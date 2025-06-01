@@ -18,19 +18,19 @@ const dropdownMenus = {
     { name: "E-commerce", href: "/solutions/ecommerce", description: "Marketplace transactions" },
     { name: "Freelancing", href: "/solutions/freelancing", description: "Project-based payments" },
     { name: "Logistics", href: "/solutions/logistics", description: "Delivery verification" },
-    { name: "Real Estate", href: "/solutions/real-estate", description: "Property transactions" },
+    { name: "Real Estate", href: "/solutions/realestate", description: "Property transactions" },
   ],
   Developers: [
     { name: "Documentation", href: "/developers/documentation", description: "API reference & guides" },
     { name: "SDKs", href: "/developers/sdks", description: "Official libraries" },
-    { name: "Quick Start", href: "/developers/quick-start", description: "Get started in minutes" },
+    { name: "Quick Start", href: "/developers/quickstart", description: "Get started in minutes" },
     { name: "Community", href: "/developers/community", description: "Discord & GitHub" },
   ],
   Resources: [
-    { name: "Blog", href: "/resources#blog", description: "Latest insights & tutorials" },
-    { name: "Case Studies", href: "/resources#cases", description: "Customer success stories" },
-    { name: "Webinars", href: "/resources#webinars", description: "Live sessions & recordings" },
-    { name: "Guides", href: "/resources#guides", description: "Step-by-step tutorials" },
+    { name: "Blog", href: "/resources/blog", description: "Latest insights & tutorials" },
+    { name: "Case Studies", href: "/resources/case-studies", description: "Customer success stories" },
+    { name: "Webinars", href: "/resources/webinars", description: "Live sessions & recordings" },
+    { name: "Guides", href: "/resources/guides", description: "Step-by-step tutorials" },
   ],
 }
 

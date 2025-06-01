@@ -31,22 +31,22 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Products</h3>
             <ul className="space-y-3 text-slate-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/products/escrow-api" className="hover:text-white transition-colors">
                   Escrow API
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/products/dispute-resolution" className="hover:text-white transition-colors">
                   Dispute Resolution
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/products/condition-engine" className="hover:text-white transition-colors">
                   Condition Engine
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/products/webhooks" className="hover:text-white transition-colors">
                   Webhooks
                 </a>
               </li>
@@ -58,22 +58,22 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Developers</h3>
             <ul className="space-y-3 text-slate-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/developers/documentation" className="hover:text-white transition-colors">
                   Documentation
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/developers/api-reference" className="hover:text-white transition-colors">
                   API Reference
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/developers/sdks" className="hover:text-white transition-colors">
                   SDKs
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/developers/status" className="hover:text-white transition-colors">
                   Status
                 </a>
               </li>
@@ -85,22 +85,22 @@ export default function Footer() {
             <h3 className="font-semibold mb-4">Company</h3>
             <ul className="space-y-3 text-slate-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/about" className="hover:text-white transition-colors">
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/blog" className="hover:text-white transition-colors">
                   Blog
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/careers" className="hover:text-white transition-colors">
                   Careers
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a href="/contact" className="hover:text-white transition-colors">
                   Contact
                 </a>
               </li>
@@ -111,13 +111,13 @@ export default function Footer() {
         <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-slate-400 text-sm mb-4 md:mb-0">© 2025 Paylock. All rights reserved.</div>
           <div className="flex space-x-6 text-sm text-slate-400">
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="/privacy" className="hover:text-white transition-colors">
               Privacy
             </a>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="/terms" className="hover:text-white transition-colors">
               Terms
             </a>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="/security" className="hover:text-white transition-colors">
               Security
             </a>
           </div>

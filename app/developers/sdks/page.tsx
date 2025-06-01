@@ -17,6 +17,8 @@ import {
   Terminal,
   Package,
 } from "lucide-react"
+import Header from "../../components/header"
+import Footer from "../../components/footer"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -176,6 +178,8 @@ echo "Escrow created: " . $escrow->id;`,
 
 export default function SDKsPage() {
   return (
+    <>
+    <Header />
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -484,5 +488,7 @@ export default function SDKsPage() {
         </div>
       </section>
     </div>
+    <Footer />
+    </>
   )
 }

@@ -8,7 +8,7 @@ import PaylockLogo from "./paylock-logo"
 import Link from "next/link"
 
 const dropdownMenus = {
-  Offerings: [
+  Products: [
     { name: "Escrow API", href: "/products", description: "Core escrow infrastructure" },
     { name: "Dispute Resolution", href: "/products/dispute-resolution", description: "Automated dispute handling" },
     { name: "Condition Engine", href: "/products/condition-engine", description: "Custom verification logic" },
@@ -26,7 +26,7 @@ const dropdownMenus = {
     { name: "Quick Start", href: "/developers/quickstart", description: "Get started in minutes" },
     { name: "Community", href: "/developers/community", description: "Discord & GitHub" },
   ],
-  Insights: [
+  Resources: [
     { name: "Blog", href: "/resources/blog", description: "Latest insights & tutorials" },
     { name: "Case Studies", href: "/resources/case-studies", description: "Customer success stories" },
     { name: "Webinars", href: "/resources/webinars", description: "Live sessions & recordings" },

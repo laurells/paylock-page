@@ -9,14 +9,14 @@ import Link from "next/link"
 
 const dropdownMenus = {
   Products: [
-    { name: "Escrow API", href: "/products", description: "Core escrow infrastructure" },
+    { name: "Escrow API", href: "/products/escrow-api", description: "Core escrow infrastructure" },
     { name: "Dispute Resolution", href: "/products/dispute-resolution", description: "Automated dispute handling" },
     { name: "Condition Engine", href: "/products/condition-engine", description: "Custom verification logic" },
-    { name: "Webhook", href: "/products/webhooks", description: "Real-time notifications" },
+    { name: "Webhook", href: "/products/webhook", description: "Real-time notifications" },
   ],
   Solutions: [
     { name: "E-commerce", href: "/solutions/ecommerce", description: "Marketplace transactions" },
-    { name: "Freelancing", href: "/solutions/freelancing", description: "Project-based payments" },
+    { name: "Freelancing", href: "/solutions/freelance", description: "Project-based payments" },
     { name: "Logistics", href: "/solutions/logistics", description: "Delivery verification" },
     { name: "Real Estate", href: "/solutions/realestate", description: "Property transactions" },
   ],

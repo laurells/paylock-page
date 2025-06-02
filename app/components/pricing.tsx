@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Button } from "./ui/button"
-import { CheckCircle, Sparkles, Zap, Crown } from "lucide-react"
-import { motion } from "framer-motion"
+import { useState } from "react";
+import { Button } from "./ui/button";
+import { CheckCircle, Sparkles, Zap, Crown } from "lucide-react";
+import { motion } from "framer-motion";
 
 const plans = [
   {
@@ -68,13 +68,16 @@ const plans = [
     popular: false,
     color: "from-purple-500 to-pink-500",
   },
-]
+];
 
 export default function Pricing() {
-  const [isAnnual, setIsAnnual] = useState(false)
+  const [isAnnual, setIsAnnual] = useState(false);
 
   return (
-    <section id="pricing" className="py-32 bg-gradient-to-b from-white to-slate-50/50">
+    <section
+      id="pricing"
+      className="py-32 bg-gradient-to-b from-white to-slate-50/50"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <motion.div
@@ -95,7 +98,9 @@ export default function Pricing() {
             className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight"
           >
             Choose your{" "}
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">plan</span>
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              plan
+            </span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -104,7 +109,8 @@ export default function Pricing() {
             viewport={{ once: true }}
             className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-8"
           >
-            Start free and scale with your business. No hidden fees or setup costs.
+            Start free and scale with your business. No hidden fees or setup
+            costs.
           </motion.p>
 
           {/* Billing Toggle */}
@@ -118,7 +124,9 @@ export default function Pricing() {
             <button
               onClick={() => setIsAnnual(false)}
               className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-                !isAnnual ? "bg-blue-600 text-white shadow-lg" : "text-slate-600 hover:text-slate-900"
+                !isAnnual
+                  ? "bg-blue-600 text-white shadow-lg"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
             >
               Monthly
@@ -126,11 +134,15 @@ export default function Pricing() {
             <button
               onClick={() => setIsAnnual(true)}
               className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
-                isAnnual ? "bg-blue-600 text-white shadow-lg" : "text-slate-600 hover:text-slate-900"
+                isAnnual
+                  ? "bg-blue-600 text-white shadow-lg"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
             >
               Annual
-              <span className="ml-2 text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Save 20%</span>
+              <span className="ml-2 text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">
+                Save 20%
+              </span>
             </button>
           </motion.div>
         </div>
@@ -169,22 +181,36 @@ export default function Pricing() {
                   >
                     <plan.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                    {plan.name}
+                  </h3>
                   <p className="text-slate-600 mb-6">{plan.description}</p>
                   <div className="mb-2">
-                    <span className="text-5xl font-bold text-slate-900">{plan.price}</span>
-                    {plan.price !== "Free" && plan.price !== "Custom" && isAnnual && (
-                      <span className="text-3xl font-bold text-slate-900 line-through opacity-50 ml-2">
-                        ${Number.parseInt(plan.price.replace("$", "")) * 12}
-                      </span>
-                    )}
-                    <span className="text-slate-600 ml-2 block text-lg">{plan.period}</span>
+                    <span className="text-5xl font-bold text-slate-900">
+                      {plan.price}
+                    </span>
+                    {plan.price !== "Free" &&
+                      plan.price !== "Custom" &&
+                      isAnnual && (
+                        <span className="text-3xl font-bold text-slate-900 line-through opacity-50 ml-2">
+                          ${Number.parseInt(plan.price.replace("$", "")) * 12}
+                        </span>
+                      )}
+                    <span className="text-slate-600 ml-2 block text-lg">
+                      {plan.period}
+                    </span>
                   </div>
-                  {isAnnual && plan.price !== "Free" && plan.price !== "Custom" && (
-                    <div className="text-green-600 font-semibold text-sm">
-                      Save ${Number.parseInt(plan.price.replace("$", "")) * 12 * 0.2}/year
-                    </div>
-                  )}
+                  {isAnnual &&
+                    plan.price !== "Free" &&
+                    plan.price !== "Custom" && (
+                      <div className="text-green-600 font-semibold text-sm">
+                        Save $
+                        {Number.parseInt(plan.price.replace("$", "")) *
+                          12 *
+                          0.2}
+                        /year
+                      </div>
+                    )}
                 </div>
 
                 <ul className="space-y-4 mb-8">
@@ -198,7 +224,9 @@ export default function Pricing() {
                       className="flex items-start gap-3"
                     >
                       <CheckCircle className="w-6 h-6 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-700 leading-relaxed">{feature}</span>
+                      <span className="text-slate-700 leading-relaxed">
+                        {feature}
+                      </span>
                     </motion.li>
                   ))}
                 </ul>
@@ -225,7 +253,8 @@ export default function Pricing() {
           className="mt-20 text-center"
         >
           <p className="text-slate-600 mb-6 text-lg">
-            All plans include bank-level security, PCI compliance, and 99.9% uptime SLA
+            All plans include bank-level security, PCI compliance, and 99.9%
+            uptime SLA
           </p>
           <div className="flex flex-wrap justify-center gap-8 text-slate-500">
             <div className="flex items-center gap-2">
@@ -248,5 +277,5 @@ export default function Pricing() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

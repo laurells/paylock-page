@@ -1,33 +1,39 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "../../components/ui/button"
-import { Input } from "../../components/ui/input"
-import { Label } from "../../components/ui/label"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card"
-import { Separator } from "../../components/ui/separator"
-import { Eye, EyeOff, Github, Mail } from "lucide-react"
-import { motion } from "framer-motion"
-import PaylockLogo from "../../components/paylock-logo"
-import Link from "next/link"
+import { useState } from "react";
+import { Button } from "../../components/ui/button";
+import { Input } from "../../components/ui/input";
+import { Label } from "../../components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../../components/ui/card";
+import { Separator } from "../../components/ui/separator";
+import { Eye, EyeOff, Github, Mail } from "lucide-react";
+import { motion } from "framer-motion";
+import PaylockLogo from "../../components/paylock-logo";
+import Link from "next/link";
 
 export default function SignInPage() {
-  const [showPassword, setShowPassword] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-  })
+  });
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
+    e.preventDefault();
+    setIsLoading(true);
     // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    setIsLoading(false)
-  }
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    setIsLoading(false);
+  };
 
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -39,7 +45,7 @@ export default function SignInPage() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -48,11 +54,16 @@ export default function SignInPage() {
       y: 0,
       transition: { duration: 0.5 },
     },
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
-      <motion.div className="w-full max-w-md" variants={containerVariants} initial="hidden" animate="visible">
+      <motion.div
+        className="w-full max-w-md"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {/* Logo */}
         <motion.div className="text-center mb-8" variants={itemVariants}>
           <Link href="/">
@@ -63,17 +74,29 @@ export default function SignInPage() {
         <motion.div variants={itemVariants}>
           <Card className="shadow-xl border-0 bg-white/80 backdrop-blur-sm">
             <CardHeader className="text-center pb-6">
-              <CardTitle className="text-2xl font-bold text-slate-900">Welcome back</CardTitle>
-              <CardDescription className="text-slate-600">Sign in to your Paylock account to continue</CardDescription>
+              <CardTitle className="text-2xl font-bold text-slate-900">
+                Welcome back
+              </CardTitle>
+              <CardDescription className="text-slate-600">
+                Sign in to your Paylock account to continue
+              </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               {/* Social Login */}
               <div className="grid grid-cols-2 gap-3">
-                <Button variant="outline" className="w-full" disabled={isLoading}>
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  disabled={isLoading}
+                >
                   <Github className="mr-2 h-4 w-4" />
                   GitHub
                 </Button>
-                <Button variant="outline" className="w-full" disabled={isLoading}>
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  disabled={isLoading}
+                >
                   <Mail className="mr-2 h-4 w-4" />
                   Google
                 </Button>
@@ -84,7 +107,9 @@ export default function SignInPage() {
                   <Separator className="w-full" />
                 </div>
                 <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-white px-2 text-slate-500">Or continue with</span>
+                  <span className="bg-white px-2 text-slate-500">
+                    Or continue with
+                  </span>
                 </div>
               </div>
 
@@ -97,7 +122,9 @@ export default function SignInPage() {
                     type="email"
                     placeholder="Enter your email"
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                     required
                     disabled={isLoading}
                     className="h-11"
@@ -107,7 +134,10 @@ export default function SignInPage() {
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
                     <Label htmlFor="password">Password</Label>
-                    <Link href="/auth/forgot-password" className="text-sm text-blue-600 hover:text-blue-500">
+                    <Link
+                      href="/auth/forgot-password"
+                      className="text-sm text-blue-600 hover:text-blue-500"
+                    >
                       Forgot password?
                     </Link>
                   </div>
@@ -117,7 +147,9 @@ export default function SignInPage() {
                       type={showPassword ? "text" : "password"}
                       placeholder="Enter your password"
                       value={formData.password}
-                      onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, password: e.target.value })
+                      }
                       required
                       disabled={isLoading}
                       className="h-11 pr-10"
@@ -145,7 +177,11 @@ export default function SignInPage() {
                     <motion.div
                       className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
                       animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                      transition={{
+                        duration: 1,
+                        repeat: Number.POSITIVE_INFINITY,
+                        ease: "linear",
+                      }}
                     />
                   ) : (
                     "Sign in"
@@ -155,7 +191,10 @@ export default function SignInPage() {
 
               <div className="text-center text-sm text-slate-600">
                 Don't have an account?{" "}
-                <Link href="/auth/signup" className="text-blue-600 hover:text-blue-500 font-medium">
+                <Link
+                  href="/auth/signup"
+                  className="text-blue-600 hover:text-blue-500 font-medium"
+                >
                   Sign up
                 </Link>
               </div>
@@ -164,7 +203,10 @@ export default function SignInPage() {
         </motion.div>
 
         {/* Footer */}
-        <motion.div className="text-center mt-8 text-sm text-slate-500" variants={itemVariants}>
+        <motion.div
+          className="text-center mt-8 text-sm text-slate-500"
+          variants={itemVariants}
+        >
           <p>
             By signing in, you agree to our{" "}
             <Link href="/terms" className="text-blue-600 hover:text-blue-500">
@@ -178,5 +220,5 @@ export default function SignInPage() {
         </motion.div>
       </motion.div>
     </div>
-  )
+  );
 }

@@ -1,10 +1,10 @@
-import type React from "react"
-import type { Metadata, Viewport } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import { generateSEOMetadata, generateStructuredData } from "./components/seo"
+import type React from "react";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { generateSEOMetadata, generateStructuredData } from "./components/seo";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = generateSEOMetadata({
   title: "Paylock - Secure Escrow Services for Digital Transactions",
@@ -25,7 +25,7 @@ export const metadata: Metadata = generateSEOMetadata({
     "payment processing",
   ],
   url: "https://paylock.com",
-})
+});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -36,12 +36,12 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: light)", color: "#3B82F6" },
     { media: "(prefers-color-scheme: dark)", color: "#1E40AF" },
   ],
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -87,5 +87,5 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
-  )
+  );
 }

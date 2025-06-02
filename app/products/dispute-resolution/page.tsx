@@ -1,12 +1,19 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Users, Brain, FileText, Clock, ArrowRight, Shield } from "lucide-react"
-import { Button } from "../../components/ui/button"
-import { Card, CardDescription, CardTitle } from "../../components/ui/card"
-import Header from "../../components/header"
-import Footer from "../../components/footer"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import {
+  Users,
+  Brain,
+  FileText,
+  Clock,
+  ArrowRight,
+  Shield,
+} from "lucide-react";
+import { Button } from "../../components/ui/button";
+import { Card, CardDescription, CardTitle } from "../../components/ui/card";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import Link from "next/link";
 
 const features = [
   {
@@ -33,13 +40,14 @@ const features = [
     icon: Clock,
     color: "from-orange-500 to-red-500",
   },
-]
+];
 
 const process = [
   {
     step: "1",
     title: "Dispute Initiated",
-    description: "Either party can initiate a dispute through the API or dashboard",
+    description:
+      "Either party can initiate a dispute through the API or dashboard",
   },
   {
     step: "2",
@@ -54,16 +62,17 @@ const process = [
   {
     step: "4",
     title: "Resolution",
-    description: "Dispute is resolved automatically or escalated to human arbitrators",
+    description:
+      "Dispute is resolved automatically or escalated to human arbitrators",
   },
-]
+];
 
 const stats = [
   { value: "95%", label: "Resolution Rate" },
   { value: "3.2 days", label: "Average Resolution Time" },
   { value: "98%", label: "Customer Satisfaction" },
   { value: "$50", label: "Cost per Case" },
-]
+];
 
 export default function DisputeResolutionPage() {
   return (
@@ -90,8 +99,9 @@ export default function DisputeResolutionPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              AI-powered dispute resolution with expert arbitrators. Resolve conflicts quickly and fairly with our
-              comprehensive dispute management system.
+              AI-powered dispute resolution with expert arbitrators. Resolve
+              conflicts quickly and fairly with our comprehensive dispute
+              management system.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">
@@ -141,8 +151,12 @@ export default function DisputeResolutionPage() {
                   >
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <CardTitle className="text-xl mb-4">{feature.title}</CardTitle>
-                  <CardDescription className="text-base">{feature.description}</CardDescription>
+                  <CardTitle className="text-xl mb-4">
+                    {feature.title}
+                  </CardTitle>
+                  <CardDescription className="text-base">
+                    {feature.description}
+                  </CardDescription>
                 </Card>
               </motion.div>
             ))}
@@ -164,7 +178,8 @@ export default function DisputeResolutionPage() {
               How it <span className="text-purple-600">works</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Our streamlined process ensures fair and efficient dispute resolution
+              Our streamlined process ensures fair and efficient dispute
+              resolution
             </p>
           </motion.div>
 
@@ -181,7 +196,9 @@ export default function DisputeResolutionPage() {
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-xl font-bold shadow-lg">
                   {step.step}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-4">{step.title}</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-4">
+                  {step.title}
+                </h3>
                 <p className="text-slate-600">{step.description}</p>
               </motion.div>
             ))}
@@ -214,7 +231,9 @@ export default function DisputeResolutionPage() {
                 viewport={{ once: true }}
                 className="text-center p-8 bg-white rounded-2xl shadow-lg"
               >
-                <div className="text-4xl font-bold text-purple-600 mb-2">{stat.value}</div>
+                <div className="text-4xl font-bold text-purple-600 mb-2">
+                  {stat.value}
+                </div>
                 <div className="text-slate-600 font-medium">{stat.label}</div>
               </motion.div>
             ))}
@@ -232,10 +251,17 @@ export default function DisputeResolutionPage() {
             viewport={{ once: true }}
             className="text-center text-white"
           >
-            <h2 className="text-4xl font-bold mb-6">Ready to resolve disputes fairly?</h2>
-            <p className="text-xl mb-8 opacity-90">Join thousands of businesses using our dispute resolution system</p>
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to resolve disputes fairly?
+            </h2>
+            <p className="text-xl mb-8 opacity-90">
+              Join thousands of businesses using our dispute resolution system
+            </p>
             <Link href="/auth/signup">
-              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100">
+              <Button
+                size="lg"
+                className="bg-white text-purple-600 hover:bg-gray-100"
+              >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -246,5 +272,5 @@ export default function DisputeResolutionPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

@@ -1,9 +1,18 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Shield, Zap, Users, CheckCircle, Code, Globe, ArrowRight, Sparkles } from "lucide-react"
-import { motion } from "framer-motion"
-import { Button } from "./ui/button"
+import { useState } from "react";
+import {
+  Shield,
+  Zap,
+  Users,
+  CheckCircle,
+  Code,
+  Globe,
+  ArrowRight,
+  Sparkles,
+} from "lucide-react";
+import { motion } from "framer-motion";
+import { Button } from "./ui/button";
 
 const features = [
   {
@@ -54,10 +63,10 @@ const features = [
     highlight: "SOC 2 Type II",
     color: "from-teal-500 to-blue-500",
   },
-]
+];
 
 export default function Features() {
-  const [hoveredFeature, setHoveredFeature] = useState<number | null>(null)
+  const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
 
   return (
     <section className="py-32 bg-gradient-to-b from-white to-slate-50/50">
@@ -92,8 +101,9 @@ export default function Features() {
             viewport={{ once: true }}
             className="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed"
           >
-            Everything you need to build trust into your platform. From simple buy-sell transactions to complex
-            multi-party escrows with custom conditions.
+            Everything you need to build trust into your platform. From simple
+            buy-sell transactions to complex multi-party escrows with custom
+            conditions.
           </motion.p>
         </div>
 
@@ -123,7 +133,9 @@ export default function Features() {
                 <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-slate-600 leading-relaxed mb-6 text-lg">{feature.description}</p>
+                <p className="text-slate-600 leading-relaxed mb-6 text-lg">
+                  {feature.description}
+                </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-semibold text-blue-600 bg-blue-50 px-4 py-2 rounded-full">
                     {feature.highlight}
@@ -181,8 +193,9 @@ export default function Features() {
                 viewport={{ once: true }}
                 className="text-xl text-slate-300 mb-8 leading-relaxed"
               >
-                Create escrow transactions, set conditions, and handle releases with just a few API calls. Our
-                TypeScript-first approach ensures type safety and excellent developer experience.
+                Create escrow transactions, set conditions, and handle releases
+                with just a few API calls. Our TypeScript-first approach ensures
+                type safety and excellent developer experience.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -226,7 +239,9 @@ export default function Features() {
                 <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                 <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                <span className="text-slate-400 text-sm ml-4 font-medium">Condition Agreement</span>
+                <span className="text-slate-400 text-sm ml-4 font-medium">
+                  Condition Agreement
+                </span>
               </div>
               <motion.pre
                 className="text-green-400 text-sm overflow-x-auto font-mono leading-relaxed"
@@ -257,5 +272,5 @@ console.log(transaction.status); // 'completed'`}</code>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

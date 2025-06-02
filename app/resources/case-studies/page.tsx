@@ -1,18 +1,25 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { FileText, ArrowRight } from "lucide-react"
-import { Button } from "../../components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card"
-import Header from "../../components/header"
-import Footer from "../../components/footer"
+import { motion } from "framer-motion";
+import { FileText, ArrowRight } from "lucide-react";
+import { Button } from "../../components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../../components/ui/card";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 
 const caseStudies = [
   {
     company: "MarketHub",
     industry: "E-commerce Marketplace",
     logo: "🏪",
-    challenge: "High dispute rates (15%) and seller churn due to payment issues and lack of trust",
+    challenge:
+      "High dispute rates (15%) and seller churn due to payment issues and lack of trust",
     solution:
       "Implemented Paylock's condition-based escrow with delivery verification and automated dispute resolution",
     results: [
@@ -30,8 +37,10 @@ const caseStudies = [
     company: "FreelanceForge",
     industry: "Freelancing Platform",
     logo: "💼",
-    challenge: "Payment delays and scope creep issues causing freelancer dissatisfaction",
-    solution: "Milestone-based escrow with automated releases and custom condition verification",
+    challenge:
+      "Payment delays and scope creep issues causing freelancer dissatisfaction",
+    solution:
+      "Milestone-based escrow with automated releases and custom condition verification",
     results: [
       { metric: "95%", description: "On-time payments to freelancers" },
       { metric: "60%", description: "Faster project completion" },
@@ -47,8 +56,10 @@ const caseStudies = [
     company: "CourierConnect",
     industry: "Logistics & Delivery",
     logo: "🚚",
-    challenge: "Payment disputes for damaged packages and delivery confirmation issues",
-    solution: "Photo verification and condition-based releases with real-time tracking integration",
+    challenge:
+      "Payment disputes for damaged packages and delivery confirmation issues",
+    solution:
+      "Photo verification and condition-based releases with real-time tracking integration",
     results: [
       { metric: "99.2%", description: "Successful delivery rate" },
       { metric: "80%", description: "Fewer payment disputes" },
@@ -64,8 +75,10 @@ const caseStudies = [
     company: "PropertyFlow",
     industry: "Real Estate",
     logo: "🏠",
-    challenge: "Complex property transactions with multiple parties and contingencies",
-    solution: "Multi-party escrow with custom conditions for inspections, financing, and title verification",
+    challenge:
+      "Complex property transactions with multiple parties and contingencies",
+    solution:
+      "Multi-party escrow with custom conditions for inspections, financing, and title verification",
     results: [
       { metric: "$50M+", description: "In property transactions secured" },
       { metric: "98%", description: "Transaction completion rate" },
@@ -82,14 +95,16 @@ const caseStudies = [
     industry: "Gaming & Digital Assets",
     logo: "🎮",
     challenge: "Fraud and chargebacks in digital asset trading",
-    solution: "Instant verification for digital goods with automated fraud detection",
+    solution:
+      "Instant verification for digital goods with automated fraud detection",
     results: [
       { metric: "500K+", description: "Digital asset trades completed" },
       { metric: "99.8%", description: "Fraud prevention rate" },
       { metric: "85%", description: "Reduction in chargebacks" },
       { metric: "3x", description: "Increase in trading volume" },
     ],
-    quote: "Paylock's fraud detection is incredible. We can now offer instant trades while staying completely secure.",
+    quote:
+      "Paylock's fraud detection is incredible. We can now offer instant trades while staying completely secure.",
     author: "Lisa Park, Head of Product",
     featured: false,
   },
@@ -97,8 +112,10 @@ const caseStudies = [
     company: "HealthConnect",
     industry: "Healthcare Services",
     logo: "🏥",
-    challenge: "Payment processing for telemedicine with insurance verification complexity",
-    solution: "HIPAA-compliant escrow with insurance verification and automated billing",
+    challenge:
+      "Payment processing for telemedicine with insurance verification complexity",
+    solution:
+      "HIPAA-compliant escrow with insurance verification and automated billing",
     results: [
       { metric: "HIPAA", description: "Fully compliant platform" },
       { metric: "75%", description: "Faster insurance processing" },
@@ -110,11 +127,11 @@ const caseStudies = [
     author: "Jennifer Adams, Chief Medical Officer",
     featured: false,
   },
-]
+];
 
 export default function CaseStudiesPage() {
-  const featuredCase = caseStudies.find((cs) => cs.featured)
-  const otherCases = caseStudies.filter((cs) => !cs.featured)
+  const featuredCase = caseStudies.find((cs) => cs.featured);
+  const otherCases = caseStudies.filter((cs) => !cs.featured);
 
   return (
     <div className="min-h-screen bg-white">
@@ -140,8 +157,8 @@ export default function CaseStudiesPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              See how companies across different industries use Paylock to transform their businesses and build trust
-              with their customers.
+              See how companies across different industries use Paylock to
+              transform their businesses and build trust with their customers.
             </p>
           </motion.div>
         </div>
@@ -158,46 +175,71 @@ export default function CaseStudiesPage() {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <h2 className="text-3xl font-bold text-slate-900 mb-8">Featured Case Study</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-8">
+                Featured Case Study
+              </h2>
               <Card className="overflow-hidden shadow-2xl">
                 <div className="grid lg:grid-cols-2">
                   <div className="p-12">
                     <div className="flex items-center gap-4 mb-6">
                       <div className="text-6xl">{featuredCase.logo}</div>
                       <div>
-                        <h3 className="text-3xl font-bold text-slate-900">{featuredCase.company}</h3>
-                        <p className="text-slate-600 text-lg">{featuredCase.industry}</p>
+                        <h3 className="text-3xl font-bold text-slate-900">
+                          {featuredCase.company}
+                        </h3>
+                        <p className="text-slate-600 text-lg">
+                          {featuredCase.industry}
+                        </p>
                       </div>
                     </div>
 
                     <div className="space-y-6">
                       <div>
-                        <h4 className="font-semibold text-slate-900 mb-2">Challenge</h4>
-                        <p className="text-slate-600">{featuredCase.challenge}</p>
+                        <h4 className="font-semibold text-slate-900 mb-2">
+                          Challenge
+                        </h4>
+                        <p className="text-slate-600">
+                          {featuredCase.challenge}
+                        </p>
                       </div>
                       <div>
-                        <h4 className="font-semibold text-slate-900 mb-2">Solution</h4>
-                        <p className="text-slate-600">{featuredCase.solution}</p>
+                        <h4 className="font-semibold text-slate-900 mb-2">
+                          Solution
+                        </h4>
+                        <p className="text-slate-600">
+                          {featuredCase.solution}
+                        </p>
                       </div>
                     </div>
 
                     <blockquote className="border-l-4 border-green-600 pl-6 italic text-slate-700 my-8">
                       "{featuredCase.quote}"
                     </blockquote>
-                    <cite className="text-slate-600">— {featuredCase.author}</cite>
+                    <cite className="text-slate-600">
+                      — {featuredCase.author}
+                    </cite>
                   </div>
 
                   <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-12">
-                    <h4 className="font-semibold text-slate-900 mb-8 text-xl">Results</h4>
+                    <h4 className="font-semibold text-slate-900 mb-8 text-xl">
+                      Results
+                    </h4>
                     <div className="grid grid-cols-2 gap-6">
                       {featuredCase.results.map((result, index) => (
                         <div key={index} className="text-center">
-                          <div className="text-4xl font-bold text-green-600 mb-2">{result.metric}</div>
-                          <div className="text-sm text-slate-600">{result.description}</div>
+                          <div className="text-4xl font-bold text-green-600 mb-2">
+                            {result.metric}
+                          </div>
+                          <div className="text-sm text-slate-600">
+                            {result.description}
+                          </div>
                         </div>
                       ))}
                     </div>
-                    <Button size="lg" className="w-full mt-8 bg-green-600 hover:bg-green-700">
+                    <Button
+                      size="lg"
+                      className="w-full mt-8 bg-green-600 hover:bg-green-700"
+                    >
                       Read Full Case Study
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
@@ -247,20 +289,33 @@ export default function CaseStudiesPage() {
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div>
-                      <h4 className="font-semibold text-slate-900 mb-2 text-sm">Challenge</h4>
-                      <p className="text-slate-600 text-sm line-clamp-2">{caseStudy.challenge}</p>
+                      <h4 className="font-semibold text-slate-900 mb-2 text-sm">
+                        Challenge
+                      </h4>
+                      <p className="text-slate-600 text-sm line-clamp-2">
+                        {caseStudy.challenge}
+                      </p>
                     </div>
 
                     <div className="grid grid-cols-2 gap-4">
-                      {caseStudy.results.slice(0, 2).map((result, resultIndex) => (
-                        <div key={resultIndex} className="text-center">
-                          <div className="text-2xl font-bold text-green-600 mb-1">{result.metric}</div>
-                          <div className="text-xs text-slate-600">{result.description}</div>
-                        </div>
-                      ))}
+                      {caseStudy.results
+                        .slice(0, 2)
+                        .map((result, resultIndex) => (
+                          <div key={resultIndex} className="text-center">
+                            <div className="text-2xl font-bold text-green-600 mb-1">
+                              {result.metric}
+                            </div>
+                            <div className="text-xs text-slate-600">
+                              {result.description}
+                            </div>
+                          </div>
+                        ))}
                     </div>
 
-                    <Button variant="outline" className="w-full group-hover:bg-green-50 group-hover:border-green-200">
+                    <Button
+                      variant="outline"
+                      className="w-full group-hover:bg-green-50 group-hover:border-green-200"
+                    >
                       Read Case Study
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -286,7 +341,8 @@ export default function CaseStudiesPage() {
               Trusted across <span className="text-green-600">industries</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              See how different industries benefit from secure escrow transactions
+              See how different industries benefit from secure escrow
+              transactions
             </p>
           </motion.div>
 
@@ -308,8 +364,12 @@ export default function CaseStudiesPage() {
                 className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <div className="text-4xl mb-4">{industry.icon}</div>
-                <h3 className="font-semibold text-slate-900 mb-2">{industry.name}</h3>
-                <p className="text-sm text-green-600 font-medium">{industry.count} companies</p>
+                <h3 className="font-semibold text-slate-900 mb-2">
+                  {industry.name}
+                </h3>
+                <p className="text-sm text-green-600 font-medium">
+                  {industry.count} companies
+                </p>
               </motion.div>
             ))}
           </div>
@@ -326,16 +386,26 @@ export default function CaseStudiesPage() {
             viewport={{ once: true }}
             className="text-center text-white"
           >
-            <h2 className="text-4xl font-bold mb-6">Ready to write your success story?</h2>
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to write your success story?
+            </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join hundreds of companies transforming their business with Paylock
+              Join hundreds of companies transforming their business with
+              Paylock
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+              <Button
+                size="lg"
+                className="bg-white text-green-600 hover:bg-gray-100"
+              >
                 Start Your Journey
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/10"
+              >
                 Schedule Demo
               </Button>
             </div>
@@ -345,5 +415,5 @@ export default function CaseStudiesPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

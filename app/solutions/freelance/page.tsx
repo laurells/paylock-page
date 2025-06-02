@@ -1,12 +1,19 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Briefcase, Shield, CheckCircle, ArrowRight, Clock, Zap } from "lucide-react"
-import { Button } from "../../components/ui/button"
-import { Card, CardDescription, CardTitle } from "../../components/ui/card"
-import Header from "../../components/header"
-import Footer from "../../components/footer"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import {
+  Briefcase,
+  Shield,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Zap,
+} from "lucide-react";
+import { Button } from "../../components/ui/button";
+import { Card, CardDescription, CardTitle } from "../../components/ui/card";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import Link from "next/link";
 
 const benefits = [
   {
@@ -33,13 +40,15 @@ const benefits = [
     icon: Zap,
     stat: "< 1min",
   },
-]
+];
 
 const useCases = [
   {
     title: "Milestone-Based Projects",
-    description: "Break large projects into funded milestones with individual approvals",
-    example: "Web development project with design, frontend, and backend milestones",
+    description:
+      "Break large projects into funded milestones with individual approvals",
+    example:
+      "Web development project with design, frontend, and backend milestones",
   },
   {
     title: "Work Completion Verification",
@@ -56,13 +65,15 @@ const useCases = [
     description: "Ensure work meets quality standards before payment",
     example: "Graphic design with revision cycles and final approval",
   },
-]
+];
 
 const caseStudy = {
   company: "FreelanceForge",
   industry: "Freelance Platform",
-  challenge: "Payment delays and scope creep causing freelancer dissatisfaction",
-  solution: "Implemented Paylock's milestone-based escrow with automated releases",
+  challenge:
+    "Payment delays and scope creep causing freelancer dissatisfaction",
+  solution:
+    "Implemented Paylock's milestone-based escrow with automated releases",
   results: [
     "95% on-time payments (up from 60%)",
     "60% faster project completion",
@@ -72,7 +83,7 @@ const caseStudy = {
   quote:
     "Paylock transformed our platform economics. Freelancers get paid faster, clients feel protected, and our support team spends 70% less time on payment disputes.",
   author: "Marcus Rodriguez, Founder at FreelanceForge",
-}
+};
 
 export default function FreelancePage() {
   return (
@@ -100,8 +111,8 @@ export default function FreelancePage() {
               Payments
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Build trust between clients and freelancers with milestone-based escrow. Ensure quality work and timely
-              payments for everyone.
+              Build trust between clients and freelancers with milestone-based
+              escrow. Ensure quality work and timely payments for everyone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">
@@ -132,7 +143,8 @@ export default function FreelancePage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Transform your <span className="text-purple-600">freelance platform</span>
+              Transform your{" "}
+              <span className="text-purple-600">freelance platform</span>
             </h2>
           </motion.div>
 
@@ -147,9 +159,15 @@ export default function FreelancePage() {
               >
                 <Card className="h-full text-center p-8 hover:shadow-xl transition-all duration-300">
                   <benefit.icon className="w-16 h-16 text-purple-600 mx-auto mb-6" />
-                  <div className="text-3xl font-bold text-purple-600 mb-2">{benefit.stat}</div>
-                  <CardTitle className="text-lg mb-4">{benefit.title}</CardTitle>
-                  <CardDescription className="text-base">{benefit.description}</CardDescription>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">
+                    {benefit.stat}
+                  </div>
+                  <CardTitle className="text-lg mb-4">
+                    {benefit.title}
+                  </CardTitle>
+                  <CardDescription className="text-base">
+                    {benefit.description}
+                  </CardDescription>
                 </Card>
               </motion.div>
             ))}
@@ -171,7 +189,8 @@ export default function FreelancePage() {
               Common <span className="text-purple-600">use cases</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              See how freelance platforms use escrow to build trust and ensure quality
+              See how freelance platforms use escrow to build trust and ensure
+              quality
             </p>
           </motion.div>
 
@@ -185,8 +204,12 @@ export default function FreelancePage() {
                 viewport={{ once: true }}
               >
                 <Card className="h-full p-8 hover:shadow-lg transition-all duration-300">
-                  <CardTitle className="text-xl mb-4">{useCase.title}</CardTitle>
-                  <CardDescription className="text-base mb-6">{useCase.description}</CardDescription>
+                  <CardTitle className="text-xl mb-4">
+                    {useCase.title}
+                  </CardTitle>
+                  <CardDescription className="text-base mb-6">
+                    {useCase.description}
+                  </CardDescription>
                   <div className="text-sm text-purple-700 bg-purple-50 p-4 rounded-lg">
                     <strong>Example:</strong> {useCase.example}
                   </div>
@@ -216,16 +239,22 @@ export default function FreelancePage() {
             <div className="grid lg:grid-cols-2 gap-12">
               <div>
                 <div className="text-6xl mb-6">💼</div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">{caseStudy.company}</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                  {caseStudy.company}
+                </h3>
                 <p className="text-slate-600 mb-6">{caseStudy.industry}</p>
 
                 <div className="space-y-6">
                   <div>
-                    <h4 className="font-semibold text-slate-900 mb-2">Challenge</h4>
+                    <h4 className="font-semibold text-slate-900 mb-2">
+                      Challenge
+                    </h4>
                     <p className="text-slate-600">{caseStudy.challenge}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-900 mb-2">Solution</h4>
+                    <h4 className="font-semibold text-slate-900 mb-2">
+                      Solution
+                    </h4>
                     <p className="text-slate-600">{caseStudy.solution}</p>
                   </div>
                 </div>
@@ -262,16 +291,27 @@ export default function FreelancePage() {
             viewport={{ once: true }}
             className="text-center text-white"
           >
-            <h2 className="text-4xl font-bold mb-6">Ready to transform your freelance platform?</h2>
-            <p className="text-xl mb-8 opacity-90">Join thousands of freelance platforms using Paylock</p>
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to transform your freelance platform?
+            </h2>
+            <p className="text-xl mb-8 opacity-90">
+              Join thousands of freelance platforms using Paylock
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">
-                <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100">
+                <Button
+                  size="lg"
+                  className="bg-white text-purple-600 hover:bg-gray-100"
+                >
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/10"
+              >
                 Contact Sales
               </Button>
             </div>
@@ -281,5 +321,5 @@ export default function FreelancePage() {
 
       <Footer />
     </div>
-  )
+  );
 }

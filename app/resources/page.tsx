@@ -1,11 +1,26 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { BookOpen, Video, FileText, Users, Calendar, ArrowRight, Clock, User } from "lucide-react"
-import { Button } from "../components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card"
-import Header from "../components/header"
-import Footer from "../components/footer"
+import { motion } from "framer-motion";
+import {
+  BookOpen,
+  Video,
+  FileText,
+  Users,
+  Calendar,
+  ArrowRight,
+  Clock,
+  User,
+} from "lucide-react";
+import { Button } from "../components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../components/ui/card";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 const resourceCategories = [
   {
@@ -36,12 +51,13 @@ const resourceCategories = [
     count: "2K+ members",
     color: "from-orange-500 to-red-500",
   },
-]
+];
 
 const blogPosts = [
   {
     title: "Building Trust in Digital Marketplaces: A Complete Guide",
-    excerpt: "Learn how to implement escrow services that build buyer and seller confidence in your marketplace.",
+    excerpt:
+      "Learn how to implement escrow services that build buyer and seller confidence in your marketplace.",
     author: "Sarah Chen",
     date: "Dec 15, 2024",
     readTime: "8 min read",
@@ -50,7 +66,8 @@ const blogPosts = [
   },
   {
     title: "Implementing Condition-Based Escrow: Technical Deep Dive",
-    excerpt: "A technical walkthrough of implementing custom conditions and automated verification systems.",
+    excerpt:
+      "A technical walkthrough of implementing custom conditions and automated verification systems.",
     author: "Marcus Rodriguez",
     date: "Dec 12, 2024",
     readTime: "12 min read",
@@ -59,7 +76,8 @@ const blogPosts = [
   },
   {
     title: "Escrow API Security: Best Practices for Production",
-    excerpt: "Essential security considerations when implementing escrow services in production environments.",
+    excerpt:
+      "Essential security considerations when implementing escrow services in production environments.",
     author: "Emily Watson",
     date: "Dec 10, 2024",
     readTime: "6 min read",
@@ -68,14 +86,15 @@ const blogPosts = [
   },
   {
     title: "Multi-Party Escrow: Handling Complex Transactions",
-    excerpt: "How to design and implement escrow systems for transactions involving multiple parties.",
+    excerpt:
+      "How to design and implement escrow systems for transactions involving multiple parties.",
     author: "David Kim",
     date: "Dec 8, 2024",
     readTime: "10 min read",
     category: "Advanced",
     image: "🤝",
   },
-]
+];
 
 const webinars = [
   {
@@ -83,7 +102,8 @@ const webinars = [
     date: "Jan 15, 2025",
     time: "2:00 PM EST",
     speaker: "Sarah Chen, CTO at MarketHub",
-    description: "Learn how to integrate escrow services into your marketplace platform.",
+    description:
+      "Learn how to integrate escrow services into your marketplace platform.",
     status: "upcoming",
   },
   {
@@ -91,7 +111,8 @@ const webinars = [
     date: "Jan 22, 2025",
     time: "3:00 PM EST",
     speaker: "Marcus Rodriguez, Lead Engineer",
-    description: "Deep dive into complex escrow scenarios and implementation patterns.",
+    description:
+      "Deep dive into complex escrow scenarios and implementation patterns.",
     status: "upcoming",
   },
   {
@@ -99,10 +120,11 @@ const webinars = [
     date: "Dec 18, 2024",
     time: "2:00 PM EST",
     speaker: "Emily Watson, Security Lead",
-    description: "Best practices for secure escrow implementation and regulatory compliance.",
+    description:
+      "Best practices for secure escrow implementation and regulatory compliance.",
     status: "recorded",
   },
-]
+];
 
 const guides = [
   {
@@ -129,7 +151,7 @@ const guides = [
     difficulty: "Intermediate",
     time: "25 min",
   },
-]
+];
 
 export default function ResourcesPage() {
   return (
@@ -147,10 +169,13 @@ export default function ResourcesPage() {
           >
             <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
               Learn and{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">grow</span>
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                grow
+              </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Discover guides, tutorials, case studies, and best practices to help you build better with Paylock.
+              Discover guides, tutorials, case studies, and best practices to
+              help you build better with Paylock.
             </p>
           </motion.div>
         </div>
@@ -179,8 +204,13 @@ export default function ResourcesPage() {
                     <CardDescription>{category.description}</CardDescription>
                   </CardHeader>
                   <CardContent className="text-center">
-                    <div className="text-sm text-blue-600 font-medium mb-4">{category.count}</div>
-                    <Button variant="outline" className="w-full group-hover:bg-blue-50 group-hover:border-blue-200">
+                    <div className="text-sm text-blue-600 font-medium mb-4">
+                      {category.count}
+                    </div>
+                    <Button
+                      variant="outline"
+                      className="w-full group-hover:bg-blue-50 group-hover:border-blue-200"
+                    >
                       Explore
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -206,7 +236,8 @@ export default function ResourcesPage() {
               Latest from our <span className="text-blue-600">blog</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Stay updated with the latest insights, tutorials, and best practices
+              Stay updated with the latest insights, tutorials, and best
+              practices
             </p>
           </motion.div>
 
@@ -232,7 +263,9 @@ export default function ResourcesPage() {
                         <CardTitle className="text-xl mb-2 hover:text-blue-600 transition-colors">
                           {post.title}
                         </CardTitle>
-                        <CardDescription className="text-base">{post.excerpt}</CardDescription>
+                        <CardDescription className="text-base">
+                          {post.excerpt}
+                        </CardDescription>
                       </div>
                     </div>
                   </CardHeader>
@@ -298,15 +331,17 @@ export default function ResourcesPage() {
                       <CardTitle className="text-lg">{guide.title}</CardTitle>
                       <ArrowRight className="w-5 h-5 text-slate-400" />
                     </div>
-                    <CardDescription className="mb-4">{guide.description}</CardDescription>
+                    <CardDescription className="mb-4">
+                      {guide.description}
+                    </CardDescription>
                     <div className="flex items-center gap-4 text-sm">
                       <span
                         className={`px-2 py-1 rounded-full text-xs font-medium ${
                           guide.difficulty === "Beginner"
                             ? "bg-green-100 text-green-700"
                             : guide.difficulty === "Intermediate"
-                              ? "bg-yellow-100 text-yellow-700"
-                              : "bg-red-100 text-red-700"
+                            ? "bg-yellow-100 text-yellow-700"
+                            : "bg-red-100 text-red-700"
                         }`}
                       >
                         {guide.difficulty}
@@ -334,7 +369,9 @@ export default function ResourcesPage() {
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
               Upcoming <span className="text-blue-600">webinars</span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">Join our experts for live sessions and Q&A</p>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Join our experts for live sessions and Q&A
+            </p>
           </motion.div>
 
           <div className="space-y-6">
@@ -351,16 +388,24 @@ export default function ResourcesPage() {
                     <div className="flex items-center justify-between">
                       <div className="flex-1">
                         <div className="flex items-center gap-4 mb-2">
-                          <CardTitle className="text-xl">{webinar.title}</CardTitle>
+                          <CardTitle className="text-xl">
+                            {webinar.title}
+                          </CardTitle>
                           <span
                             className={`px-3 py-1 rounded-full text-xs font-medium ${
-                              webinar.status === "upcoming" ? "bg-blue-100 text-blue-700" : "bg-gray-100 text-gray-700"
+                              webinar.status === "upcoming"
+                                ? "bg-blue-100 text-blue-700"
+                                : "bg-gray-100 text-gray-700"
                             }`}
                           >
-                            {webinar.status === "upcoming" ? "Upcoming" : "Recorded"}
+                            {webinar.status === "upcoming"
+                              ? "Upcoming"
+                              : "Recorded"}
                           </span>
                         </div>
-                        <CardDescription className="mb-3">{webinar.description}</CardDescription>
+                        <CardDescription className="mb-3">
+                          {webinar.description}
+                        </CardDescription>
                         <div className="flex items-center gap-6 text-sm text-slate-600">
                           <div className="flex items-center gap-1">
                             <Calendar className="w-4 h-4" />
@@ -379,7 +424,9 @@ export default function ResourcesPage() {
                             : "bg-gray-600 hover:bg-gray-700"
                         }
                       >
-                        {webinar.status === "upcoming" ? "Register" : "Watch Recording"}
+                        {webinar.status === "upcoming"
+                          ? "Register"
+                          : "Watch Recording"}
                       </Button>
                     </div>
                   </CardContent>
@@ -392,5 +439,5 @@ export default function ResourcesPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

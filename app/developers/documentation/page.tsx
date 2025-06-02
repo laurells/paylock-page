@@ -1,30 +1,51 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Book, Code, Search, ArrowRight, ExternalLink } from "lucide-react"
-import { Button } from "../../components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card"
-import { Input } from "../../components/ui/input"
-import Header from "../../components/header"
-import Footer from "../../components/footer"
+import { motion } from "framer-motion";
+import { Book, Code, Search, ArrowRight, ExternalLink } from "lucide-react";
+import { Button } from "../../components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../../components/ui/card";
+import { Input } from "../../components/ui/input";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 
 const sections = [
   {
     title: "Getting Started",
     description: "Quick start guide and basic concepts",
-    items: ["Authentication", "Making your first API call", "Understanding escrow flow", "Testing with sandbox"],
+    items: [
+      "Authentication",
+      "Making your first API call",
+      "Understanding escrow flow",
+      "Testing with sandbox",
+    ],
     icon: "🚀",
   },
   {
     title: "API Reference",
     description: "Complete API documentation with examples",
-    items: ["Transactions API", "Conditions API", "Disputes API", "Webhooks API"],
+    items: [
+      "Transactions API",
+      "Conditions API",
+      "Disputes API",
+      "Webhooks API",
+    ],
     icon: "📚",
   },
   {
     title: "Guides",
     description: "Step-by-step implementation guides",
-    items: ["Marketplace integration", "Custom conditions", "Webhook handling", "Error handling"],
+    items: [
+      "Marketplace integration",
+      "Custom conditions",
+      "Webhook handling",
+      "Error handling",
+    ],
     icon: "📖",
   },
   {
@@ -33,7 +54,7 @@ const sections = [
     items: ["Node.js SDK", "Python SDK", "PHP SDK", "Code examples"],
     icon: "💻",
   },
-]
+];
 
 export default function DocumentationPage() {
   return (
@@ -60,8 +81,8 @@ export default function DocumentationPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Everything you need to integrate Paylock into your application. From quick start guides to comprehensive
-              API references.
+              Everything you need to integrate Paylock into your application.
+              From quick start guides to comprehensive API references.
             </p>
 
             {/* Search Bar */}
@@ -111,7 +132,9 @@ export default function DocumentationPage() {
                     <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">
                       {section.title}
                     </CardTitle>
-                    <CardDescription className="text-base">{section.description}</CardDescription>
+                    <CardDescription className="text-base">
+                      {section.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
@@ -153,44 +176,52 @@ export default function DocumentationPage() {
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
               Popular <span className="text-blue-600">guides</span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">Most accessed documentation and tutorials</p>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Most accessed documentation and tutorials
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 title: "Quick Start: Your First Transaction",
-                description: "Create your first escrow transaction in under 10 minutes",
+                description:
+                  "Create your first escrow transaction in under 10 minutes",
                 time: "10 min read",
                 difficulty: "Beginner",
               },
               {
                 title: "Implementing Webhooks",
-                description: "Set up real-time notifications for transaction events",
+                description:
+                  "Set up real-time notifications for transaction events",
                 time: "15 min read",
                 difficulty: "Intermediate",
               },
               {
                 title: "Custom Condition Logic",
-                description: "Build complex verification workflows with custom conditions",
+                description:
+                  "Build complex verification workflows with custom conditions",
                 time: "25 min read",
                 difficulty: "Advanced",
               },
               {
                 title: "Marketplace Integration Guide",
-                description: "Complete guide for e-commerce marketplace integration",
+                description:
+                  "Complete guide for e-commerce marketplace integration",
                 time: "30 min read",
                 difficulty: "Intermediate",
               },
               {
                 title: "Error Handling Best Practices",
-                description: "Handle API errors gracefully in production applications",
+                description:
+                  "Handle API errors gracefully in production applications",
                 time: "20 min read",
                 difficulty: "Intermediate",
               },
               {
                 title: "Security Implementation",
-                description: "Secure your integration with best practices and examples",
+                description:
+                  "Secure your integration with best practices and examples",
                 time: "35 min read",
                 difficulty: "Advanced",
               },
@@ -204,8 +235,12 @@ export default function DocumentationPage() {
               >
                 <Card className="h-full hover:shadow-lg transition-all duration-300 cursor-pointer">
                   <CardContent className="p-6">
-                    <CardTitle className="text-lg mb-3 hover:text-blue-600 transition-colors">{guide.title}</CardTitle>
-                    <CardDescription className="mb-4">{guide.description}</CardDescription>
+                    <CardTitle className="text-lg mb-3 hover:text-blue-600 transition-colors">
+                      {guide.title}
+                    </CardTitle>
+                    <CardDescription className="mb-4">
+                      {guide.description}
+                    </CardDescription>
                     <div className="flex items-center justify-between text-sm">
                       <span className="text-slate-500">{guide.time}</span>
                       <span
@@ -213,8 +248,8 @@ export default function DocumentationPage() {
                           guide.difficulty === "Beginner"
                             ? "bg-green-100 text-green-700"
                             : guide.difficulty === "Intermediate"
-                              ? "bg-yellow-100 text-yellow-700"
-                              : "bg-red-100 text-red-700"
+                            ? "bg-yellow-100 text-yellow-700"
+                            : "bg-red-100 text-red-700"
                         }`}
                       >
                         {guide.difficulty}
@@ -249,7 +284,9 @@ export default function DocumentationPage() {
               <Card className="text-center p-8">
                 <div className="text-4xl mb-4">💬</div>
                 <CardTitle className="mb-4">Live Chat</CardTitle>
-                <CardDescription className="mb-6">Get instant help from our support team</CardDescription>
+                <CardDescription className="mb-6">
+                  Get instant help from our support team
+                </CardDescription>
                 <Button className="w-full">Start Chat</Button>
               </Card>
 
@@ -267,7 +304,9 @@ export default function DocumentationPage() {
               <Card className="text-center p-8">
                 <div className="text-4xl mb-4">🎯</div>
                 <CardTitle className="mb-4">Community</CardTitle>
-                <CardDescription className="mb-6">Join our Discord community for peer support</CardDescription>
+                <CardDescription className="mb-6">
+                  Join our Discord community for peer support
+                </CardDescription>
                 <Button variant="outline" className="w-full">
                   Join Discord
                 </Button>
@@ -279,5 +318,5 @@ export default function DocumentationPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

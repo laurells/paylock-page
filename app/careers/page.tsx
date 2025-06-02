@@ -1,18 +1,19 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { MapPin, Clock, Heart, Zap, Globe, Award } from "lucide-react"
-import Header from "../components/header"
-import Footer from "../components/footer"
-import { Button } from "../components/ui/button"
-import { Card, CardContent } from "../components/ui/card"
+import { motion } from "framer-motion";
+import { MapPin, Clock, Heart, Zap, Globe, Award } from "lucide-react";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import { Button } from "../components/ui/button";
+import { Card, CardContent } from "../components/ui/card";
 
 export default function CareersPage() {
   const benefits = [
     {
       icon: Heart,
       title: "Health & Wellness",
-      description: "Comprehensive health, dental, and vision insurance plus wellness stipend",
+      description:
+        "Comprehensive health, dental, and vision insurance plus wellness stipend",
     },
     {
       icon: Zap,
@@ -22,14 +23,16 @@ export default function CareersPage() {
     {
       icon: Globe,
       title: "Remote First",
-      description: "Work from anywhere with flexible hours and home office setup",
+      description:
+        "Work from anywhere with flexible hours and home office setup",
     },
     {
       icon: Award,
       title: "Equity & Compensation",
-      description: "Competitive salary, equity package, and performance bonuses",
+      description:
+        "Competitive salary, equity package, and performance bonuses",
     },
-  ]
+  ];
 
   const openings = [
     {
@@ -37,44 +40,50 @@ export default function CareersPage() {
       department: "Engineering",
       location: "Remote / San Francisco",
       type: "Full-time",
-      description: "Build and scale our core escrow infrastructure handling billions in transactions.",
+      description:
+        "Build and scale our core escrow infrastructure handling billions in transactions.",
     },
     {
       title: "Product Manager",
       department: "Product",
       location: "Remote / New York",
       type: "Full-time",
-      description: "Drive product strategy and roadmap for our developer-facing API platform.",
+      description:
+        "Drive product strategy and roadmap for our developer-facing API platform.",
     },
     {
       title: "DevRel Engineer",
       department: "Developer Relations",
       location: "Remote",
       type: "Full-time",
-      description: "Help developers integrate Paylock and build amazing developer experiences.",
+      description:
+        "Help developers integrate Paylock and build amazing developer experiences.",
     },
     {
       title: "Security Engineer",
       department: "Security",
       location: "Remote / San Francisco",
       type: "Full-time",
-      description: "Ensure the highest security standards for our financial infrastructure.",
+      description:
+        "Ensure the highest security standards for our financial infrastructure.",
     },
     {
       title: "Sales Engineer",
       department: "Sales",
       location: "Remote / New York",
       type: "Full-time",
-      description: "Work with enterprise customers to implement secure escrow solutions.",
+      description:
+        "Work with enterprise customers to implement secure escrow solutions.",
     },
     {
       title: "Marketing Manager",
       department: "Marketing",
       location: "Remote",
       type: "Full-time",
-      description: "Drive growth through content marketing and developer community building.",
+      description:
+        "Drive growth through content marketing and developer community building.",
     },
-  ]
+  ];
 
   const values = [
     "Build with empathy and user-first thinking",
@@ -83,7 +92,7 @@ export default function CareersPage() {
     "Embrace diverse perspectives and inclusive practices",
     "Take ownership and deliver exceptional results",
     "Learn continuously and share knowledge freely",
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -106,8 +115,9 @@ export default function CareersPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Help us build the infrastructure that powers trust in digital commerce. Join a team of passionate engineers,
-            designers, and builders creating the future of secure transactions.
+            Help us build the infrastructure that powers trust in digital
+            commerce. Join a team of passionate engineers, designers, and
+            builders creating the future of secure transactions.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -134,10 +144,12 @@ export default function CareersPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Work at Paylock?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Why Work at Paylock?
+            </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We believe in taking care of our team so they can do their best work building the future of secure
-              commerce.
+              We believe in taking care of our team so they can do their best
+              work building the future of secure commerce.
             </p>
           </motion.div>
 
@@ -155,7 +167,9 @@ export default function CareersPage() {
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <benefit.icon className="w-8 h-8 text-blue-600" />
                     </div>
-                    <h3 className="text-xl font-semibold text-slate-900 mb-2">{benefit.title}</h3>
+                    <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                      {benefit.title}
+                    </h3>
                     <p className="text-slate-600">{benefit.description}</p>
                   </CardContent>
                 </Card>
@@ -175,8 +189,12 @@ export default function CareersPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Values</h2>
-            <p className="text-xl text-slate-600">The principles that guide how we work together and build products.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Our Values
+            </h2>
+            <p className="text-xl text-slate-600">
+              The principles that guide how we work together and build products.
+            </p>
           </motion.div>
 
           <motion.div
@@ -206,9 +224,12 @@ export default function CareersPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Open Positions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Open Positions
+            </h2>
             <p className="text-xl text-slate-600">
-              Join our growing team and help shape the future of digital commerce.
+              Join our growing team and help shape the future of digital
+              commerce.
             </p>
           </motion.div>
 
@@ -226,7 +247,9 @@ export default function CareersPage() {
                     <div className="flex flex-col md:flex-row md:items-center justify-between">
                       <div className="flex-1">
                         <div className="flex flex-wrap items-center gap-4 mb-2">
-                          <h3 className="text-xl font-semibold text-slate-900">{job.title}</h3>
+                          <h3 className="text-xl font-semibold text-slate-900">
+                            {job.title}
+                          </h3>
                           <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                             {job.department}
                           </span>
@@ -264,13 +287,19 @@ export default function CareersPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Don't See the Right Role?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Don't See the Right Role?
+            </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              We're always looking for exceptional talent. Send us your resume and tell us how you'd like to contribute
-              to our mission.
+              We're always looking for exceptional talent. Send us your resume
+              and tell us how you'd like to contribute to our mission.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-slate-50">
+              <Button
+                size="lg"
+                variant="secondary"
+                className="bg-white text-blue-600 hover:bg-slate-50"
+              >
                 Send Us Your Resume
               </Button>
               <Button
@@ -287,5 +316,5 @@ export default function CareersPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

@@ -1,17 +1,17 @@
-import type { Metadata } from "next"
+import type { Metadata } from "next";
 
 interface SEOProps {
-  title?: string
-  description?: string
-  keywords?: string[]
-  image?: string
-  url?: string
-  type?: "website" | "article" | "product"
-  publishedTime?: string
-  modifiedTime?: string
-  author?: string
-  section?: string
-  tags?: string[]
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  image?: string;
+  url?: string;
+  type?: "website" | "article" | "product";
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
 }
 
 export function generateSEOMetadata({
@@ -34,8 +34,8 @@ export function generateSEOMetadata({
   section,
   tags,
 }: SEOProps = {}): Metadata {
-  const siteName = "Paylock"
-  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`
+  const siteName = "Paylock";
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
 
   return {
     title: fullTitle,
@@ -88,7 +88,7 @@ export function generateSEOMetadata({
       canonical: url,
     },
     category: section || "Technology",
-  }
+  };
 }
 
 export function generateStructuredData({
@@ -98,7 +98,11 @@ export function generateStructuredData({
   url = "https://paylock.com",
   logo = "https://paylock.com/logo.png",
   contactPoint,
-  sameAs = ["https://twitter.com/paylock", "https://linkedin.com/company/paylock", "https://github.com/paylock"],
+  sameAs = [
+    "https://twitter.com/paylock",
+    "https://linkedin.com/company/paylock",
+    "https://github.com/paylock",
+  ],
   address,
   foundingDate = "2020",
   employees = "51-200",
@@ -122,7 +126,7 @@ export function generateStructuredData({
     industry,
     ...(contactPoint && { contactPoint }),
     ...(address && { address }),
-  }
+  };
 
   return (
     <script
@@ -131,5 +135,5 @@ export function generateStructuredData({
         __html: JSON.stringify(baseStructuredData),
       }}
     />
-  )
+  );
 }

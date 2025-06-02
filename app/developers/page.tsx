@@ -1,11 +1,26 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Code, Book, Download, Zap, Shield, ArrowRight, ExternalLink, Copy } from "lucide-react"
-import { Button } from "../components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card"
-import Header from "../components/header"
-import Footer from "../components/footer"
+import { motion } from "framer-motion";
+import {
+  Code,
+  Book,
+  Download,
+  Zap,
+  Shield,
+  ArrowRight,
+  ExternalLink,
+  Copy,
+} from "lucide-react";
+import { Button } from "../components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../components/ui/card";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 const resources = [
   {
@@ -36,7 +51,7 @@ const resources = [
     link: "/docs/security",
     color: "from-orange-500 to-red-500",
   },
-]
+];
 
 const sdks = [
   { name: "Node.js", version: "v2.1.0", downloads: "50K+", logo: "🟢" },
@@ -45,7 +60,7 @@ const sdks = [
   { name: "Ruby", version: "v1.8.5", downloads: "15K+", logo: "💎" },
   { name: "Java", version: "v1.7.3", downloads: "20K+", logo: "☕" },
   { name: "Go", version: "v1.6.1", downloads: "12K+", logo: "🐹" },
-]
+];
 
 const codeExample = `// Initialize Paylock client
 const paylock = new Paylock({
@@ -78,7 +93,7 @@ const transaction = await paylock.transactions.create({
   }
 });
 
-console.log('Transaction created:', transaction.id);`
+console.log('Transaction created:', transaction.id);`;
 
 export default function DevelopersPage() {
   return (
@@ -105,8 +120,9 @@ export default function DevelopersPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Everything you need to integrate secure escrow into your application. Simple APIs, comprehensive docs, and
-              world-class support.
+              Everything you need to integrate secure escrow into your
+              application. Simple APIs, comprehensive docs, and world-class
+              support.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -155,9 +171,15 @@ export default function DevelopersPage() {
                 <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                 <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                <span className="text-slate-400 text-sm ml-4 font-medium">create-transaction.js</span>
+                <span className="text-slate-400 text-sm ml-4 font-medium">
+                  create-transaction.js
+                </span>
               </div>
-              <Button size="sm" variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-800">
+              <Button
+                size="sm"
+                variant="outline"
+                className="border-slate-600 text-slate-300 hover:bg-slate-800"
+              >
                 <Copy className="w-4 h-4 mr-2" />
                 Copy
               </Button>
@@ -182,7 +204,9 @@ export default function DevelopersPage() {
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
               Developer <span className="text-blue-600">resources</span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">Everything you need to build with confidence</p>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Everything you need to build with confidence
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -205,7 +229,10 @@ export default function DevelopersPage() {
                     <CardDescription>{resource.description}</CardDescription>
                   </CardHeader>
                   <CardContent className="text-center">
-                    <Button variant="outline" className="w-full group-hover:bg-blue-50 group-hover:border-blue-200">
+                    <Button
+                      variant="outline"
+                      className="w-full group-hover:bg-blue-50 group-hover:border-blue-200"
+                    >
                       Explore
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -246,9 +273,13 @@ export default function DevelopersPage() {
                 className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-slate-100"
               >
                 <div className="text-4xl mb-4">{sdk.logo}</div>
-                <h3 className="font-semibold text-slate-900 mb-2">{sdk.name}</h3>
+                <h3 className="font-semibold text-slate-900 mb-2">
+                  {sdk.name}
+                </h3>
                 <p className="text-sm text-slate-600 mb-2">{sdk.version}</p>
-                <p className="text-xs text-blue-600 font-medium">{sdk.downloads} downloads</p>
+                <p className="text-xs text-blue-600 font-medium">
+                  {sdk.downloads} downloads
+                </p>
               </motion.div>
             ))}
           </div>
@@ -269,25 +300,32 @@ export default function DevelopersPage() {
               Join our <span className="text-blue-600">community</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-12">
-              Connect with other developers, get help, and share your experiences
+              Connect with other developers, get help, and share your
+              experiences
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="text-center p-8">
                 <div className="text-4xl mb-4">💬</div>
                 <CardTitle className="mb-4">Discord Community</CardTitle>
-                <CardDescription className="mb-6">Join 2,000+ developers in our Discord server</CardDescription>
+                <CardDescription className="mb-6">
+                  Join 2,000+ developers in our Discord server
+                </CardDescription>
                 <Button variant="outline">Join Discord</Button>
               </Card>
               <Card className="text-center p-8">
                 <div className="text-4xl mb-4">📚</div>
                 <CardTitle className="mb-4">GitHub</CardTitle>
-                <CardDescription className="mb-6">Contribute to our open-source SDKs and examples</CardDescription>
+                <CardDescription className="mb-6">
+                  Contribute to our open-source SDKs and examples
+                </CardDescription>
                 <Button variant="outline">View on GitHub</Button>
               </Card>
               <Card className="text-center p-8">
                 <div className="text-4xl mb-4">🎯</div>
                 <CardTitle className="mb-4">Stack Overflow</CardTitle>
-                <CardDescription className="mb-6">Get help from the community and our team</CardDescription>
+                <CardDescription className="mb-6">
+                  Get help from the community and our team
+                </CardDescription>
                 <Button variant="outline">Ask Question</Button>
               </Card>
             </div>
@@ -297,5 +335,5 @@ export default function DevelopersPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

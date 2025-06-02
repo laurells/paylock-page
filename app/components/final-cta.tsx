@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { Button } from "./ui/button"
-import { Input } from "./ui/input"
-import { ArrowRight, Code, BookOpen, Shield, Zap, Users } from "lucide-react"
-import { motion } from "framer-motion"
-import Link from "next/link"
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { ArrowRight, Code, BookOpen, Shield, Zap, Users } from "lucide-react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function FinalCTA() {
   return (
@@ -46,7 +46,8 @@ export default function FinalCTA() {
             viewport={{ once: true }}
             className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Join thousands of businesses building trust with Paylock. Start with our free tier and scale as you grow.
+            Join thousands of businesses building trust with Paylock. Start with
+            our free tier and scale as you grow.
           </motion.p>
 
           <motion.div
@@ -105,7 +106,9 @@ export default function FinalCTA() {
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl">
                 <Code className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Developer First</h3>
+              <h3 className="text-xl font-bold text-white mb-3">
+                Developer First
+              </h3>
               <p className="text-blue-100 leading-relaxed">
                 RESTful APIs, comprehensive docs, and SDKs for every language
               </p>
@@ -114,21 +117,28 @@ export default function FinalCTA() {
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl">
                 <Zap className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Quick Integration</h3>
-              <p className="text-blue-100 leading-relaxed">Go live in minutes with our simple API and testing tools</p>
+              <h3 className="text-xl font-bold text-white mb-3">
+                Quick Integration
+              </h3>
+              <p className="text-blue-100 leading-relaxed">
+                Go live in minutes with our simple API and testing tools
+              </p>
             </div>
             <div className="text-center p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-xl">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">24/7 Support</h3>
+              <h3 className="text-xl font-bold text-white mb-3">
+                24/7 Support
+              </h3>
               <p className="text-blue-100 leading-relaxed">
-                Expert support when you need it, with comprehensive documentation
+                Expert support when you need it, with comprehensive
+                documentation
               </p>
             </div>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }

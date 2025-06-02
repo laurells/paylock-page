@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Header from "../components/header"
-import Footer from "../components/footer"
+import { motion } from "framer-motion";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 export default function PrivacyPage() {
   const sections = [
@@ -72,7 +72,7 @@ export default function PrivacyPage() {
         "We regularly review and delete data that is no longer necessary for our business purposes.",
       ],
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -99,12 +99,15 @@ export default function PrivacyPage() {
               <strong>Last updated:</strong> January 1, 2025
             </p>
             <p>
-              At Paylock, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose,
-              and safeguard your information when you use our escrow API platform and related services.
+              At Paylock, we take your privacy seriously. This Privacy Policy
+              explains how we collect, use, disclose, and safeguard your
+              information when you use our escrow API platform and related
+              services.
             </p>
             <p>
-              By using our services, you agree to the collection and use of information in accordance with this policy.
-              If you do not agree with our policies and practices, please do not use our services.
+              By using our services, you agree to the collection and use of
+              information in accordance with this policy. If you do not agree
+              with our policies and practices, please do not use our services.
             </p>
           </motion.div>
         </div>
@@ -121,7 +124,9 @@ export default function PrivacyPage() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">{section.title}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+                {section.title}
+              </h2>
               <div className="space-y-4">
                 {section.content.map((item, itemIndex) => (
                   <p key={itemIndex} className="text-slate-700 leading-relaxed">
@@ -140,21 +145,30 @@ export default function PrivacyPage() {
             viewport={{ once: true }}
             className="bg-slate-50 rounded-lg p-8"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">Contact Us</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+              Contact Us
+            </h2>
             <div className="space-y-4 text-slate-700">
-              <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+              <p>
+                If you have any questions about this Privacy Policy or our data
+                practices, please contact us:
+              </p>
               <div className="space-y-2">
                 <p>
                   <strong>Email:</strong> privacy@paylock.com
                 </p>
                 <p>
-                  <strong>Address:</strong> Paylock Inc., 123 Market Street, Suite 400, San Francisco, CA 94105
+                  <strong>Address:</strong> Paylock Inc., 123 Market Street,
+                  Suite 400, San Francisco, CA 94105
                 </p>
                 <p>
                   <strong>Phone:</strong> +1 (555) 123-4567
                 </p>
               </div>
-              <p>For EU residents, you may also contact our Data Protection Officer at dpo@paylock.com.</p>
+              <p>
+                For EU residents, you may also contact our Data Protection
+                Officer at dpo@paylock.com.
+              </p>
             </div>
           </motion.div>
         </div>
@@ -162,5 +176,5 @@ export default function PrivacyPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

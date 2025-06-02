@@ -29,12 +29,12 @@ export default function TrustedBy() {
           >
             Trusted by innovative companies worldwide
           </p>
-          <button
+          {/* <button
             onClick={() => setIsDark(!isDark)}
             className="text-sm text-blue-500 hover:text-blue-600 transition-colors"
           >
             Toggle {isDark ? "Light" : "Dark"} Mode
-          </button>
+          </button> */}
         </motion.div>
 
         <motion.div

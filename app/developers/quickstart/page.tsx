@@ -1,12 +1,18 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Zap, CheckCircle, ArrowRight, Copy, Play, Clock } from "lucide-react"
-import { Button } from "../../components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card"
-import Header from "../../components/header"
-import Footer from "../../components/footer"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import { Zap, CheckCircle, ArrowRight, Copy, Play, Clock } from "lucide-react";
+import { Button } from "../../components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../../components/ui/card";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import Link from "next/link";
 
 const steps = [
   {
@@ -91,7 +97,7 @@ await paylock.transactions.acceptCondition({
 
 // Funds released automatically!`,
   },
-]
+];
 
 const nextSteps = [
   {
@@ -118,7 +124,7 @@ const nextSteps = [
     link: "/developers/errors",
     icon: "🛡️",
   },
-]
+];
 
 export default function QuickStartPage() {
   return (
@@ -145,8 +151,9 @@ export default function QuickStartPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Create your first escrow transaction with Paylock. Follow this step-by-step guide to integrate secure
-              transactions into your application.
+              Create your first escrow transaction with Paylock. Follow this
+              step-by-step guide to integrate secure transactions into your
+              application.
             </p>
             <div className="flex items-center justify-center gap-6 text-slate-600">
               <div className="flex items-center gap-2">
@@ -182,9 +189,13 @@ export default function QuickStartPage() {
                       </div>
                       <div className="flex-1">
                         <CardTitle className="text-xl">{step.title}</CardTitle>
-                        <CardDescription className="text-base">{step.description}</CardDescription>
+                        <CardDescription className="text-base">
+                          {step.description}
+                        </CardDescription>
                       </div>
-                      <div className="text-sm text-green-600 font-medium">{step.time}</div>
+                      <div className="text-sm text-green-600 font-medium">
+                        {step.time}
+                      </div>
                     </div>
                   </CardHeader>
                   <CardContent className="p-0">
@@ -194,7 +205,9 @@ export default function QuickStartPage() {
                           <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                           <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                           <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                          <span className="text-slate-400 text-sm ml-4">step-{step.step}.js</span>
+                          <span className="text-slate-400 text-sm ml-4">
+                            step-{step.step}.js
+                          </span>
                         </div>
                         <Button
                           size="sm"
@@ -230,17 +243,24 @@ export default function QuickStartPage() {
             <div className="text-6xl mb-6">🎉</div>
             <h2 className="text-4xl font-bold mb-6">Congratulations!</h2>
             <p className="text-xl mb-8 opacity-90">
-              You've successfully created your first escrow transaction with Paylock. Your integration is ready to
-              secure real transactions.
+              You've successfully created your first escrow transaction with
+              Paylock. Your integration is ready to secure real transactions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">
-                <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+                <Button
+                  size="lg"
+                  className="bg-white text-green-600 hover:bg-gray-100"
+                >
                   Go to Dashboard
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/10"
+              >
                 <Play className="mr-2 w-5 h-5" />
                 Watch Video Tutorial
               </Button>
@@ -263,7 +283,8 @@ export default function QuickStartPage() {
               What's <span className="text-green-600">next?</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Take your integration to the next level with these advanced features
+              Take your integration to the next level with these advanced
+              features
             </p>
           </motion.div>
 
@@ -281,8 +302,13 @@ export default function QuickStartPage() {
                   <CardTitle className="text-lg mb-4 group-hover:text-green-600 transition-colors">
                     {step.title}
                   </CardTitle>
-                  <CardDescription className="mb-6">{step.description}</CardDescription>
-                  <Button variant="outline" className="w-full group-hover:bg-green-50 group-hover:border-green-200">
+                  <CardDescription className="mb-6">
+                    {step.description}
+                  </CardDescription>
+                  <Button
+                    variant="outline"
+                    className="w-full group-hover:bg-green-50 group-hover:border-green-200"
+                  >
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
@@ -295,5 +321,5 @@ export default function QuickStartPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

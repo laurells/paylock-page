@@ -1,12 +1,19 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Zap, Settings, Code, CheckCircle, ArrowRight, Copy } from "lucide-react"
-import { Button } from "../../components/ui/button"
-import { Card, CardDescription, CardTitle } from "../../components/ui/card"
-import Header from "../../components/header"
-import Footer from "../../components/footer"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import {
+  Zap,
+  Settings,
+  Code,
+  CheckCircle,
+  ArrowRight,
+  Copy,
+} from "lucide-react";
+import { Button } from "../../components/ui/button";
+import { Card, CardDescription, CardTitle } from "../../components/ui/card";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import Link from "next/link";
 
 const conditionTypes = [
   {
@@ -45,7 +52,7 @@ const conditionTypes = [
     example: "Verify payment through external payment processor",
     icon: "🔗",
   },
-]
+];
 
 const codeExample = `// Define custom conditions
 const conditions = [
@@ -84,7 +91,7 @@ const transaction = await paylock.transactions.create({
   metadata: {
     order_id: 'order_789'
   }
-});`
+});`;
 
 export default function ConditionEnginePage() {
   return (
@@ -111,8 +118,9 @@ export default function ConditionEnginePage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Create custom verification logic for any transaction scenario. From simple delivery confirmations to
-              complex multi-party approvals.
+              Create custom verification logic for any transaction scenario.
+              From simple delivery confirmations to complex multi-party
+              approvals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">
@@ -146,7 +154,8 @@ export default function ConditionEnginePage() {
               Built-in <span className="text-green-600">condition types</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Choose from our library of pre-built conditions or create your own custom logic
+              Choose from our library of pre-built conditions or create your own
+              custom logic
             </p>
           </motion.div>
 
@@ -161,8 +170,12 @@ export default function ConditionEnginePage() {
               >
                 <Card className="h-full p-6 hover:shadow-xl transition-all duration-300">
                   <div className="text-4xl mb-4">{condition.icon}</div>
-                  <CardTitle className="text-xl mb-3">{condition.name}</CardTitle>
-                  <CardDescription className="text-base mb-4">{condition.description}</CardDescription>
+                  <CardTitle className="text-xl mb-3">
+                    {condition.name}
+                  </CardTitle>
+                  <CardDescription className="text-base mb-4">
+                    {condition.description}
+                  </CardDescription>
                   <div className="text-sm text-green-700 bg-green-50 p-3 rounded-lg">
                     <strong>Example:</strong> {condition.example}
                   </div>
@@ -183,9 +196,12 @@ export default function ConditionEnginePage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">Build custom verification logic</h2>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">
+                Build custom verification logic
+              </h2>
               <p className="text-xl text-slate-600 mb-8">
-                Define exactly when and how funds should be released with our flexible condition system.
+                Define exactly when and how funds should be released with our
+                flexible condition system.
               </p>
               <ul className="space-y-4 mb-8">
                 {[
@@ -218,9 +234,15 @@ export default function ConditionEnginePage() {
                   <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-slate-400 text-sm ml-4">conditions.js</span>
+                  <span className="text-slate-400 text-sm ml-4">
+                    conditions.js
+                  </span>
                 </div>
-                <Button size="sm" variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-800">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="border-slate-600 text-slate-300 hover:bg-slate-800"
+                >
                   <Copy className="w-4 h-4 mr-2" />
                   Copy
                 </Button>
@@ -251,18 +273,32 @@ export default function ConditionEnginePage() {
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="text-center p-8">
               <Settings className="w-16 h-16 text-green-600 mx-auto mb-6" />
-              <CardTitle className="text-xl mb-4">Flexible Configuration</CardTitle>
-              <CardDescription>Configure conditions with timeouts, retries, and fallback behaviors</CardDescription>
+              <CardTitle className="text-xl mb-4">
+                Flexible Configuration
+              </CardTitle>
+              <CardDescription>
+                Configure conditions with timeouts, retries, and fallback
+                behaviors
+              </CardDescription>
             </Card>
             <Card className="text-center p-8">
               <Code className="w-16 h-16 text-green-600 mx-auto mb-6" />
-              <CardTitle className="text-xl mb-4">Webhook Integration</CardTitle>
-              <CardDescription>Connect with external systems for real-time condition verification</CardDescription>
+              <CardTitle className="text-xl mb-4">
+                Webhook Integration
+              </CardTitle>
+              <CardDescription>
+                Connect with external systems for real-time condition
+                verification
+              </CardDescription>
             </Card>
             <Card className="text-center p-8">
               <Zap className="w-16 h-16 text-green-600 mx-auto mb-6" />
-              <CardTitle className="text-xl mb-4">Real-time Processing</CardTitle>
-              <CardDescription>Instant condition evaluation and automatic fund releases</CardDescription>
+              <CardTitle className="text-xl mb-4">
+                Real-time Processing
+              </CardTitle>
+              <CardDescription>
+                Instant condition evaluation and automatic fund releases
+              </CardDescription>
             </Card>
           </div>
         </div>
@@ -270,5 +306,5 @@ export default function ConditionEnginePage() {
 
       <Footer />
     </div>
-  )
+  );
 }

@@ -1,11 +1,17 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Video, Calendar, Clock, Users, ArrowRight, Play } from "lucide-react"
-import { Button } from "../../components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card"
-import Header from "../../components/header"
-import Footer from "../../components/footer"
+import { motion } from "framer-motion";
+import { Video, Calendar, Clock, Users, ArrowRight, Play } from "lucide-react";
+import { Button } from "../../components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../../components/ui/card";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 
 const upcomingWebinars = [
   {
@@ -31,7 +37,8 @@ const upcomingWebinars = [
   },
   {
     title: "Advanced Escrow Patterns for Enterprise",
-    description: "Deep dive into complex escrow scenarios and implementation patterns for enterprise applications.",
+    description:
+      "Deep dive into complex escrow scenarios and implementation patterns for enterprise applications.",
     date: "Jan 22, 2025",
     time: "3:00 PM EST",
     duration: "75 min",
@@ -41,12 +48,18 @@ const upcomingWebinars = [
       avatar: "MR",
     },
     attendees: "180+ registered",
-    topics: ["Multi-party escrow design", "Custom condition logic", "Performance optimization", "Enterprise security"],
+    topics: [
+      "Multi-party escrow design",
+      "Custom condition logic",
+      "Performance optimization",
+      "Enterprise security",
+    ],
     featured: false,
   },
   {
     title: "Escrow for Real Estate: Digital Transformation",
-    description: "How modern real estate platforms are using escrow APIs to streamline property transactions.",
+    description:
+      "How modern real estate platforms are using escrow APIs to streamline property transactions.",
     date: "Feb 5, 2025",
     time: "1:00 PM EST",
     duration: "45 min",
@@ -64,12 +77,13 @@ const upcomingWebinars = [
     ],
     featured: false,
   },
-]
+];
 
 const recordedWebinars = [
   {
     title: "Escrow Security and Compliance Best Practices",
-    description: "Essential security considerations and regulatory compliance for escrow implementations.",
+    description:
+      "Essential security considerations and regulatory compliance for escrow implementations.",
     date: "Dec 18, 2024",
     duration: "50 min",
     speaker: {
@@ -78,11 +92,17 @@ const recordedWebinars = [
       avatar: "EW",
     },
     views: "1,200+ views",
-    topics: ["Security architecture", "Compliance frameworks", "Risk assessment", "Implementation checklist"],
+    topics: [
+      "Security architecture",
+      "Compliance frameworks",
+      "Risk assessment",
+      "Implementation checklist",
+    ],
   },
   {
     title: "Getting Started with Paylock: Complete Walkthrough",
-    description: "Step-by-step guide to implementing your first escrow transaction with Paylock APIs.",
+    description:
+      "Step-by-step guide to implementing your first escrow transaction with Paylock APIs.",
     date: "Dec 10, 2024",
     duration: "40 min",
     speaker: {
@@ -91,11 +111,17 @@ const recordedWebinars = [
       avatar: "AT",
     },
     views: "2,500+ views",
-    topics: ["API setup and authentication", "Creating transactions", "Webhook implementation", "Testing strategies"],
+    topics: [
+      "API setup and authentication",
+      "Creating transactions",
+      "Webhook implementation",
+      "Testing strategies",
+    ],
   },
   {
     title: "Multi-Party Escrow: Complex Transaction Handling",
-    description: "How to design and implement escrow systems for transactions involving multiple parties.",
+    description:
+      "How to design and implement escrow systems for transactions involving multiple parties.",
     date: "Nov 28, 2024",
     duration: "65 min",
     speaker: {
@@ -104,11 +130,17 @@ const recordedWebinars = [
       avatar: "LP",
     },
     views: "950+ views",
-    topics: ["Multi-party architecture", "Condition coordination", "Payment distribution", "Error handling"],
+    topics: [
+      "Multi-party architecture",
+      "Condition coordination",
+      "Payment distribution",
+      "Error handling",
+    ],
   },
   {
     title: "Marketplace Integration Masterclass",
-    description: "Complete guide to integrating escrow services into e-commerce and service marketplaces.",
+    description:
+      "Complete guide to integrating escrow services into e-commerce and service marketplaces.",
     date: "Nov 15, 2024",
     duration: "55 min",
     speaker: {
@@ -117,9 +149,14 @@ const recordedWebinars = [
       avatar: "JA",
     },
     views: "1,800+ views",
-    topics: ["Marketplace patterns", "User experience design", "Dispute resolution", "Performance optimization"],
+    topics: [
+      "Marketplace patterns",
+      "User experience design",
+      "Dispute resolution",
+      "Performance optimization",
+    ],
   },
-]
+];
 
 export default function WebinarsPage() {
   return (
@@ -146,8 +183,9 @@ export default function WebinarsPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Join our live sessions and watch recorded webinars to master escrow implementation, learn best practices,
-              and get insights from industry experts.
+              Join our live sessions and watch recorded webinars to master
+              escrow implementation, learn best practices, and get insights from
+              industry experts.
             </p>
           </motion.div>
         </div>
@@ -163,7 +201,9 @@ export default function WebinarsPage() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-3xl font-bold text-slate-900 mb-8">Featured Upcoming Webinar</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-8">
+              Featured Upcoming Webinar
+            </h2>
             <Card className="overflow-hidden shadow-2xl">
               <div className="grid lg:grid-cols-2">
                 <div className="p-12">
@@ -175,7 +215,9 @@ export default function WebinarsPage() {
                       Featured
                     </span>
                   </div>
-                  <CardTitle className="text-3xl mb-4">{upcomingWebinars[0].title}</CardTitle>
+                  <CardTitle className="text-3xl mb-4">
+                    {upcomingWebinars[0].title}
+                  </CardTitle>
                   <CardDescription className="text-lg mb-6 leading-relaxed">
                     {upcomingWebinars[0].description}
                   </CardDescription>
@@ -202,19 +244,28 @@ export default function WebinarsPage() {
                       {upcomingWebinars[0].speaker.avatar}
                     </div>
                     <div>
-                      <div className="font-semibold text-slate-900">{upcomingWebinars[0].speaker.name}</div>
-                      <div className="text-slate-600">{upcomingWebinars[0].speaker.title}</div>
+                      <div className="font-semibold text-slate-900">
+                        {upcomingWebinars[0].speaker.name}
+                      </div>
+                      <div className="text-slate-600">
+                        {upcomingWebinars[0].speaker.title}
+                      </div>
                     </div>
                   </div>
 
-                  <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
+                  <Button
+                    size="lg"
+                    className="bg-purple-600 hover:bg-purple-700"
+                  >
                     Register Now
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
 
                 <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-12">
-                  <h4 className="font-semibold text-slate-900 mb-6 text-xl">What You'll Learn</h4>
+                  <h4 className="font-semibold text-slate-900 mb-6 text-xl">
+                    What You'll Learn
+                  </h4>
                   <ul className="space-y-4">
                     {upcomingWebinars[0].topics.map((topic, index) => (
                       <li key={index} className="flex items-center gap-3">
@@ -262,10 +313,16 @@ export default function WebinarsPage() {
                       <span className="text-xs bg-purple-100 text-purple-700 px-3 py-1 rounded-full font-medium">
                         Upcoming
                       </span>
-                      <span className="text-sm text-slate-500">{webinar.attendees}</span>
+                      <span className="text-sm text-slate-500">
+                        {webinar.attendees}
+                      </span>
                     </div>
-                    <CardTitle className="text-xl mb-2">{webinar.title}</CardTitle>
-                    <CardDescription className="text-base">{webinar.description}</CardDescription>
+                    <CardTitle className="text-xl mb-2">
+                      {webinar.title}
+                    </CardTitle>
+                    <CardDescription className="text-base">
+                      {webinar.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div className="space-y-3">
@@ -286,8 +343,12 @@ export default function WebinarsPage() {
                         {webinar.speaker.avatar}
                       </div>
                       <div>
-                        <div className="font-semibold text-slate-900 text-sm">{webinar.speaker.name}</div>
-                        <div className="text-slate-600 text-xs">{webinar.speaker.title}</div>
+                        <div className="font-semibold text-slate-900 text-sm">
+                          {webinar.speaker.name}
+                        </div>
+                        <div className="text-slate-600 text-xs">
+                          {webinar.speaker.title}
+                        </div>
                       </div>
                     </div>
 
@@ -336,12 +397,16 @@ export default function WebinarsPage() {
                       <span className="text-xs bg-gray-100 text-gray-700 px-3 py-1 rounded-full font-medium">
                         Recorded
                       </span>
-                      <span className="text-sm text-slate-500">{webinar.views}</span>
+                      <span className="text-sm text-slate-500">
+                        {webinar.views}
+                      </span>
                     </div>
                     <CardTitle className="text-xl mb-2 group-hover:text-purple-600 transition-colors">
                       {webinar.title}
                     </CardTitle>
-                    <CardDescription className="text-base">{webinar.description}</CardDescription>
+                    <CardDescription className="text-base">
+                      {webinar.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div className="space-y-3">
@@ -360,12 +425,19 @@ export default function WebinarsPage() {
                         {webinar.speaker.avatar}
                       </div>
                       <div>
-                        <div className="font-semibold text-slate-900 text-sm">{webinar.speaker.name}</div>
-                        <div className="text-slate-600 text-xs">{webinar.speaker.title}</div>
+                        <div className="font-semibold text-slate-900 text-sm">
+                          {webinar.speaker.name}
+                        </div>
+                        <div className="text-slate-600 text-xs">
+                          {webinar.speaker.title}
+                        </div>
                       </div>
                     </div>
 
-                    <Button variant="outline" className="w-full group-hover:bg-purple-50 group-hover:border-purple-200">
+                    <Button
+                      variant="outline"
+                      className="w-full group-hover:bg-purple-50 group-hover:border-purple-200"
+                    >
                       <Play className="mr-2 w-4 h-4" />
                       Watch Recording
                     </Button>
@@ -389,7 +461,8 @@ export default function WebinarsPage() {
           >
             <h2 className="text-4xl font-bold mb-6">Never miss an event</h2>
             <p className="text-xl mb-8 opacity-90">
-              Subscribe to get notified about upcoming webinars and exclusive events
+              Subscribe to get notified about upcoming webinars and exclusive
+              events
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
               <input
@@ -397,7 +470,9 @@ export default function WebinarsPage() {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg border-0 text-slate-900 placeholder:text-slate-500"
               />
-              <Button className="bg-white text-purple-600 hover:bg-gray-100 whitespace-nowrap px-8">Subscribe</Button>
+              <Button className="bg-white text-purple-600 hover:bg-gray-100 whitespace-nowrap px-8">
+                Subscribe
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -405,5 +480,5 @@ export default function WebinarsPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

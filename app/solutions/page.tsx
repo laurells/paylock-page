@@ -1,12 +1,27 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { ShoppingCart, Briefcase, Truck, Home, Gamepad2, Heart, ArrowRight, CheckCircle } from "lucide-react"
-import { Button } from "../components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card"
-import Header from "../components/header"
-import Footer from "../components/footer"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import {
+  ShoppingCart,
+  Briefcase,
+  Truck,
+  Home,
+  Gamepad2,
+  Heart,
+  ArrowRight,
+  CheckCircle,
+} from "lucide-react";
+import { Button } from "../components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../components/ui/card";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import Link from "next/link";
 
 const solutions = [
   {
@@ -26,7 +41,12 @@ const solutions = [
     name: "Freelance Platforms",
     description: "Milestone-based payments and project completion verification",
     icon: Briefcase,
-    useCases: ["Milestone payments", "Work completion verification", "Scope change protection", "Quality guarantees"],
+    useCases: [
+      "Milestone payments",
+      "Work completion verification",
+      "Scope change protection",
+      "Quality guarantees",
+    ],
     stats: { metric: "$2M+", label: "Protected monthly" },
     color: "from-purple-500 to-pink-500",
   },
@@ -47,7 +67,12 @@ const solutions = [
     name: "Real Estate",
     description: "Property transactions and rental deposit management",
     icon: Home,
-    useCases: ["Property purchase escrow", "Rental deposits", "Inspection contingencies", "Title verification"],
+    useCases: [
+      "Property purchase escrow",
+      "Rental deposits",
+      "Inspection contingencies",
+      "Title verification",
+    ],
     stats: { metric: "$50M+", label: "Properties secured" },
     color: "from-orange-500 to-red-500",
   },
@@ -55,7 +80,12 @@ const solutions = [
     name: "Gaming & Digital Assets",
     description: "Secure trading of in-game items and digital collectibles",
     icon: Gamepad2,
-    useCases: ["NFT trading", "In-game item sales", "Account transfers", "Digital asset verification"],
+    useCases: [
+      "NFT trading",
+      "In-game item sales",
+      "Account transfers",
+      "Digital asset verification",
+    ],
     stats: { metric: "500K+", label: "Trades completed" },
     color: "from-indigo-500 to-purple-500",
   },
@@ -63,11 +93,16 @@ const solutions = [
     name: "Healthcare Services",
     description: "Secure payments for medical services and consultations",
     icon: Heart,
-    useCases: ["Telemedicine payments", "Treatment completion", "Insurance verification", "Medical equipment sales"],
+    useCases: [
+      "Telemedicine payments",
+      "Treatment completion",
+      "Insurance verification",
+      "Medical equipment sales",
+    ],
     stats: { metric: "HIPAA", label: "Compliant" },
     color: "from-teal-500 to-blue-500",
   },
-]
+];
 
 const caseStudies = [
   {
@@ -94,7 +129,7 @@ const caseStudies = [
     result: "99.2% successful deliveries, 80% fewer disputes",
     logo: "🚚",
   },
-]
+];
 
 export default function SolutionsPage() {
   return (
@@ -117,7 +152,8 @@ export default function SolutionsPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Discover how businesses across different industries use Paylock to build trust and secure transactions.
+              Discover how businesses across different industries use Paylock to
+              build trust and secure transactions.
             </p>
           </motion.div>
         </div>
@@ -143,12 +179,17 @@ export default function SolutionsPage() {
                       <solution.icon className="w-8 h-8 text-white" />
                     </div>
                     <CardTitle className="text-xl">{solution.name}</CardTitle>
-                    <CardDescription className="text-base">{solution.description}</CardDescription>
+                    <CardDescription className="text-base">
+                      {solution.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <ul className="space-y-2">
                       {solution.useCases.map((useCase, useCaseIndex) => (
-                        <li key={useCaseIndex} className="flex items-center gap-2 text-sm">
+                        <li
+                          key={useCaseIndex}
+                          className="flex items-center gap-2 text-sm"
+                        >
                           <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
                           <span className="text-slate-700">{useCase}</span>
                         </li>
@@ -156,8 +197,12 @@ export default function SolutionsPage() {
                     </ul>
                     <div className="pt-4 border-t">
                       <div className="text-center">
-                        <div className="text-2xl font-bold text-blue-600">{solution.stats.metric}</div>
-                        <div className="text-sm text-slate-600">{solution.stats.label}</div>
+                        <div className="text-2xl font-bold text-blue-600">
+                          {solution.stats.metric}
+                        </div>
+                        <div className="text-sm text-slate-600">
+                          {solution.stats.label}
+                        </div>
                       </div>
                     </div>
                   </CardContent>
@@ -200,23 +245,35 @@ export default function SolutionsPage() {
                     <div className="flex items-center gap-4 mb-4">
                       <div className="text-3xl">{study.logo}</div>
                       <div>
-                        <CardTitle className="text-lg">{study.company}</CardTitle>
+                        <CardTitle className="text-lg">
+                          {study.company}
+                        </CardTitle>
                         <CardDescription>{study.industry}</CardDescription>
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div>
-                      <h4 className="font-semibold text-slate-900 mb-2">Challenge</h4>
-                      <p className="text-slate-600 text-sm">{study.challenge}</p>
+                      <h4 className="font-semibold text-slate-900 mb-2">
+                        Challenge
+                      </h4>
+                      <p className="text-slate-600 text-sm">
+                        {study.challenge}
+                      </p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900 mb-2">Solution</h4>
+                      <h4 className="font-semibold text-slate-900 mb-2">
+                        Solution
+                      </h4>
                       <p className="text-slate-600 text-sm">{study.solution}</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900 mb-2">Result</h4>
-                      <p className="text-green-700 text-sm font-medium">{study.result}</p>
+                      <h4 className="font-semibold text-slate-900 mb-2">
+                        Result
+                      </h4>
+                      <p className="text-green-700 text-sm font-medium">
+                        {study.result}
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -236,15 +293,26 @@ export default function SolutionsPage() {
             viewport={{ once: true }}
             className="text-center bg-gradient-to-br from-blue-600 to-indigo-600 rounded-3xl p-16 text-white"
           >
-            <h2 className="text-4xl font-bold mb-6">Ready to transform your business?</h2>
-            <p className="text-xl mb-8 opacity-90">Let's discuss how Paylock can solve your specific challenges</p>
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to transform your business?
+            </h2>
+            <p className="text-xl mb-8 opacity-90">
+              Let's discuss how Paylock can solve your specific challenges
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              <Button
+                size="lg"
+                className="bg-white text-blue-600 hover:bg-gray-100"
+              >
                 Schedule Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Link href="/auth/signup">
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white/10"
+                >
                   Start Free Trial
                 </Button>
               </Link>
@@ -255,5 +323,5 @@ export default function SolutionsPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

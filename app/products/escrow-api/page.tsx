@@ -1,22 +1,24 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Shield, CheckCircle, ArrowRight, Copy, Play } from "lucide-react"
-import { Button } from "../../components/ui/button"
-import { Card, CardDescription, CardTitle } from "../../components/ui/card"
-import Header from "../../components/header"
-import Footer from "../../components/footer"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import { Shield, CheckCircle, ArrowRight, Copy, Play } from "lucide-react";
+import { Button } from "../../components/ui/button";
+import { Card, CardDescription, CardTitle } from "../../components/ui/card";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import Link from "next/link";
 
 const features = [
   {
     title: "Condition-Based Releases",
-    description: "Funds are only released when predefined conditions are met by all parties",
+    description:
+      "Funds are only released when predefined conditions are met by all parties",
     icon: "✅",
   },
   {
     title: "Multi-Party Support",
-    description: "Handle complex transactions with buyers, sellers, and intermediaries",
+    description:
+      "Handle complex transactions with buyers, sellers, and intermediaries",
     icon: "👥",
   },
   {
@@ -29,7 +31,7 @@ const features = [
     description: "Built-in KYC/AML compliance and regulatory reporting",
     icon: "🛡️",
   },
-]
+];
 
 const codeExample = `// Create an escrow transaction
 const transaction = await paylock.transactions.create({
@@ -63,7 +65,7 @@ await paylock.transactions.acceptCondition({
   conditionMet: true
 });
 
-// Funds released automatically when all conditions met`
+// Funds released automatically when all conditions met`;
 
 export default function EscrowAPIPage() {
   return (
@@ -85,11 +87,14 @@ export default function EscrowAPIPage() {
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 tracking-tight">
               Escrow{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">API</span>
+              <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                API
+              </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              The most trusted escrow infrastructure for platforms and marketplaces. Secure transactions with
-              condition-based releases and automated compliance.
+              The most trusted escrow infrastructure for platforms and
+              marketplaces. Secure transactions with condition-based releases
+              and automated compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">
@@ -121,7 +126,8 @@ export default function EscrowAPIPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Everything you need for <span className="text-blue-600">secure transactions</span>
+              Everything you need for{" "}
+              <span className="text-blue-600">secure transactions</span>
             </h2>
           </motion.div>
 
@@ -136,8 +142,12 @@ export default function EscrowAPIPage() {
               >
                 <Card className="h-full p-8 hover:shadow-xl transition-all duration-300">
                   <div className="text-4xl mb-4">{feature.icon}</div>
-                  <CardTitle className="text-xl mb-4">{feature.title}</CardTitle>
-                  <CardDescription className="text-base">{feature.description}</CardDescription>
+                  <CardTitle className="text-xl mb-4">
+                    {feature.title}
+                  </CardTitle>
+                  <CardDescription className="text-base">
+                    {feature.description}
+                  </CardDescription>
                 </Card>
               </motion.div>
             ))}
@@ -155,9 +165,12 @@ export default function EscrowAPIPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-slate-900 mb-6">Simple, powerful integration</h2>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">
+                Simple, powerful integration
+              </h2>
               <p className="text-xl text-slate-600 mb-8">
-                Create secure escrow transactions with just a few lines of code. Our API handles all the complexity.
+                Create secure escrow transactions with just a few lines of code.
+                Our API handles all the complexity.
               </p>
               <ul className="space-y-4 mb-8">
                 {[
@@ -190,9 +203,15 @@ export default function EscrowAPIPage() {
                   <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <span className="text-slate-400 text-sm ml-4">escrow-example.js</span>
+                  <span className="text-slate-400 text-sm ml-4">
+                    escrow-example.js
+                  </span>
                 </div>
-                <Button size="sm" variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-800">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="border-slate-600 text-slate-300 hover:bg-slate-800"
+                >
                   <Copy className="w-4 h-4 mr-2" />
                   Copy
                 </Button>
@@ -221,9 +240,14 @@ export default function EscrowAPIPage() {
             <div className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-3xl p-12 text-white max-w-2xl mx-auto">
               <div className="text-6xl font-bold mb-4">2.9%</div>
               <div className="text-xl mb-6">+ $0.30 per transaction</div>
-              <p className="text-blue-100 mb-8">No setup fees, no monthly minimums. Pay only for what you use.</p>
+              <p className="text-blue-100 mb-8">
+                No setup fees, no monthly minimums. Pay only for what you use.
+              </p>
               <Link href="/auth/signup">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+                <Button
+                  size="lg"
+                  className="bg-white text-blue-600 hover:bg-gray-100"
+                >
                   Start Free Trial
                 </Button>
               </Link>
@@ -234,5 +258,5 @@ export default function EscrowAPIPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

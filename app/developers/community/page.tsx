@@ -1,65 +1,100 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Users, MessageCircle, Github, BookOpen, ArrowRight, ExternalLink, Star } from "lucide-react"
-import { Button } from "../../components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card"
-import Header from "../../components/header"
-import Footer from "../../components/footer"
+import { motion } from "framer-motion";
+import {
+  Users,
+  MessageCircle,
+  Github,
+  BookOpen,
+  ArrowRight,
+  ExternalLink,
+  Star,
+} from "lucide-react";
+import { Button } from "../../components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../../components/ui/card";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 
 const communityChannels = [
   {
     name: "Discord Community",
-    description: "Join 2,000+ developers in our Discord server for real-time help and discussions",
+    description:
+      "Join 2,000+ developers in our Discord server for real-time help and discussions",
     members: "2,000+",
     icon: MessageCircle,
     color: "from-indigo-500 to-purple-500",
     link: "https://discord.gg/paylock",
-    features: ["Real-time chat", "Code help", "Feature discussions", "Community events"],
+    features: [
+      "Real-time chat",
+      "Code help",
+      "Feature discussions",
+      "Community events",
+    ],
   },
   {
     name: "GitHub",
-    description: "Contribute to our open-source SDKs, report issues, and share examples",
+    description:
+      "Contribute to our open-source SDKs, report issues, and share examples",
     members: "500+",
     icon: Github,
     color: "from-gray-700 to-gray-900",
     link: "https://github.com/paylock",
-    features: ["Open source SDKs", "Issue tracking", "Code examples", "Contributions welcome"],
+    features: [
+      "Open source SDKs",
+      "Issue tracking",
+      "Code examples",
+      "Contributions welcome",
+    ],
   },
   {
     name: "Stack Overflow",
-    description: "Get help from the community and our team with the 'paylock' tag",
+    description:
+      "Get help from the community and our team with the 'paylock' tag",
     members: "1,000+",
     icon: BookOpen,
     color: "from-orange-500 to-red-500",
     link: "https://stackoverflow.com/questions/tagged/paylock",
-    features: ["Q&A format", "Expert answers", "Searchable archive", "Reputation system"],
+    features: [
+      "Q&A format",
+      "Expert answers",
+      "Searchable archive",
+      "Reputation system",
+    ],
   },
-]
+];
 
 const events = [
   {
     title: "Monthly Developer Meetup",
-    description: "Virtual meetup with product updates, Q&A, and community showcase",
+    description:
+      "Virtual meetup with product updates, Q&A, and community showcase",
     frequency: "Monthly",
     nextDate: "Jan 15, 2025",
     attendees: "200+",
   },
   {
     title: "Office Hours",
-    description: "Weekly sessions with our engineering team for technical questions",
+    description:
+      "Weekly sessions with our engineering team for technical questions",
     frequency: "Weekly",
     nextDate: "Every Friday",
     attendees: "50+",
   },
   {
     title: "Hackathon",
-    description: "Quarterly hackathon with prizes for the best Paylock integrations",
+    description:
+      "Quarterly hackathon with prizes for the best Paylock integrations",
     frequency: "Quarterly",
     nextDate: "Mar 2025",
     attendees: "500+",
   },
-]
+];
 
 const contributors = [
   {
@@ -90,7 +125,7 @@ const contributors = [
     avatar: "SJ",
     badge: "Moderator",
   },
-]
+];
 
 const resources = [
   {
@@ -100,12 +135,14 @@ const resources = [
   },
   {
     title: "Code of Conduct",
-    description: "Our commitment to maintaining a welcoming and inclusive environment",
+    description:
+      "Our commitment to maintaining a welcoming and inclusive environment",
     icon: "🤝",
   },
   {
     title: "Contribution Guide",
-    description: "How to contribute to our open-source projects and documentation",
+    description:
+      "How to contribute to our open-source projects and documentation",
     icon: "🚀",
   },
   {
@@ -113,7 +150,7 @@ const resources = [
     description: "Stories, tutorials, and insights from our community members",
     icon: "📝",
   },
-]
+];
 
 export default function CommunityPage() {
   return (
@@ -140,8 +177,9 @@ export default function CommunityPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Connect with thousands of developers building with Paylock. Get help, share knowledge, and shape the
-              future of secure transactions.
+              Connect with thousands of developers building with Paylock. Get
+              help, share knowledge, and shape the future of secure
+              transactions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -178,7 +216,9 @@ export default function CommunityPage() {
                 viewport={{ once: true }}
                 className="text-center p-8 bg-white rounded-2xl shadow-lg"
               >
-                <div className="text-4xl font-bold text-purple-600 mb-2">{stat.value}</div>
+                <div className="text-4xl font-bold text-purple-600 mb-2">
+                  {stat.value}
+                </div>
                 <div className="text-slate-600 font-medium">{stat.label}</div>
               </motion.div>
             ))}
@@ -221,13 +261,20 @@ export default function CommunityPage() {
                       <channel.icon className="w-8 h-8 text-white" />
                     </div>
                     <CardTitle className="text-xl">{channel.name}</CardTitle>
-                    <CardDescription className="text-base">{channel.description}</CardDescription>
-                    <div className="text-sm text-purple-600 font-medium">{channel.members} members</div>
+                    <CardDescription className="text-base">
+                      {channel.description}
+                    </CardDescription>
+                    <div className="text-sm text-purple-600 font-medium">
+                      {channel.members} members
+                    </div>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <ul className="space-y-2">
                       {channel.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-2 text-sm">
+                        <li
+                          key={featureIndex}
+                          className="flex items-center gap-2 text-sm"
+                        >
                           <Star className="w-4 h-4 text-purple-600" />
                           <span className="text-slate-700">{feature}</span>
                         </li>
@@ -274,7 +321,9 @@ export default function CommunityPage() {
               >
                 <Card className="h-full p-8 text-center hover:shadow-lg transition-all duration-300">
                   <CardTitle className="text-xl mb-4">{event.title}</CardTitle>
-                  <CardDescription className="text-base mb-6">{event.description}</CardDescription>
+                  <CardDescription className="text-base mb-6">
+                    {event.description}
+                  </CardDescription>
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span className="text-slate-600">Frequency:</span>
@@ -309,7 +358,9 @@ export default function CommunityPage() {
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
               Top <span className="text-purple-600">contributors</span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">Meet some of our most active community members</p>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Meet some of our most active community members
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -325,9 +376,15 @@ export default function CommunityPage() {
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
                     {contributor.avatar}
                   </div>
-                  <CardTitle className="text-lg mb-2">{contributor.name}</CardTitle>
-                  <CardDescription className="mb-3">{contributor.role}</CardDescription>
-                  <div className="text-sm text-purple-600 font-medium mb-3">{contributor.contributions}</div>
+                  <CardTitle className="text-lg mb-2">
+                    {contributor.name}
+                  </CardTitle>
+                  <CardDescription className="mb-3">
+                    {contributor.role}
+                  </CardDescription>
+                  <div className="text-sm text-purple-600 font-medium mb-3">
+                    {contributor.contributions}
+                  </div>
                   <span className="inline-block bg-purple-100 text-purple-700 text-xs px-3 py-1 rounded-full font-medium">
                     {contributor.badge}
                   </span>
@@ -364,7 +421,9 @@ export default function CommunityPage() {
               >
                 <Card className="h-full text-center p-6 hover:shadow-lg transition-all duration-300 cursor-pointer">
                   <div className="text-4xl mb-4">{resource.icon}</div>
-                  <CardTitle className="text-lg mb-3">{resource.title}</CardTitle>
+                  <CardTitle className="text-lg mb-3">
+                    {resource.title}
+                  </CardTitle>
                   <CardDescription>{resource.description}</CardDescription>
                 </Card>
               </motion.div>
@@ -375,5 +434,5 @@ export default function CommunityPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

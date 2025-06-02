@@ -1,20 +1,27 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { MapPin, Clock, MessageSquare, Users, Headphones } from "lucide-react"
-import Header from "../components/header"
-import Footer from "../components/footer"
-import { Button } from "../components/ui/button"
-import { Input } from "../components/ui/input"
-import { Label } from "../components/ui/label"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card"
+import { motion } from "framer-motion";
+import { MapPin, Clock, MessageSquare, Users, Headphones } from "lucide-react";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
+import { Label } from "../components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../components/ui/card";
 
 export default function ContactPage() {
   const contactMethods = [
     {
       icon: MessageSquare,
       title: "Sales Inquiries",
-      description: "Get in touch with our sales team to discuss your platform's needs",
+      description:
+        "Get in touch with our sales team to discuss your platform's needs",
       contact: "sales@paylock.com",
       action: "Email Sales",
     },
@@ -32,7 +39,7 @@ export default function ContactPage() {
       contact: "partnerships@paylock.com",
       action: "Partner With Us",
     },
-  ]
+  ];
 
   const offices = [
     {
@@ -53,7 +60,7 @@ export default function ContactPage() {
       zipcode: "London E14 5AB, UK",
       phone: "+44 20 7123 4567",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -76,8 +83,8 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Have questions about Paylock? Want to discuss how we can help secure your platform's transactions? We'd love
-            to hear from you.
+            Have questions about Paylock? Want to discuss how we can help secure
+            your platform's transactions? We'd love to hear from you.
           </motion.p>
         </div>
       </section>
@@ -123,8 +130,12 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Send Us a Message</h2>
-            <p className="text-xl text-slate-600">Fill out the form below and we'll get back to you within 24 hours.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Send Us a Message
+            </h2>
+            <p className="text-xl text-slate-600">
+              Fill out the form below and we'll get back to you within 24 hours.
+            </p>
           </motion.div>
 
           <motion.div
@@ -150,7 +161,11 @@ export default function ContactPage() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" placeholder="john@company.com" />
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="john@company.com"
+                      />
                     </div>
                     <div>
                       <Label htmlFor="company">Company</Label>
@@ -193,8 +208,12 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Offices</h2>
-            <p className="text-xl text-slate-600">Visit us at one of our global locations.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Our Offices
+            </h2>
+            <p className="text-xl text-slate-600">
+              Visit us at one of our global locations.
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -212,7 +231,9 @@ export default function ContactPage() {
                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <MapPin className="w-6 h-6 text-blue-600" />
                     </div>
-                    <h3 className="text-xl font-semibold text-slate-900 mb-2">{office.city}</h3>
+                    <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                      {office.city}
+                    </h3>
                     <p className="text-slate-600 mb-1">{office.address}</p>
                     <p className="text-slate-600 mb-3">{office.zipcode}</p>
                     <p className="text-blue-600 font-medium">{office.phone}</p>
@@ -234,18 +255,28 @@ export default function ContactPage() {
             viewport={{ once: true }}
           >
             <Clock className="w-16 h-16 text-white mx-auto mb-4" />
-            <h2 className="text-3xl font-bold text-white mb-4">Support Hours</h2>
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Support Hours
+            </h2>
             <p className="text-xl text-blue-100 mb-6">
               Our support team is available to help you when you need it most.
             </p>
             <div className="grid md:grid-cols-2 gap-8 text-left max-w-2xl mx-auto">
               <div>
-                <h3 className="text-lg font-semibold text-white mb-2">Business Hours</h3>
-                <p className="text-blue-100">Monday - Friday: 9:00 AM - 6:00 PM PST</p>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Business Hours
+                </h3>
+                <p className="text-blue-100">
+                  Monday - Friday: 9:00 AM - 6:00 PM PST
+                </p>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-white mb-2">Emergency Support</h3>
-                <p className="text-blue-100">24/7 for critical production issues</p>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  Emergency Support
+                </h3>
+                <p className="text-blue-100">
+                  24/7 for critical production issues
+                </p>
               </div>
             </div>
           </motion.div>
@@ -254,5 +285,5 @@ export default function ContactPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

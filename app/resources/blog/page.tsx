@@ -1,14 +1,27 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { BookOpen, Clock, User, ArrowRight, Search } from "lucide-react"
-import { Button } from "../../components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card"
-import { Input } from "../../components/ui/input"
-import Header from "../../components/header"
-import Footer from "../../components/footer"
+import { motion } from "framer-motion";
+import { BookOpen, Clock, User, ArrowRight, Search } from "lucide-react";
+import { Button } from "../../components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../../components/ui/card";
+import { Input } from "../../components/ui/input";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 
-const categories = ["All", "Technical", "Best Practices", "Case Studies", "Product Updates", "Security"]
+const categories = [
+  "All",
+  "Technical",
+  "Best Practices",
+  "Case Studies",
+  "Product Updates",
+  "Security",
+];
 
 const blogPosts = [
   {
@@ -35,7 +48,8 @@ const blogPosts = [
   },
   {
     title: "Escrow API Security: Best Practices for Production",
-    excerpt: "Essential security considerations when implementing escrow services in production environments.",
+    excerpt:
+      "Essential security considerations when implementing escrow services in production environments.",
     author: "Emily Watson",
     date: "Dec 10, 2024",
     readTime: "6 min read",
@@ -45,7 +59,8 @@ const blogPosts = [
   },
   {
     title: "Multi-Party Escrow: Handling Complex Transactions",
-    excerpt: "How to design and implement escrow systems for transactions involving multiple parties and stakeholders.",
+    excerpt:
+      "How to design and implement escrow systems for transactions involving multiple parties and stakeholders.",
     author: "David Kim",
     date: "Dec 8, 2024",
     readTime: "10 min read",
@@ -55,7 +70,8 @@ const blogPosts = [
   },
   {
     title: "Case Study: How MarketHub Reduced Disputes by 90%",
-    excerpt: "A detailed look at how MarketHub implemented Paylock to transform their marketplace experience.",
+    excerpt:
+      "A detailed look at how MarketHub implemented Paylock to transform their marketplace experience.",
     author: "Alex Thompson",
     date: "Dec 5, 2024",
     readTime: "7 min read",
@@ -65,7 +81,8 @@ const blogPosts = [
   },
   {
     title: "Webhook Implementation: Real-time Transaction Updates",
-    excerpt: "Step-by-step guide to implementing webhooks for real-time transaction status updates.",
+    excerpt:
+      "Step-by-step guide to implementing webhooks for real-time transaction status updates.",
     author: "Lisa Park",
     date: "Dec 3, 2024",
     readTime: "9 min read",
@@ -75,7 +92,8 @@ const blogPosts = [
   },
   {
     title: "Announcing Paylock API v2.0",
-    excerpt: "Introducing new features, improved performance, and enhanced security in our latest API version.",
+    excerpt:
+      "Introducing new features, improved performance, and enhanced security in our latest API version.",
     author: "Paylock Team",
     date: "Dec 1, 2024",
     readTime: "5 min read",
@@ -85,7 +103,8 @@ const blogPosts = [
   },
   {
     title: "Compliance and Regulatory Considerations for Escrow",
-    excerpt: "Understanding the legal and regulatory landscape for escrow services in different jurisdictions.",
+    excerpt:
+      "Understanding the legal and regulatory landscape for escrow services in different jurisdictions.",
     author: "Jennifer Adams",
     date: "Nov 28, 2024",
     readTime: "11 min read",
@@ -93,7 +112,7 @@ const blogPosts = [
     image: "⚖️",
     featured: false,
   },
-]
+];
 
 export default function BlogPage() {
   return (
@@ -120,8 +139,8 @@ export default function BlogPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Stay updated with the latest tutorials, best practices, case studies, and product updates from the Paylock
-              team.
+              Stay updated with the latest tutorials, best practices, case
+              studies, and product updates from the Paylock team.
             </p>
 
             {/* Search and Filter */}
@@ -140,7 +159,9 @@ export default function BlogPage() {
                     key={index}
                     variant={index === 0 ? "default" : "outline"}
                     size="sm"
-                    className={index === 0 ? "bg-blue-600 hover:bg-blue-700" : ""}
+                    className={
+                      index === 0 ? "bg-blue-600 hover:bg-blue-700" : ""
+                    }
                   >
                     {category}
                   </Button>
@@ -161,7 +182,9 @@ export default function BlogPage() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-3xl font-bold text-slate-900 mb-8">Featured Article</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-8">
+              Featured Article
+            </h2>
             <Card className="overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 cursor-pointer">
               <div className="grid lg:grid-cols-2">
                 <div className="p-12">
@@ -176,7 +199,9 @@ export default function BlogPage() {
                   <CardTitle className="text-3xl mb-4 hover:text-blue-600 transition-colors">
                     {blogPosts[0].title}
                   </CardTitle>
-                  <CardDescription className="text-lg mb-6 leading-relaxed">{blogPosts[0].excerpt}</CardDescription>
+                  <CardDescription className="text-lg mb-6 leading-relaxed">
+                    {blogPosts[0].excerpt}
+                  </CardDescription>
                   <div className="flex items-center justify-between text-sm text-slate-500 mb-6">
                     <div className="flex items-center gap-4">
                       <div className="flex items-center gap-1">
@@ -214,7 +239,9 @@ export default function BlogPage() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h2 className="text-3xl font-bold text-slate-900 mb-8">Latest Articles</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-8">
+              Latest Articles
+            </h2>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -237,7 +264,9 @@ export default function BlogPage() {
                     <CardTitle className="text-xl mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
                       {post.title}
                     </CardTitle>
-                    <CardDescription className="text-base line-clamp-3">{post.excerpt}</CardDescription>
+                    <CardDescription className="text-base line-clamp-3">
+                      {post.excerpt}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-center justify-between text-sm text-slate-500">
@@ -280,7 +309,8 @@ export default function BlogPage() {
           >
             <h2 className="text-4xl font-bold mb-6">Stay updated</h2>
             <p className="text-xl mb-8 opacity-90">
-              Get the latest articles, tutorials, and product updates delivered to your inbox
+              Get the latest articles, tutorials, and product updates delivered
+              to your inbox
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
               <Input
@@ -288,7 +318,9 @@ export default function BlogPage() {
                 placeholder="Enter your email"
                 className="bg-white/10 border-white/20 text-white placeholder:text-white/70 focus:bg-white/20 focus:border-white/40"
               />
-              <Button className="bg-white text-blue-600 hover:bg-gray-100 whitespace-nowrap">Subscribe</Button>
+              <Button className="bg-white text-blue-600 hover:bg-gray-100 whitespace-nowrap">
+                Subscribe
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -296,5 +328,5 @@ export default function BlogPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

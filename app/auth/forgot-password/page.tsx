@@ -1,30 +1,36 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "../../components/ui/button"
-import { Input } from "../../components/ui/input"
-import { Label } from "../../components/ui/label"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card"
-import { ArrowLeft, Mail } from "lucide-react"
-import { motion } from "framer-motion"
-import PaylockLogo from "../../components/paylock-logo"
-import Link from "next/link"
+import { useState } from "react";
+import { Button } from "../../components/ui/button";
+import { Input } from "../../components/ui/input";
+import { Label } from "../../components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../../components/ui/card";
+import { ArrowLeft, Mail } from "lucide-react";
+import { motion } from "framer-motion";
+import PaylockLogo from "../../components/paylock-logo";
+import Link from "next/link";
 
 export default function ForgotPasswordPage() {
-  const [isLoading, setIsLoading] = useState(false) 
-  const [isSubmitted, setIsSubmitted] = useState(false)
-  const [email, setEmail] = useState("")
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [email, setEmail] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
+    e.preventDefault();
+    setIsLoading(true);
     // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    setIsLoading(false)
-    setIsSubmitted(true)
-  }
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    setIsLoading(false);
+    setIsSubmitted(true);
+  };
 
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -36,7 +42,7 @@ export default function ForgotPasswordPage() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -45,11 +51,16 @@ export default function ForgotPasswordPage() {
       y: 0,
       transition: { duration: 0.5 },
     },
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 flex items-center justify-center p-4">
-      <motion.div className="w-full max-w-md" variants={containerVariants} initial="hidden" animate="visible">
+      <motion.div
+        className="w-full max-w-md"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {/* Logo */}
         <motion.div className="text-center mb-8" variants={itemVariants}>
           <Link href="/">
@@ -115,7 +126,11 @@ export default function ForgotPasswordPage() {
                       <motion.div
                         className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
                         animate={{ rotate: 360 }}
-                        transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                        transition={{
+                          duration: 1,
+                          repeat: Number.POSITIVE_INFINITY,
+                          ease: "linear",
+                        }}
                       />
                     ) : (
                       "Send reset link"
@@ -138,5 +153,5 @@ export default function ForgotPasswordPage() {
         </motion.div>
       </motion.div>
     </div>
-  )
+  );
 }

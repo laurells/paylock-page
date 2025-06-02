@@ -1,50 +1,55 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "./ui/button"
-import { Input } from "./ui/input"
-import { ArrowRight, Shield, CheckCircle, Play, Star } from "lucide-react"
-import { motion, useAnimation } from "framer-motion"
-import Link from "next/link"
+import { useState, useEffect } from "react";
+import { Button } from "./ui/button";
+import { Input } from "./ui/input";
+import { ArrowRight, Shield, CheckCircle, Play, Star } from "lucide-react";
+import { motion, useAnimation } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero() {
-  const [animatedValue, setAnimatedValue] = useState(0)
-  const [currentStat, setCurrentStat] = useState(0)
-  const controls = useAnimation()
+  const [animatedValue, setAnimatedValue] = useState(0);
+  const [currentStat, setCurrentStat] = useState(0);
+  const controls = useAnimation();
 
   const stats = [
-    { label: "Secured in Escrow", value: 1200000000, prefix: "$", suffix: "B+" },
+    {
+      label: "Secured in Escrow",
+      value: 1200000000,
+      prefix: "$",
+      suffix: "B+",
+    },
     { label: "Success Rate", value: 99.8, prefix: "", suffix: "%" },
     { label: "Platforms Integrated", value: 500, prefix: "", suffix: "+" },
     { label: "API Uptime", value: 99.99, prefix: "", suffix: "%" },
-  ]
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % stats.length)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
+      setCurrentStat((prev) => (prev + 1) % stats.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
-    const targetValue = stats[currentStat].value
-    const duration = 2000
-    const steps = 60
-    const increment = targetValue / steps
-    let current = 0
+    const targetValue = stats[currentStat].value;
+    const duration = 2000;
+    const steps = 60;
+    const increment = targetValue / steps;
+    let current = 0;
 
     const timer = setInterval(() => {
-      current += increment
+      current += increment;
       if (current >= targetValue) {
-        setAnimatedValue(targetValue)
-        clearInterval(timer)
+        setAnimatedValue(targetValue);
+        clearInterval(timer);
       } else {
-        setAnimatedValue(current)
+        setAnimatedValue(current);
       }
-    }, duration / steps)
+    }, duration / steps);
 
-    return () => clearInterval(timer)
-  }, [currentStat])
+    return () => clearInterval(timer);
+  }, [currentStat]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -55,7 +60,7 @@ export default function Hero() {
         delayChildren: 0.2,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -67,7 +72,7 @@ export default function Hero() {
         ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
-  }
+  };
 
   const floatingVariants = {
     hidden: { opacity: 0, scale: 0.8, y: 50 },
@@ -80,7 +85,7 @@ export default function Hero() {
         ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
-  }
+  };
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 min-h-screen">
@@ -124,7 +129,12 @@ export default function Hero() {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[85vh]">
           {/* Left Content */}
-          <motion.div className="text-slate-900" variants={containerVariants} initial="hidden" animate="visible">
+          <motion.div
+            className="text-slate-900"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
             {/* Trust Badge */}
             <motion.div
               variants={itemVariants}
@@ -151,7 +161,9 @@ export default function Hero() {
               <br />
               <span className="text-slate-900">transactions</span>
               <br />
-              <span className="text-slate-500 text-5xl sm:text-6xl md:text-6xl lg:text-7xl">at scale</span>
+              <span className="text-slate-500 text-5xl sm:text-6xl md:text-6xl lg:text-7xl">
+                at scale
+              </span>
             </motion.h1>
 
             {/* Description */}
@@ -159,8 +171,9 @@ export default function Hero() {
               variants={itemVariants}
               className="text-xl md:text-2xl text-slate-600 mb-8 max-w-2xl leading-relaxed font-light"
             >
-              The most trusted escrow infrastructure for platforms and marketplaces. Secure billions in transactions
-              with condition-based releases, automated compliance, and enterprise-grade reliability.
+              The most trusted escrow infrastructure for platforms and
+              marketplaces. Secure billions in transactions with condition-based
+              releases, automated compliance, and enterprise-grade reliability.
             </motion.p>
 
             {/* Social Proof */}
@@ -170,7 +183,10 @@ export default function Hero() {
             >
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  <Star
+                    key={i}
+                    className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                  />
                 ))}
               </div>
               <div className="text-slate-700">
@@ -199,17 +215,21 @@ export default function Hero() {
                   {currentStat === 0
                     ? (animatedValue / 1000000000).toFixed(1)
                     : currentStat === 2
-                      ? Math.floor(animatedValue)
-                      : animatedValue.toFixed(currentStat === 3 ? 2 : 1)}
+                    ? Math.floor(animatedValue)
+                    : animatedValue.toFixed(currentStat === 3 ? 2 : 1)}
                   {stats[currentStat].suffix}
                 </motion.div>
-                <div className="text-lg text-slate-600 font-medium mb-4">{stats[currentStat].label}</div>
+                <div className="text-lg text-slate-600 font-medium mb-4">
+                  {stats[currentStat].label}
+                </div>
                 <div className="flex justify-center gap-2">
                   {stats.map((_, index) => (
                     <motion.div
                       key={index}
                       className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        index === currentStat ? "bg-blue-600 w-8" : "bg-slate-300"
+                        index === currentStat
+                          ? "bg-blue-600 w-8"
+                          : "bg-slate-300"
                       }`}
                       whileHover={{ scale: 1.2 }}
                     />
@@ -269,7 +289,9 @@ export default function Hero() {
               whileHover={{ scale: 1.02, rotate: 1, y: -5 }}
             >
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-bold text-slate-900">Escrow Dashboard</h3>
+                <h3 className="text-xl font-bold text-slate-900">
+                  Escrow Dashboard
+                </h3>
                 <motion.div
                   className="w-4 h-4 bg-green-500 rounded-full shadow-lg"
                   animate={{ scale: [1, 1.2, 1], opacity: [1, 0.7, 1] }}
@@ -278,7 +300,9 @@ export default function Hero() {
               </div>
               <div className="space-y-6">
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-600 font-medium">Active Escrows</span>
+                  <span className="text-slate-600 font-medium">
+                    Active Escrows
+                  </span>
                   <motion.span
                     className="text-2xl font-bold text-slate-900"
                     initial={{ opacity: 0, scale: 0 }}
@@ -289,7 +313,9 @@ export default function Hero() {
                   </motion.span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-slate-600 font-medium">Total Volume</span>
+                  <span className="text-slate-600 font-medium">
+                    Total Volume
+                  </span>
                   <motion.span
                     className="text-2xl font-bold text-slate-900"
                     initial={{ opacity: 0, scale: 0 }}
@@ -309,7 +335,11 @@ export default function Hero() {
                       className="h-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"
                       initial={{ width: 0 }}
                       animate={{ width: "98.7%" }}
-                      transition={{ delay: 1.8, duration: 1.5, ease: "easeOut" }}
+                      transition={{
+                        delay: 1.8,
+                        duration: 1.5,
+                        ease: "easeOut",
+                      }}
                     />
                   </div>
                 </div>
@@ -329,7 +359,9 @@ export default function Hero() {
                 <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                 <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                <span className="text-slate-400 text-sm ml-4 font-medium">Create Escrow</span>
+                <span className="text-slate-400 text-sm ml-4 font-medium">
+                  Create Escrow
+                </span>
               </div>
               <motion.pre
                 className="text-green-400 text-sm overflow-hidden font-mono"
@@ -359,7 +391,9 @@ export default function Hero() {
               whileHover={{ scale: 1.02, rotate: -1, y: -5 }}
             >
               <div className="flex items-center justify-between mb-4">
-                <span className="text-lg font-bold text-slate-900">Transaction #1247</span>
+                <span className="text-lg font-bold text-slate-900">
+                  Transaction #1247
+                </span>
                 <motion.span
                   className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full font-semibold"
                   initial={{ scale: 0, rotate: -180 }}
@@ -372,11 +406,15 @@ export default function Hero() {
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-slate-600 font-medium">Amount</span>
-                  <span className="text-xl font-bold text-slate-900">$500.00</span>
+                  <span className="text-xl font-bold text-slate-900">
+                    $500.00
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-slate-600 font-medium">Condition</span>
-                  <span className="text-sm text-green-600 font-semibold">✓ Delivered</span>
+                  <span className="text-sm text-green-600 font-semibold">
+                    ✓ Delivered
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-slate-600 font-medium">Time</span>
@@ -394,7 +432,9 @@ export default function Hero() {
               className="absolute bottom-24 left-8 w-64 xl:w-72 bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl p-6 transform -rotate-1 border border-slate-200/50"
               whileHover={{ scale: 1.02, rotate: 1, y: -5 }}
             >
-              <h4 className="text-lg font-bold text-slate-900 mb-4">Success Rate Trend</h4>
+              <h4 className="text-lg font-bold text-slate-900 mb-4">
+                Success Rate Trend
+              </h4>
               <div className="flex items-end space-x-2 h-20 mb-4">
                 {[65, 78, 85, 72, 92, 88, 95].map((height, i) => (
                   <motion.div
@@ -402,7 +442,11 @@ export default function Hero() {
                     className="bg-gradient-to-t from-blue-500 to-indigo-500 rounded-t-lg flex-1"
                     initial={{ height: 0 }}
                     animate={{ height: `${height}%` }}
-                    transition={{ delay: 2.5 + i * 0.1, duration: 0.6, ease: "easeOut" }}
+                    transition={{
+                      delay: 2.5 + i * 0.1,
+                      duration: 0.6,
+                      ease: "easeOut",
+                    }}
                   />
                 ))}
               </div>
@@ -415,12 +459,14 @@ export default function Hero() {
                 >
                   98.7%
                 </motion.span>
-                <p className="text-sm text-slate-600 font-medium">Average success rate</p>
+                <p className="text-sm text-slate-600 font-medium">
+                  Average success rate
+                </p>
               </div>
             </motion.div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

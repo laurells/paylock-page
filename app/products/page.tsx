@@ -1,19 +1,38 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Shield, Zap, Code, Users, CheckCircle, ArrowRight, Sparkles } from "lucide-react"
-import { Button } from "../components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card"
-import Header from "../components/header"
-import Footer from "../components/footer"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import {
+  Shield,
+  Zap,
+  Code,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Sparkles,
+} from "lucide-react";
+import { Button } from "../components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../components/ui/card";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import Link from "next/link";
 
 const products = [
   {
     name: "Escrow API",
     description: "Core escrow infrastructure for secure transactions",
     icon: Shield,
-    features: ["Condition-based releases", "Multi-party support", "Real-time verification", "Automated compliance"],
+    features: [
+      "Condition-based releases",
+      "Multi-party support",
+      "Real-time verification",
+      "Automated compliance",
+    ],
     pricing: "2.9% + $0.30",
     color: "from-blue-500 to-cyan-500",
   },
@@ -21,7 +40,12 @@ const products = [
     name: "Dispute Resolution",
     description: "Automated and manual dispute handling system",
     icon: Users,
-    features: ["AI-powered mediation", "Expert arbitrators", "Evidence management", "Resolution tracking"],
+    features: [
+      "AI-powered mediation",
+      "Expert arbitrators",
+      "Evidence management",
+      "Resolution tracking",
+    ],
     pricing: "$50 per case",
     color: "from-purple-500 to-pink-500",
   },
@@ -29,7 +53,12 @@ const products = [
     name: "Condition Engine",
     description: "Flexible condition verification and automation",
     icon: Zap,
-    features: ["Custom conditions", "API integrations", "Smart contracts", "Workflow automation"],
+    features: [
+      "Custom conditions",
+      "API integrations",
+      "Smart contracts",
+      "Workflow automation",
+    ],
     pricing: "Included",
     color: "from-green-500 to-emerald-500",
   },
@@ -37,11 +66,16 @@ const products = [
     name: "Webhooks & Events",
     description: "Real-time notifications and event streaming",
     icon: Code,
-    features: ["Real-time events", "Retry mechanisms", "Event filtering", "Delivery guarantees"],
+    features: [
+      "Real-time events",
+      "Retry mechanisms",
+      "Event filtering",
+      "Delivery guarantees",
+    ],
     pricing: "Free",
     color: "from-orange-500 to-red-500",
   },
-]
+];
 
 const integrations = [
   { name: "Stripe", logo: "💳", description: "Payment processing" },
@@ -50,7 +84,7 @@ const integrations = [
   { name: "SendGrid", logo: "📧", description: "Email delivery" },
   { name: "Slack", logo: "💬", description: "Team notifications" },
   { name: "Zapier", logo: "⚡", description: "Workflow automation" },
-]
+];
 
 export default function ProductsPage() {
   return (
@@ -77,8 +111,8 @@ export default function ProductsPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              From basic escrow to complex multi-party transactions with custom conditions and automated dispute
-              resolution.
+              From basic escrow to complex multi-party transactions with custom
+              conditions and automated dispute resolution.
             </p>
           </motion.div>
         </div>
@@ -104,12 +138,17 @@ export default function ProductsPage() {
                       <product.icon className="w-8 h-8 text-white" />
                     </div>
                     <CardTitle className="text-2xl">{product.name}</CardTitle>
-                    <CardDescription className="text-lg">{product.description}</CardDescription>
+                    <CardDescription className="text-lg">
+                      {product.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <ul className="space-y-3">
                       {product.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-3">
+                        <li
+                          key={featureIndex}
+                          className="flex items-center gap-3"
+                        >
                           <CheckCircle className="w-5 h-5 text-green-600" />
                           <span className="text-slate-700">{feature}</span>
                         </li>
@@ -117,8 +156,12 @@ export default function ProductsPage() {
                     </ul>
                     <div className="flex items-center justify-between pt-4 border-t">
                       <div>
-                        <span className="text-sm text-slate-500">Starting at</span>
-                        <div className="text-xl font-bold text-slate-900">{product.pricing}</div>
+                        <span className="text-sm text-slate-500">
+                          Starting at
+                        </span>
+                        <div className="text-xl font-bold text-slate-900">
+                          {product.pricing}
+                        </div>
                       </div>
                       <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
                         Learn More
@@ -147,7 +190,8 @@ export default function ProductsPage() {
               Seamless <span className="text-blue-600">integrations</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Connect with your existing tools and services for a complete solution
+              Connect with your existing tools and services for a complete
+              solution
             </p>
           </motion.div>
 
@@ -162,8 +206,12 @@ export default function ProductsPage() {
                 className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <div className="text-4xl mb-4">{integration.logo}</div>
-                <h3 className="font-semibold text-slate-900 mb-2">{integration.name}</h3>
-                <p className="text-sm text-slate-600">{integration.description}</p>
+                <h3 className="font-semibold text-slate-900 mb-2">
+                  {integration.name}
+                </h3>
+                <p className="text-sm text-slate-600">
+                  {integration.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -181,15 +229,24 @@ export default function ProductsPage() {
             className="text-center bg-gradient-to-br from-blue-600 to-indigo-600 rounded-3xl p-16 text-white"
           >
             <h2 className="text-4xl font-bold mb-6">Ready to get started?</h2>
-            <p className="text-xl mb-8 opacity-90">Join thousands of businesses securing transactions with Paylock</p>
+            <p className="text-xl mb-8 opacity-90">
+              Join thousands of businesses securing transactions with Paylock
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+                <Button
+                  size="lg"
+                  className="bg-white text-blue-600 hover:bg-gray-100"
+                >
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/10"
+              >
                 Schedule Demo
               </Button>
             </div>
@@ -199,5 +256,5 @@ export default function ProductsPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

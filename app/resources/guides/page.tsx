@@ -1,19 +1,33 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { BookOpen, Clock, ArrowRight, Search } from "lucide-react"
-import { Button } from "../../components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card"
-import { Input } from "../../components/ui/input"
-import Header from "../../components/header"
-import Footer from "../../components/footer"
+import { motion } from "framer-motion";
+import { BookOpen, Clock, ArrowRight, Search } from "lucide-react";
+import { Button } from "../../components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../../components/ui/card";
+import { Input } from "../../components/ui/input";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 
-const categories = ["All", "Getting Started", "Integration", "Advanced", "Security", "Best Practices"]
+const categories = [
+  "All",
+  "Getting Started",
+  "Integration",
+  "Advanced",
+  "Security",
+  "Best Practices",
+];
 
 const guides = [
   {
     title: "Quick Start: Your First Transaction",
-    description: "Create your first escrow transaction in under 10 minutes with our step-by-step guide",
+    description:
+      "Create your first escrow transaction in under 10 minutes with our step-by-step guide",
     difficulty: "Beginner",
     time: "10 min",
     category: "Getting Started",
@@ -23,7 +37,8 @@ const guides = [
   },
   {
     title: "Marketplace Integration Guide",
-    description: "Complete guide for integrating escrow into e-commerce and service marketplaces",
+    description:
+      "Complete guide for integrating escrow into e-commerce and service marketplaces",
     difficulty: "Intermediate",
     time: "30 min",
     category: "Integration",
@@ -33,7 +48,8 @@ const guides = [
   },
   {
     title: "Implementing Webhooks",
-    description: "Set up real-time notifications for transaction events with secure webhook handling",
+    description:
+      "Set up real-time notifications for transaction events with secure webhook handling",
     difficulty: "Intermediate",
     time: "25 min",
     category: "Integration",
@@ -43,7 +59,8 @@ const guides = [
   },
   {
     title: "Custom Condition Logic",
-    description: "Build complex verification workflows with custom conditions and automated releases",
+    description:
+      "Build complex verification workflows with custom conditions and automated releases",
     difficulty: "Advanced",
     time: "45 min",
     category: "Advanced",
@@ -53,7 +70,8 @@ const guides = [
   },
   {
     title: "Error Handling Best Practices",
-    description: "Handle API errors gracefully in production applications with retry logic and fallbacks",
+    description:
+      "Handle API errors gracefully in production applications with retry logic and fallbacks",
     difficulty: "Intermediate",
     time: "20 min",
     category: "Best Practices",
@@ -63,7 +81,8 @@ const guides = [
   },
   {
     title: "Security Implementation Guide",
-    description: "Secure your integration with authentication, encryption, and security best practices",
+    description:
+      "Secure your integration with authentication, encryption, and security best practices",
     difficulty: "Advanced",
     time: "35 min",
     category: "Security",
@@ -73,7 +92,8 @@ const guides = [
   },
   {
     title: "Multi-Party Escrow Setup",
-    description: "Configure escrow for complex transactions involving multiple parties and conditions",
+    description:
+      "Configure escrow for complex transactions involving multiple parties and conditions",
     difficulty: "Advanced",
     time: "40 min",
     category: "Advanced",
@@ -83,7 +103,8 @@ const guides = [
   },
   {
     title: "Testing Your Integration",
-    description: "Comprehensive testing strategies for escrow implementations using sandbox environment",
+    description:
+      "Comprehensive testing strategies for escrow implementations using sandbox environment",
     difficulty: "Intermediate",
     time: "30 min",
     category: "Best Practices",
@@ -93,7 +114,8 @@ const guides = [
   },
   {
     title: "Production Deployment Checklist",
-    description: "Essential steps and considerations for deploying escrow services to production",
+    description:
+      "Essential steps and considerations for deploying escrow services to production",
     difficulty: "Intermediate",
     time: "25 min",
     category: "Best Practices",
@@ -101,7 +123,7 @@ const guides = [
     steps: 15,
     icon: "✅",
   },
-]
+];
 
 const quickLinks = [
   {
@@ -128,11 +150,11 @@ const quickLinks = [
     time: "15 min",
     icon: "🔗",
   },
-]
+];
 
 export default function GuidesPage() {
-  const featuredGuide = guides.find((guide) => guide.featured)
-  const otherGuides = guides.filter((guide) => !guide.featured)
+  const featuredGuide = guides.find((guide) => guide.featured);
+  const otherGuides = guides.filter((guide) => !guide.featured);
 
   return (
     <div className="min-h-screen bg-white">
@@ -158,8 +180,8 @@ export default function GuidesPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Master Paylock with our comprehensive step-by-step guides. From basic setup to advanced implementations,
-              we've got you covered.
+              Master Paylock with our comprehensive step-by-step guides. From
+              basic setup to advanced implementations, we've got you covered.
             </p>
 
             {/* Search and Filter */}
@@ -178,7 +200,9 @@ export default function GuidesPage() {
                     key={index}
                     variant={index === 0 ? "default" : "outline"}
                     size="sm"
-                    className={index === 0 ? "bg-orange-600 hover:bg-orange-700" : ""}
+                    className={
+                      index === 0 ? "bg-orange-600 hover:bg-orange-700" : ""
+                    }
                   >
                     {category}
                   </Button>
@@ -202,7 +226,9 @@ export default function GuidesPage() {
             <h2 className="text-3xl font-bold text-slate-900 mb-6">
               Quick <span className="text-orange-600">start</span>
             </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">Jump right in with these essential setup guides</p>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Jump right in with these essential setup guides
+            </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -219,8 +245,12 @@ export default function GuidesPage() {
                   <CardTitle className="text-lg mb-2 group-hover:text-orange-600 transition-colors">
                     {link.title}
                   </CardTitle>
-                  <CardDescription className="mb-4">{link.description}</CardDescription>
-                  <div className="text-sm text-orange-600 font-medium">{link.time}</div>
+                  <CardDescription className="mb-4">
+                    {link.description}
+                  </CardDescription>
+                  <div className="text-sm text-orange-600 font-medium">
+                    {link.time}
+                  </div>
                 </Card>
               </motion.div>
             ))}
@@ -239,7 +269,9 @@ export default function GuidesPage() {
               viewport={{ once: true }}
               className="mb-16"
             >
-              <h2 className="text-3xl font-bold text-slate-900 mb-8">Featured Guide</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-8">
+                Featured Guide
+              </h2>
               <Card className="overflow-hidden shadow-2xl">
                 <div className="grid lg:grid-cols-2">
                   <div className="p-12">
@@ -251,7 +283,9 @@ export default function GuidesPage() {
                         Featured
                       </span>
                     </div>
-                    <CardTitle className="text-3xl mb-4">{featuredGuide.title}</CardTitle>
+                    <CardTitle className="text-3xl mb-4">
+                      {featuredGuide.title}
+                    </CardTitle>
                     <CardDescription className="text-lg mb-6 leading-relaxed">
                       {featuredGuide.description}
                     </CardDescription>
@@ -266,8 +300,8 @@ export default function GuidesPage() {
                           featuredGuide.difficulty === "Beginner"
                             ? "bg-green-100 text-green-700"
                             : featuredGuide.difficulty === "Intermediate"
-                              ? "bg-yellow-100 text-yellow-700"
-                              : "bg-red-100 text-red-700"
+                            ? "bg-yellow-100 text-yellow-700"
+                            : "bg-red-100 text-red-700"
                         }`}
                       >
                         {featuredGuide.difficulty}
@@ -275,7 +309,10 @@ export default function GuidesPage() {
                       <span>{featuredGuide.steps} steps</span>
                     </div>
 
-                    <Button size="lg" className="bg-orange-600 hover:bg-orange-700">
+                    <Button
+                      size="lg"
+                      className="bg-orange-600 hover:bg-orange-700"
+                    >
                       Start Guide
                       <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
@@ -326,7 +363,9 @@ export default function GuidesPage() {
                     <CardTitle className="text-xl mb-2 group-hover:text-orange-600 transition-colors">
                       {guide.title}
                     </CardTitle>
-                    <CardDescription className="text-base">{guide.description}</CardDescription>
+                    <CardDescription className="text-base">
+                      {guide.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-center justify-between text-sm mb-6">
@@ -335,21 +374,26 @@ export default function GuidesPage() {
                           <Clock className="w-4 h-4 text-slate-500" />
                           {guide.time}
                         </div>
-                        <span className="text-slate-500">{guide.steps} steps</span>
+                        <span className="text-slate-500">
+                          {guide.steps} steps
+                        </span>
                       </div>
                       <span
                         className={`px-2 py-1 rounded-full text-xs font-medium ${
                           guide.difficulty === "Beginner"
                             ? "bg-green-100 text-green-700"
                             : guide.difficulty === "Intermediate"
-                              ? "bg-yellow-100 text-yellow-700"
-                              : "bg-red-100 text-red-700"
+                            ? "bg-yellow-100 text-yellow-700"
+                            : "bg-red-100 text-red-700"
                         }`}
                       >
                         {guide.difficulty}
                       </span>
                     </div>
-                    <Button variant="outline" className="w-full group-hover:bg-orange-50 group-hover:border-orange-200">
+                    <Button
+                      variant="outline"
+                      className="w-full group-hover:bg-orange-50 group-hover:border-orange-200"
+                    >
                       Start Guide
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -375,21 +419,28 @@ export default function GuidesPage() {
               Need <span className="text-orange-600">help?</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-12">
-              Can't find the guide you're looking for? We're here to help you succeed.
+              Can't find the guide you're looking for? We're here to help you
+              succeed.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <Card className="text-center p-8">
                 <div className="text-4xl mb-4">💬</div>
                 <CardTitle className="mb-4">Live Chat</CardTitle>
-                <CardDescription className="mb-6">Get instant help from our support team</CardDescription>
-                <Button className="w-full bg-orange-600 hover:bg-orange-700">Start Chat</Button>
+                <CardDescription className="mb-6">
+                  Get instant help from our support team
+                </CardDescription>
+                <Button className="w-full bg-orange-600 hover:bg-orange-700">
+                  Start Chat
+                </Button>
               </Card>
 
               <Card className="text-center p-8">
                 <div className="text-4xl mb-4">📚</div>
                 <CardTitle className="mb-4">Documentation</CardTitle>
-                <CardDescription className="mb-6">Browse our comprehensive API documentation</CardDescription>
+                <CardDescription className="mb-6">
+                  Browse our comprehensive API documentation
+                </CardDescription>
                 <Button variant="outline" className="w-full">
                   View Docs
                 </Button>
@@ -398,7 +449,9 @@ export default function GuidesPage() {
               <Card className="text-center p-8">
                 <div className="text-4xl mb-4">🎯</div>
                 <CardTitle className="mb-4">Community</CardTitle>
-                <CardDescription className="mb-6">Join our Discord community for peer support</CardDescription>
+                <CardDescription className="mb-6">
+                  Join our Discord community for peer support
+                </CardDescription>
                 <Button variant="outline" className="w-full">
                   Join Discord
                 </Button>
@@ -410,5 +463,5 @@ export default function GuidesPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

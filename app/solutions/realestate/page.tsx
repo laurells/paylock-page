@@ -1,12 +1,19 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Home, Shield, CheckCircle, ArrowRight, Key, FileText } from "lucide-react"
-import { Button } from "../../components/ui/button"
-import { Card, CardDescription, CardTitle } from "../../components/ui/card"
-import Header from "../../components/header"
-import Footer from "../../components/footer"
-import Link from "next/link"
+import { motion } from "framer-motion";
+import {
+  Home,
+  Shield,
+  CheckCircle,
+  ArrowRight,
+  Key,
+  FileText,
+} from "lucide-react";
+import { Button } from "../../components/ui/button";
+import { Card, CardDescription, CardTitle } from "../../components/ui/card";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import Link from "next/link";
 
 const benefits = [
   {
@@ -33,22 +40,26 @@ const benefits = [
     icon: FileText,
     stat: "99.9%",
   },
-]
+];
 
 const useCases = [
   {
     title: "Property Purchase Escrow",
-    description: "Secure the entire property purchase process from offer to closing",
-    example: "Residential home purchase with inspection and financing contingencies",
+    description:
+      "Secure the entire property purchase process from offer to closing",
+    example:
+      "Residential home purchase with inspection and financing contingencies",
   },
   {
     title: "Rental Deposits",
-    description: "Protect both landlords and tenants with condition-based deposit handling",
+    description:
+      "Protect both landlords and tenants with condition-based deposit handling",
     example: "Apartment rental with move-in/move-out condition verification",
   },
   {
     title: "Renovation Payments",
-    description: "Milestone-based payments for property renovations and construction",
+    description:
+      "Milestone-based payments for property renovations and construction",
     example: "Home remodeling with progress-based payment releases",
   },
   {
@@ -56,13 +67,15 @@ const useCases = [
     description: "Automated agent commission payments upon successful closing",
     example: "Real estate agent commission split with brokerage verification",
   },
-]
+];
 
 const caseStudy = {
   company: "PropertyPro",
   industry: "Real Estate Platform",
-  challenge: "Complex closing processes with multiple contingencies and high dispute rates",
-  solution: "Implemented Paylock's condition-based escrow with document verification",
+  challenge:
+    "Complex closing processes with multiple contingencies and high dispute rates",
+  solution:
+    "Implemented Paylock's condition-based escrow with document verification",
   results: [
     "95% reduction in closing disputes",
     "30% faster closing times",
@@ -72,7 +85,7 @@ const caseStudy = {
   quote:
     "Paylock has revolutionized our closing process. What used to take weeks now happens in days, with complete transparency and security for all parties involved.",
   author: "Michael Chen, CEO at PropertyPro",
-}
+};
 
 export default function RealEstatePage() {
   return (
@@ -100,8 +113,9 @@ export default function RealEstatePage() {
               Transactions
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Streamline property transactions with secure escrow services. From purchase agreements to rental deposits,
-              protect all parties with condition-based releases.
+              Streamline property transactions with secure escrow services. From
+              purchase agreements to rental deposits, protect all parties with
+              condition-based releases.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">
@@ -132,7 +146,8 @@ export default function RealEstatePage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-slate-900 mb-6">
-              Transform <span className="text-orange-600">property transactions</span>
+              Transform{" "}
+              <span className="text-orange-600">property transactions</span>
             </h2>
           </motion.div>
 
@@ -147,9 +162,15 @@ export default function RealEstatePage() {
               >
                 <Card className="h-full text-center p-8 hover:shadow-xl transition-all duration-300">
                   <benefit.icon className="w-16 h-16 text-orange-600 mx-auto mb-6" />
-                  <div className="text-3xl font-bold text-orange-600 mb-2">{benefit.stat}</div>
-                  <CardTitle className="text-lg mb-4">{benefit.title}</CardTitle>
-                  <CardDescription className="text-base">{benefit.description}</CardDescription>
+                  <div className="text-3xl font-bold text-orange-600 mb-2">
+                    {benefit.stat}
+                  </div>
+                  <CardTitle className="text-lg mb-4">
+                    {benefit.title}
+                  </CardTitle>
+                  <CardDescription className="text-base">
+                    {benefit.description}
+                  </CardDescription>
                 </Card>
               </motion.div>
             ))}
@@ -171,7 +192,8 @@ export default function RealEstatePage() {
               Common <span className="text-orange-600">use cases</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              See how real estate companies use escrow to secure property transactions
+              See how real estate companies use escrow to secure property
+              transactions
             </p>
           </motion.div>
 
@@ -185,8 +207,12 @@ export default function RealEstatePage() {
                 viewport={{ once: true }}
               >
                 <Card className="h-full p-8 hover:shadow-lg transition-all duration-300">
-                  <CardTitle className="text-xl mb-4">{useCase.title}</CardTitle>
-                  <CardDescription className="text-base mb-6">{useCase.description}</CardDescription>
+                  <CardTitle className="text-xl mb-4">
+                    {useCase.title}
+                  </CardTitle>
+                  <CardDescription className="text-base mb-6">
+                    {useCase.description}
+                  </CardDescription>
                   <div className="text-sm text-orange-700 bg-orange-50 p-4 rounded-lg">
                     <strong>Example:</strong> {useCase.example}
                   </div>
@@ -216,16 +242,22 @@ export default function RealEstatePage() {
             <div className="grid lg:grid-cols-2 gap-12">
               <div>
                 <div className="text-6xl mb-6">🏠</div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">{caseStudy.company}</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                  {caseStudy.company}
+                </h3>
                 <p className="text-slate-600 mb-6">{caseStudy.industry}</p>
 
                 <div className="space-y-6">
                   <div>
-                    <h4 className="font-semibold text-slate-900 mb-2">Challenge</h4>
+                    <h4 className="font-semibold text-slate-900 mb-2">
+                      Challenge
+                    </h4>
                     <p className="text-slate-600">{caseStudy.challenge}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-slate-900 mb-2">Solution</h4>
+                    <h4 className="font-semibold text-slate-900 mb-2">
+                      Solution
+                    </h4>
                     <p className="text-slate-600">{caseStudy.solution}</p>
                   </div>
                 </div>
@@ -262,16 +294,27 @@ export default function RealEstatePage() {
             viewport={{ once: true }}
             className="text-center text-white"
           >
-            <h2 className="text-4xl font-bold mb-6">Ready to transform your real estate transactions?</h2>
-            <p className="text-xl mb-8 opacity-90">Join hundreds of real estate companies using Paylock</p>
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to transform your real estate transactions?
+            </h2>
+            <p className="text-xl mb-8 opacity-90">
+              Join hundreds of real estate companies using Paylock
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">
-                <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100">
+                <Button
+                  size="lg"
+                  className="bg-white text-orange-600 hover:bg-gray-100"
+                >
                   Start Free Trial
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/10"
+              >
                 Contact Sales
               </Button>
             </div>
@@ -281,5 +324,5 @@ export default function RealEstatePage() {
 
       <Footer />
     </div>
-  )
+  );
 }

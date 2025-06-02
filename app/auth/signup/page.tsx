@@ -1,29 +1,35 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "../../components/ui/button"
-import { Input } from "../../components/ui/input"
-import { Label } from "../../components/ui/label"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card"
-import { Separator } from "../../components/ui/separator"
-import { Checkbox } from "../../components/ui/checkbox"
-import { Eye, EyeOff, Github, Mail, Check } from "lucide-react"
-import { motion } from "framer-motion"
-import PaylockLogo from "../../components/paylock-logo"
-import Link from "next/link"
+import { useState } from "react";
+import { Button } from "../../components/ui/button";
+import { Input } from "../../components/ui/input";
+import { Label } from "../../components/ui/label";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../../components/ui/card";
+import { Separator } from "../../components/ui/separator";
+import { Checkbox } from "../../components/ui/checkbox";
+import { Eye, EyeOff, Github, Mail, Check } from "lucide-react";
+import { motion } from "framer-motion";
+import PaylockLogo from "../../components/paylock-logo";
+import Link from "next/link";
 
 export default function SignUpPage() {
-  const [showPassword, setShowPassword] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
     password: "",
     agreeToTerms: false,
-  })
+  });
 
   const [passwordStrength, setPasswordStrength] = useState({
     length: false,
@@ -31,26 +37,26 @@ export default function SignUpPage() {
     lowercase: false,
     number: false,
     special: false,
-  })
+  });
 
   const handlePasswordChange = (password: string) => {
-    setFormData({ ...formData, password })
+    setFormData({ ...formData, password });
     setPasswordStrength({
       length: password.length >= 8,
       uppercase: /[A-Z]/.test(password),
       lowercase: /[a-z]/.test(password),
       number: /\d/.test(password),
       special: /[!@#$%^&*(),.?":{}|<>]/.test(password),
-    })
-  }
+    });
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
+    e.preventDefault();
+    setIsLoading(true);
     // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-    setIsLoading(false)
-  }
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    setIsLoading(false);
+  };
 
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -62,7 +68,7 @@ export default function SignUpPage() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -71,11 +77,16 @@ export default function SignUpPage() {
       y: 0,
       transition: { duration: 0.5 },
     },
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50 flex items-center justify-center p-4">
-      <motion.div className="w-full max-w-md" variants={containerVariants} initial="hidden" animate="visible">
+      <motion.div
+        className="w-full max-w-md"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {/* Logo */}
         <motion.div className="text-center mb-8" variants={itemVariants}>
           <Link href="/">
@@ -86,7 +97,9 @@ export default function SignUpPage() {
         <motion.div variants={itemVariants}>
           <Card className="shadow-xl border-0 bg-white/80 backdrop-blur-sm">
             <CardHeader className="text-center pb-6">
-              <CardTitle className="text-2xl font-bold text-slate-900">Create your account</CardTitle>
+              <CardTitle className="text-2xl font-bold text-slate-900">
+                Create your account
+              </CardTitle>
               <CardDescription className="text-slate-600">
                 Start securing transactions with Paylock today
               </CardDescription>
@@ -94,11 +107,19 @@ export default function SignUpPage() {
             <CardContent className="space-y-6">
               {/* Social Login */}
               <div className="grid grid-cols-2 gap-3">
-                <Button variant="outline" className="w-full" disabled={isLoading}>
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  disabled={isLoading}
+                >
                   <Github className="mr-2 h-4 w-4" />
                   GitHub
                 </Button>
-                <Button variant="outline" className="w-full" disabled={isLoading}>
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  disabled={isLoading}
+                >
                   <Mail className="mr-2 h-4 w-4" />
                   Google
                 </Button>
@@ -109,7 +130,9 @@ export default function SignUpPage() {
                   <Separator className="w-full" />
                 </div>
                 <div className="relative flex justify-center text-xs uppercase">
-                  <span className="bg-white px-2 text-slate-500">Or continue with</span>
+                  <span className="bg-white px-2 text-slate-500">
+                    Or continue with
+                  </span>
                 </div>
               </div>
 
@@ -122,7 +145,9 @@ export default function SignUpPage() {
                       id="firstName"
                       placeholder="John"
                       value={formData.firstName}
-                      onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, firstName: e.target.value })
+                      }
                       required
                       disabled={isLoading}
                       className="h-11"
@@ -134,7 +159,9 @@ export default function SignUpPage() {
                       id="lastName"
                       placeholder="Doe"
                       value={formData.lastName}
-                      onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, lastName: e.target.value })
+                      }
                       required
                       disabled={isLoading}
                       className="h-11"
@@ -149,7 +176,9 @@ export default function SignUpPage() {
                     type="email"
                     placeholder="john@example.com"
                     value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
                     required
                     disabled={isLoading}
                     className="h-11"
@@ -190,7 +219,9 @@ export default function SignUpPage() {
                       animate={{ opacity: 1, height: "auto" }}
                       transition={{ duration: 0.3 }}
                     >
-                      <p className="text-xs font-medium text-slate-700">Password requirements:</p>
+                      <p className="text-xs font-medium text-slate-700">
+                        Password requirements:
+                      </p>
                       <div className="grid grid-cols-2 gap-1 text-xs">
                         {[
                           { key: "length", label: "8+ characters" },
@@ -201,14 +232,18 @@ export default function SignUpPage() {
                           <div key={key} className="flex items-center gap-1">
                             <Check
                               className={`h-3 w-3 ${
-                                passwordStrength[key as keyof typeof passwordStrength]
+                                passwordStrength[
+                                  key as keyof typeof passwordStrength
+                                ]
                                   ? "text-green-500"
                                   : "text-slate-300"
                               }`}
                             />
                             <span
                               className={
-                                passwordStrength[key as keyof typeof passwordStrength]
+                                passwordStrength[
+                                  key as keyof typeof passwordStrength
+                                ]
                                   ? "text-green-700"
                                   : "text-slate-500"
                               }
@@ -226,16 +261,27 @@ export default function SignUpPage() {
                   <Checkbox
                     id="terms"
                     checked={formData.agreeToTerms}
-                    onCheckedChange={(checked) => setFormData({ ...formData, agreeToTerms: checked as boolean })}
+                    onCheckedChange={(checked) =>
+                      setFormData({
+                        ...formData,
+                        agreeToTerms: checked as boolean,
+                      })
+                    }
                     required
                   />
                   <Label htmlFor="terms" className="text-sm text-slate-600">
                     I agree to the{" "}
-                    <Link href="/terms" className="text-blue-600 hover:text-blue-500">
+                    <Link
+                      href="/terms"
+                      className="text-blue-600 hover:text-blue-500"
+                    >
                       Terms of Service
                     </Link>{" "}
                     and{" "}
-                    <Link href="/privacy" className="text-blue-600 hover:text-blue-500">
+                    <Link
+                      href="/privacy"
+                      className="text-blue-600 hover:text-blue-500"
+                    >
                       Privacy Policy
                     </Link>
                   </Label>
@@ -250,7 +296,11 @@ export default function SignUpPage() {
                     <motion.div
                       className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
                       animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                      transition={{
+                        duration: 1,
+                        repeat: Number.POSITIVE_INFINITY,
+                        ease: "linear",
+                      }}
                     />
                   ) : (
                     "Create account"
@@ -260,7 +310,10 @@ export default function SignUpPage() {
 
               <div className="text-center text-sm text-slate-600">
                 Already have an account?{" "}
-                <Link href="/auth/signin" className="text-blue-600 hover:text-blue-500 font-medium">
+                <Link
+                  href="/auth/signin"
+                  className="text-blue-600 hover:text-blue-500 font-medium"
+                >
                   Sign in
                 </Link>
               </div>
@@ -269,5 +322,5 @@ export default function SignUpPage() {
         </motion.div>
       </motion.div>
     </div>
-  )
+  );
 }

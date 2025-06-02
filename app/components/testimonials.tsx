@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Star, Quote, ArrowLeft, ArrowRight } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
-import { Button } from "./ui/button"
+import { useState } from "react";
+import { Star, Quote, ArrowLeft, ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "./ui/button";
 
 const testimonials = [
   {
@@ -50,18 +50,20 @@ const testimonials = [
     companyLogo: "⚡",
     metrics: "< 1 week integration",
   },
-]
+];
 
 export default function Testimonials() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0)
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length)
-  }
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length)
-  }
+    setCurrentTestimonial(
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+    );
+  };
 
   return (
     <section className="py-32 bg-gradient-to-b from-slate-50/50 to-white">
@@ -96,7 +98,8 @@ export default function Testimonials() {
             viewport={{ once: true }}
             className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto"
           >
-            See how companies use Paylock to build trust and grow their platforms
+            See how companies use Paylock to build trust and grow their
+            platforms
           </motion.p>
         </div>
 
@@ -127,24 +130,34 @@ export default function Testimonials() {
                     "{testimonials[currentTestimonial].content}"
                   </blockquote>
                   <div className="flex items-center gap-1 mb-6">
-                    {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                      <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
-                    ))}
+                    {[...Array(testimonials[currentTestimonial].rating)].map(
+                      (_, i) => (
+                        <Star
+                          key={i}
+                          className="w-6 h-6 fill-yellow-400 text-yellow-400"
+                        />
+                      )
+                    )}
                   </div>
                   <div className="flex items-center gap-6">
                     <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center text-white text-xl font-bold shadow-lg">
                       {testimonials[currentTestimonial].avatar}
                     </div>
                     <div>
-                      <div className="text-xl font-bold text-slate-900">{testimonials[currentTestimonial].name}</div>
+                      <div className="text-xl font-bold text-slate-900">
+                        {testimonials[currentTestimonial].name}
+                      </div>
                       <div className="text-slate-600 font-medium">
-                        {testimonials[currentTestimonial].role}, {testimonials[currentTestimonial].company}
+                        {testimonials[currentTestimonial].role},{" "}
+                        {testimonials[currentTestimonial].company}
                       </div>
                     </div>
                   </div>
                 </div>
                 <div className="text-center lg:text-right">
-                  <div className="text-6xl mb-4">{testimonials[currentTestimonial].companyLogo}</div>
+                  <div className="text-6xl mb-4">
+                    {testimonials[currentTestimonial].companyLogo}
+                  </div>
                   <div className="text-3xl font-bold text-blue-600 mb-2">
                     {testimonials[currentTestimonial].metrics}
                   </div>
@@ -161,7 +174,9 @@ export default function Testimonials() {
                     key={index}
                     onClick={() => setCurrentTestimonial(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentTestimonial ? "bg-blue-600 w-8" : "bg-slate-300"
+                      index === currentTestimonial
+                        ? "bg-blue-600 w-8"
+                        : "bg-slate-300"
                     }`}
                   />
                 ))}
@@ -219,5 +234,5 @@ export default function Testimonials() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

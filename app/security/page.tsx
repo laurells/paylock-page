@@ -1,53 +1,68 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Shield, Lock, Eye, Server, Award, AlertTriangle, CheckCircle } from "lucide-react"
-import Header from "../components/header"
-import Footer from "../components/footer"
-import { Card, CardContent } from "../components/ui/card"
+import { motion } from "framer-motion";
+import {
+  Shield,
+  Lock,
+  Eye,
+  Server,
+  Award,
+  AlertTriangle,
+  CheckCircle,
+} from "lucide-react";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import { Card, CardContent } from "../components/ui/card";
 
 export default function SecurityPage() {
   const securityFeatures = [
     {
       icon: Lock,
       title: "End-to-End Encryption",
-      description: "All data is encrypted in transit using TLS 1.3 and at rest using AES-256 encryption",
+      description:
+        "All data is encrypted in transit using TLS 1.3 and at rest using AES-256 encryption",
     },
     {
       icon: Shield,
       title: "Multi-Factor Authentication",
-      description: "Required 2FA for all accounts with support for TOTP, SMS, and hardware keys",
+      description:
+        "Required 2FA for all accounts with support for TOTP, SMS, and hardware keys",
     },
     {
       icon: Server,
       title: "Secure Infrastructure",
-      description: "SOC 2 Type II compliant infrastructure with 24/7 monitoring and intrusion detection",
+      description:
+        "SOC 2 Type II compliant infrastructure with 24/7 monitoring and intrusion detection",
     },
     {
       icon: Eye,
       title: "Continuous Monitoring",
-      description: "Real-time fraud detection and automated security monitoring across all transactions",
+      description:
+        "Real-time fraud detection and automated security monitoring across all transactions",
     },
-  ]
+  ];
 
   const certifications = [
     {
       title: "SOC 2 Type II",
-      description: "Annual compliance audits for security, availability, and confidentiality",
+      description:
+        "Annual compliance audits for security, availability, and confidentiality",
     },
     {
       title: "PCI DSS Level 1",
-      description: "Highest level of payment card industry data security standards",
+      description:
+        "Highest level of payment card industry data security standards",
     },
     {
       title: "ISO 27001",
-      description: "International standard for information security management systems",
+      description:
+        "International standard for information security management systems",
     },
     {
       title: "GDPR Compliant",
       description: "Full compliance with European data protection regulations",
     },
-  ]
+  ];
 
   const securityPractices = [
     "Regular penetration testing by third-party security firms",
@@ -56,30 +71,33 @@ export default function SecurityPage() {
     "Incident response procedures with 24/7 security team",
     "Data backup and disaster recovery protocols",
     "Segregated customer funds in FDIC-insured accounts",
-  ]
+  ];
 
   const reportingSteps = [
     {
       step: "1",
       title: "Report the Issue",
-      description: "Email security@paylock.com with details of the vulnerability",
+      description:
+        "Email security@paylock.com with details of the vulnerability",
     },
     {
       step: "2",
       title: "Initial Response",
-      description: "We'll acknowledge receipt within 24 hours and begin investigation",
+      description:
+        "We'll acknowledge receipt within 24 hours and begin investigation",
     },
     {
       step: "3",
       title: "Investigation",
-      description: "Our security team will validate and assess the severity of the issue",
+      description:
+        "Our security team will validate and assess the severity of the issue",
     },
     {
       step: "4",
       title: "Resolution",
       description: "We'll fix the issue and notify you of the resolution",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -102,8 +120,9 @@ export default function SecurityPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Security is at the core of everything we do. We implement industry-leading security measures to protect your
-            funds, data, and transactions with bank-level security standards.
+            Security is at the core of everything we do. We implement
+            industry-leading security measures to protect your funds, data, and
+            transactions with bank-level security standards.
           </motion.p>
         </div>
       </section>
@@ -118,9 +137,12 @@ export default function SecurityPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Security Features</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Security Features
+            </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Multi-layered security architecture designed to protect against evolving threats.
+              Multi-layered security architecture designed to protect against
+              evolving threats.
             </p>
           </motion.div>
 
@@ -138,7 +160,9 @@ export default function SecurityPage() {
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <feature.icon className="w-8 h-8 text-blue-600" />
                     </div>
-                    <h3 className="text-xl font-semibold text-slate-900 mb-2">{feature.title}</h3>
+                    <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                      {feature.title}
+                    </h3>
                     <p className="text-slate-600">{feature.description}</p>
                   </CardContent>
                 </Card>
@@ -158,9 +182,12 @@ export default function SecurityPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Certifications & Compliance</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Certifications & Compliance
+            </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We maintain the highest industry certifications and undergo regular third-party audits.
+              We maintain the highest industry certifications and undergo
+              regular third-party audits.
             </p>
           </motion.div>
 
@@ -179,7 +206,9 @@ export default function SecurityPage() {
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Award className="w-8 h-8 text-green-600" />
                     </div>
-                    <h3 className="text-xl font-semibold text-slate-900 mb-2">{cert.title}</h3>
+                    <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                      {cert.title}
+                    </h3>
                     <p className="text-slate-600">{cert.description}</p>
                   </CardContent>
                 </Card>
@@ -199,9 +228,12 @@ export default function SecurityPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Security Practices</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Security Practices
+            </h2>
             <p className="text-xl text-slate-600">
-              Our comprehensive approach to security includes people, processes, and technology.
+              Our comprehensive approach to security includes people, processes,
+              and technology.
             </p>
           </motion.div>
 
@@ -232,10 +264,13 @@ export default function SecurityPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Responsible Disclosure</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Responsible Disclosure
+            </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We welcome security researchers to help us maintain the highest security standards. Report vulnerabilities
-              responsibly and we'll work with you to resolve them quickly.
+              We welcome security researchers to help us maintain the highest
+              security standards. Report vulnerabilities responsibly and we'll
+              work with you to resolve them quickly.
             </p>
           </motion.div>
 
@@ -250,9 +285,13 @@ export default function SecurityPage() {
                 viewport={{ once: true }}
               >
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-orange-600">{step.step}</span>
+                  <span className="text-2xl font-bold text-orange-600">
+                    {step.step}
+                  </span>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-2">{step.title}</h3>
+                <h3 className="text-xl font-semibold text-slate-900 mb-2">
+                  {step.title}
+                </h3>
                 <p className="text-slate-600">{step.description}</p>
               </motion.div>
             ))}
@@ -268,9 +307,12 @@ export default function SecurityPage() {
             <div className="flex items-start space-x-4">
               <AlertTriangle className="w-8 h-8 text-orange-600 flex-shrink-0" />
               <div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Security Contact</h3>
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">
+                  Security Contact
+                </h3>
                 <p className="text-slate-700 mb-4">
-                  For security-related inquiries or to report vulnerabilities, please contact our security team:
+                  For security-related inquiries or to report vulnerabilities,
+                  please contact our security team:
                 </p>
                 <div className="space-y-2 text-slate-700">
                   <p>
@@ -298,9 +340,12 @@ export default function SecurityPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Security Status & Updates</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Security Status & Updates
+            </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Stay informed about our security posture and any security-related updates or incidents.
+              Stay informed about our security posture and any security-related
+              updates or incidents.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -322,5 +367,5 @@ export default function SecurityPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Header from "../components/header"
-import Footer from "../components/footer"
+import { motion } from "framer-motion";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 export default function TermsPage() {
   const sections = [
@@ -92,7 +92,7 @@ export default function TermsPage() {
         "You waive any right to a jury trial or to participate in a class action lawsuit.",
       ],
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -119,12 +119,14 @@ export default function TermsPage() {
               <strong>Last updated:</strong> January 1, 2025
             </p>
             <p>
-              These Terms of Service ("Terms") govern your use of Paylock's escrow API platform and related services.
-              Please read these terms carefully before using our services.
+              These Terms of Service ("Terms") govern your use of Paylock's
+              escrow API platform and related services. Please read these terms
+              carefully before using our services.
             </p>
             <p>
-              By using our services, you agree to be bound by these terms. If you disagree with any part of these terms,
-              then you may not access our services.
+              By using our services, you agree to be bound by these terms. If
+              you disagree with any part of these terms, then you may not access
+              our services.
             </p>
           </motion.div>
         </div>
@@ -141,7 +143,9 @@ export default function TermsPage() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">{section.title}</h2>
+              <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+                {section.title}
+              </h2>
               <div className="space-y-4">
                 {section.content.map((item, itemIndex) => (
                   <p key={itemIndex} className="text-slate-700 leading-relaxed">
@@ -160,15 +164,21 @@ export default function TermsPage() {
             viewport={{ once: true }}
             className="bg-slate-50 rounded-lg p-8"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">Questions About These Terms?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-6">
+              Questions About These Terms?
+            </h2>
             <div className="space-y-4 text-slate-700">
-              <p>If you have any questions about these Terms of Service, please contact us:</p>
+              <p>
+                If you have any questions about these Terms of Service, please
+                contact us:
+              </p>
               <div className="space-y-2">
                 <p>
                   <strong>Email:</strong> legal@paylock.com
                 </p>
                 <p>
-                  <strong>Address:</strong> Paylock Inc., 123 Market Street, Suite 400, San Francisco, CA 94105
+                  <strong>Address:</strong> Paylock Inc., 123 Market Street,
+                  Suite 400, San Francisco, CA 94105
                 </p>
                 <p>
                   <strong>Phone:</strong> +1 (555) 123-4567
@@ -181,5 +191,5 @@ export default function TermsPage() {
 
       <Footer />
     </div>
-  )
+  );
 }

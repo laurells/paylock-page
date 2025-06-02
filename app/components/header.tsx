@@ -1,51 +1,115 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Button } from "../components/ui/button"
-import { ChevronDown, Menu, X } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
-import PaylockLogo from "./paylock-logo"
-import Link from "next/link"
+import { useState, useEffect } from "react";
+import { Button } from "../components/ui/button";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import PaylockLogo from "./paylock-logo";
+import Link from "next/link";
 
 const dropdownMenus = {
   Products: [
-    { name: "Escrow API", href: "/products/escrow-api", description: "Core escrow infrastructure" },
-    { name: "Dispute Resolution", href: "/products/dispute-resolution", description: "Automated dispute handling" },
-    { name: "Condition Engine", href: "/products/condition-engine", description: "Custom verification logic" },
-    { name: "Webhook", href: "/products/webhook", description: "Real-time notifications" },
+    {
+      name: "Escrow API",
+      href: "/products/escrow-api",
+      description: "Core escrow infrastructure",
+    },
+    {
+      name: "Dispute Resolution",
+      href: "/products/dispute-resolution",
+      description: "Automated dispute handling",
+    },
+    {
+      name: "Condition Engine",
+      href: "/products/condition-engine",
+      description: "Custom verification logic",
+    },
+    {
+      name: "Webhook",
+      href: "/products/webhook",
+      description: "Real-time notifications",
+    },
   ],
   Solutions: [
-    { name: "E-commerce", href: "/solutions/ecommerce", description: "Marketplace transactions" },
-    { name: "Freelancing", href: "/solutions/freelance", description: "Project-based payments" },
-    { name: "Logistics", href: "/solutions/logistics", description: "Delivery verification" },
-    { name: "Real Estate", href: "/solutions/realestate", description: "Property transactions" },
+    {
+      name: "E-commerce",
+      href: "/solutions/ecommerce",
+      description: "Marketplace transactions",
+    },
+    {
+      name: "Freelancing",
+      href: "/solutions/freelance",
+      description: "Project-based payments",
+    },
+    {
+      name: "Logistics",
+      href: "/solutions/logistics",
+      description: "Delivery verification",
+    },
+    {
+      name: "Real Estate",
+      href: "/solutions/realestate",
+      description: "Property transactions",
+    },
   ],
   Developers: [
-    { name: "Documentation", href: "/developers/documentation", description: "API reference & guides" },
-    { name: "SDKs", href: "/developers/sdks", description: "Official libraries" },
-    { name: "Quick Start", href: "/developers/quickstart", description: "Get started in minutes" },
-    { name: "Community", href: "/developers/community", description: "Discord & GitHub" },
+    {
+      name: "Documentation",
+      href: "/developers/documentation",
+      description: "API reference & guides",
+    },
+    {
+      name: "SDKs",
+      href: "/developers/sdks",
+      description: "Official libraries",
+    },
+    {
+      name: "Quick Start",
+      href: "/developers/quickstart",
+      description: "Get started in minutes",
+    },
+    {
+      name: "Community",
+      href: "/developers/community",
+      description: "Discord & GitHub",
+    },
   ],
   Resources: [
-    { name: "Blog", href: "/resources/blog", description: "Latest insights & tutorials" },
-    { name: "Case Studies", href: "/resources/case-studies", description: "Customer success stories" },
-    { name: "Webinars", href: "/resources/webinars", description: "Live sessions & recordings" },
-    { name: "Guides", href: "/resources/guides", description: "Step-by-step tutorials" },
+    {
+      name: "Blog",
+      href: "/resources/blog",
+      description: "Latest insights & tutorials",
+    },
+    {
+      name: "Case Studies",
+      href: "/resources/case-studies",
+      description: "Customer success stories",
+    },
+    {
+      name: "Webinars",
+      href: "/resources/webinars",
+      description: "Live sessions & recordings",
+    },
+    {
+      name: "Guides",
+      href: "/resources/guides",
+      description: "Step-by-step tutorials",
+    },
   ],
-}
+};
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const menuVariants = {
     closed: {
@@ -64,7 +128,7 @@ export default function Header() {
         ease: "easeInOut",
       },
     },
-  }
+  };
 
   const dropdownVariants = {
     hidden: {
@@ -90,12 +154,14 @@ export default function Header() {
         ease: "easeIn",
       },
     },
-  }
+  };
 
   return (
     <motion.header
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm" : "bg-white/80 backdrop-blur-sm"
+        isScrolled
+          ? "bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm"
+          : "bg-white/80 backdrop-blur-sm"
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
@@ -104,7 +170,10 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.2 }}
+          >
             <Link href="/">
               <PaylockLogo size="md" variant="gradient" animated />
             </Link>
@@ -150,7 +219,9 @@ export default function Header() {
                             <div className="font-medium text-slate-900 group-hover:text-blue-600 transition-colors">
                               {item.name}
                             </div>
-                            <div className="text-sm text-slate-600 mt-1">{item.description}</div>
+                            <div className="text-sm text-slate-600 mt-1">
+                              {item.description}
+                            </div>
                           </Link>
                         ))}
                       </div>
@@ -159,7 +230,11 @@ export default function Header() {
                 </AnimatePresence>
               </motion.div>
             ))}
-            <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+            >
               <Link
                 href="#pricing"
                 className="text-slate-600 hover:text-slate-900 font-medium transition-colors duration-200 hover:text-blue-600"
@@ -235,27 +310,29 @@ export default function Header() {
             >
               <div className="py-4 border-t border-gray-100">
                 <nav className="flex flex-col space-y-4">
-                  {Object.entries(dropdownMenus).map(([menuName, items], index) => (
-                    <div key={menuName}>
-                      <Link
-                        href={`/${menuName.toLowerCase()}`}
-                        className="text-slate-600 hover:text-slate-900 transition-colors duration-200 py-2 font-medium"
-                      >
-                        {menuName}
-                      </Link>
-                      <div className="ml-4 mt-2 space-y-2">
-                        {items.map((item, itemIndex) => (
-                          <Link
-                            key={itemIndex}
-                            href={item.href}
-                            className="block text-sm text-slate-500 hover:text-slate-700 transition-colors duration-200 py-1"
-                          >
-                            {item.name}
-                          </Link>
-                        ))}
+                  {Object.entries(dropdownMenus).map(
+                    ([menuName, items], index) => (
+                      <div key={menuName}>
+                        <Link
+                          href={`/${menuName.toLowerCase()}`}
+                          className="text-slate-600 hover:text-slate-900 transition-colors duration-200 py-2 font-medium"
+                        >
+                          {menuName}
+                        </Link>
+                        <div className="ml-4 mt-2 space-y-2">
+                          {items.map((item, itemIndex) => (
+                            <Link
+                              key={itemIndex}
+                              href={item.href}
+                              className="block text-sm text-slate-500 hover:text-slate-700 transition-colors duration-200 py-1"
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    )
+                  )}
                   <Link
                     href="#pricing"
                     className="text-slate-600 hover:text-slate-900 transition-colors duration-200 py-2 font-medium"
@@ -281,5 +358,5 @@ export default function Header() {
         </AnimatePresence>
       </div>
     </motion.header>
-  )
+  );
 }

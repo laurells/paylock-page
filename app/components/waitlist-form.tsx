@@ -9,6 +9,7 @@ import { Label } from "./ui/label"
 import { Card, CardContent } from "./ui/card"
 import { Checkbox } from "./ui/checkbox"
 import { Mail, Users, CheckCircle, Loader2, ArrowRight } from "lucide-react"
+import { trackWaitlistJoin, trackFormSubmission } from "./analytics"
 
 interface WaitlistFormProps {
   variant?: "inline" | "modal" | "page"
@@ -60,6 +61,10 @@ export function WaitlistForm({ variant = "inline", showExtendedFields = false }:
       setIsSuccess(true)
       setWaitlistPosition(data.position)
 
+      // Track successful waitlist join
+      trackWaitlistJoin(data.position)
+      trackFormSubmission("waitlist", true)
+
       // Reset form
       setFormData({
         email: "",
@@ -70,6 +75,7 @@ export function WaitlistForm({ variant = "inline", showExtendedFields = false }:
       })
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong")
+      trackFormSubmission("waitlist", false)
     } finally {
       setIsSubmitting(false)
     }

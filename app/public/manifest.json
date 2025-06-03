@@ -1,41 +1,119 @@
 {
     "name": "Paylock - Secure Escrow Services",
     "short_name": "Paylock",
-    "description": "Secure escrow services for digital transactions",
+    "description": "Secure escrow services for digital transactions with advanced fraud protection",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#3B82F6",
     "orientation": "portrait-primary",
+    "scope": "/",
+    "lang": "en",
+    "categories": ["finance", "business", "productivity"],
     "icons": [
       {
-        "src": "/favicon-16x16.png",
-        "sizes": "16x16",
-        "type": "image/png"
+        "src": "/icons/icon-72x72.png",
+        "sizes": "72x72",
+        "type": "image/png",
+        "purpose": "maskable any"
       },
       {
-        "src": "/favicon-32x32.png",
-        "sizes": "32x32",
-        "type": "image/png"
+        "src": "/icons/icon-96x96.png",
+        "sizes": "96x96",
+        "type": "image/png",
+        "purpose": "maskable any"
       },
       {
-        "src": "/apple-touch-icon.png",
-        "sizes": "180x180",
-        "type": "image/png"
+        "src": "/icons/icon-128x128.png",
+        "sizes": "128x128",
+        "type": "image/png",
+        "purpose": "maskable any"
       },
       {
-        "src": "/android-chrome-192x192.png",
+        "src": "/icons/icon-144x144.png",
+        "sizes": "144x144",
+        "type": "image/png",
+        "purpose": "maskable any"
+      },
+      {
+        "src": "/icons/icon-152x152.png",
+        "sizes": "152x152",
+        "type": "image/png",
+        "purpose": "maskable any"
+      },
+      {
+        "src": "/icons/icon-192x192.png",
         "sizes": "192x192",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "maskable any"
       },
       {
-        "src": "/android-chrome-512x512.png",
+        "src": "/icons/icon-384x384.png",
+        "sizes": "384x384",
+        "type": "image/png",
+        "purpose": "maskable any"
+      },
+      {
+        "src": "/icons/icon-512x512.png",
         "sizes": "512x512",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "maskable any"
       }
     ],
-    "categories": ["finance", "business", "productivity"],
-    "lang": "en",
-    "dir": "ltr"
+    "shortcuts": [
+      {
+        "name": "Dashboard",
+        "short_name": "Dashboard",
+        "description": "Access your escrow dashboard",
+        "url": "/dashboard",
+        "icons": [
+          {
+            "src": "/icons/dashboard-96x96.png",
+            "sizes": "96x96"
+          }
+        ]
+      },
+      {
+        "name": "Create Escrow",
+        "short_name": "New Escrow",
+        "description": "Create a new escrow transaction",
+        "url": "/dashboard/create",
+        "icons": [
+          {
+            "src": "/icons/create-96x96.png",
+            "sizes": "96x96"
+          }
+        ]
+      }
+    ],
+    "screenshots": [
+      {
+        "src": "/screenshots/desktop-home.png",
+        "sizes": "1280x720",
+        "type": "image/png",
+        "form_factor": "wide",
+        "label": "Paylock Homepage"
+      },
+      {
+        "src": "/screenshots/mobile-dashboard.png",
+        "sizes": "375x667",
+        "type": "image/png",
+        "form_factor": "narrow",
+        "label": "Mobile Dashboard"
+      }
+    ],
+    "related_applications": [
+      {
+        "platform": "play",
+        "url": "https://play.google.com/store/apps/details?id=com.paylock.app",
+        "id": "com.paylock.app"
+      },
+      {
+        "platform": "itunes",
+        "url": "https://apps.apple.com/app/paylock/id123456789",
+        "id": "123456789"
+      }
+    ],
+    "prefer_related_applications": false
   }
   

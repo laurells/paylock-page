@@ -1,5 +1,6 @@
 "use client";
-import { Github, Twitter, Linkedin } from "lucide-react";
+import { Github, Twitter, Linkedin } from "lucide-react"
+import { LanguageSelector } from "./language-selector"
 
 export default function Footer() {
   return (
@@ -151,16 +152,19 @@ export default function Footer() {
           <div className="text-slate-400 text-sm mb-4 md:mb-0">
             © 2025 Paylock. All rights reserved.
           </div>
-          <div className="flex space-x-6 text-sm text-slate-400">
-            <a href="/privacy" className="hover:text-white transition-colors">
-              Privacy
-            </a>
-            <a href="/terms" className="hover:text-white transition-colors">
-              Terms
-            </a>
-            <a href="/security" className="hover:text-white transition-colors">
-              Security
-            </a>
+          <div className="flex items-center gap-6">
+            <LanguageSelector variant="footer" />
+            <div className="flex space-x-6 text-sm text-slate-400">
+              <a href="/privacy" className="hover:text-white transition-colors">
+                Privacy
+              </a>
+              <a href="/terms" className="hover:text-white transition-colors">
+                Terms
+              </a>
+              <a href="/security" className="hover:text-white transition-colors">
+                Security
+              </a>
+            </div>
           </div>
         </div>
       </div>

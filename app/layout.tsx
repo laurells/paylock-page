@@ -1,18 +1,21 @@
-import type React from "react"
-import type { Metadata, Viewport } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import { generateSEOMetadata, generateStructuredData } from "./components/seo"
-import { GoogleAnalytics } from "./components/analytics"
-import { CookieConsent } from "./components/cookie-consent"
-import { PWAInstall } from "./components/pwa-install"
-import { AccessibilityMenu } from "./components/accessibility-menu"
-import { Suspense } from "react"
-import { GoogleTranslateWidget, BrowserTranslate } from "./components/auto-translate"
-import { TranslationStatus } from "./components/ai-translate"
-import { LanguageProvider } from "./components/language-provider"
+import type React from "react";
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { generateSEOMetadata, generateStructuredData } from "./components/seo";
+import { GoogleAnalytics } from "./components/analytics";
+import { CookieConsent } from "./components/cookie-consent";
+import { PWAInstall } from "./components/pwa-install";
+import { AccessibilityMenu } from "./components/accessibility-menu";
+import { Suspense } from "react";
+import {
+  GoogleTranslateWidget,
+  BrowserTranslate,
+} from "./components/auto-translate";
+import { TranslationStatus } from "./components/ai-translate";
+import { LanguageProvider } from "./components/language-provider";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = generateSEOMetadata({
   title: "Paylock - Secure Escrow Services for Digital Transactions",
@@ -33,7 +36,7 @@ export const metadata: Metadata = generateSEOMetadata({
     "payment processing",
   ],
   url: "https://paylock.com",
-})
+});
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -44,12 +47,12 @@ export const viewport: Viewport = {
     { media: "(prefers-color-scheme: light)", color: "#3B82F6" },
     { media: "(prefers-color-scheme: dark)", color: "#1E40AF" },
   ],
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="scroll-smooth">
@@ -94,8 +97,8 @@ export default function RootLayout({
         <meta name="theme-color" content="#3B82F6" />
       </head>
       <body className={`${inter.className} antialiased`}>
-      <LanguageProvider>
-          <Suspense>{children}</Suspense>
+        <LanguageProvider>
+          <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
           <GoogleAnalytics />
           <CookieConsent />
           <PWAInstall />
@@ -106,5 +109,5 @@ export default function RootLayout({
         </LanguageProvider>
       </body>
     </html>
-  )
+  );
 }

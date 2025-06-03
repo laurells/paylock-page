@@ -103,9 +103,9 @@ export default function RootLayout({
           <CookieConsent />
           <PWAInstall />
           <AccessibilityMenu />
-          <GoogleTranslateWidget />
+          {/* <GoogleTranslateWidget />
           <BrowserTranslate />
-          <TranslationStatus />
+          <TranslationStatus /> */}
         </LanguageProvider>
       </body>
     </html>

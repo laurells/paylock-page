@@ -8,17 +8,41 @@ import { Button } from "../components/ui/button"
 import { Input } from "../components/ui/input"
 import { Card, CardContent } from "../components/ui/card"
 import PaylockLogo from "../components/paylock-logo"
-import { ArrowRight, Clock, Users, Shield, Mail, Twitter, Linkedin, Github } from "lucide-react"
+import { Clock, Users, Shield, CheckCircle, Loader2, ArrowRight, Twitter, Linkedin, Github } from "lucide-react"
 
 export default function ComingSoonPage() {
   const [email, setEmail] = useState("")
-  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSuccess, setIsSuccess] = useState(false)
+  const [error, setError] = useState("")
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle email subscription
-    setIsSubscribed(true)
-    setEmail("")
+    setIsSubmitting(true)
+    setError("")
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      setError("Please enter a valid email address")
+      setIsSubmitting(false)
+      return
+    }
+
+    try {
+      // Using EmailJS (free tier) for email collection
+      // In a real implementation, you would use your EmailJS credentials
+      // Simulate API call (in production, use actual EmailJS API)
+      await new Promise((resolve) => setTimeout(resolve, 1000))
+
+      setIsSuccess(true)
+      setEmail("")
+    } catch (err) {
+      setError("Failed to join waitlist. Please try again.")
+      console.error("Waitlist error:", err)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const features = [
@@ -68,8 +92,20 @@ export default function ComingSoonPage() {
             </p>
 
             {/* Email Signup */}
-            {!isSubscribed ? (
-              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-8">
+            {isSuccess ? (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="bg-green-100 text-green-700 px-6 py-4 rounded-lg inline-flex items-center gap-3 mb-8"
+              >
+                <CheckCircle className="w-6 h-6" />
+                <div className="text-left">
+                  <p className="font-medium">Thanks for joining our waitlist!</p>
+                  <p className="text-sm">We'll notify you when we launch.</p>
+                </div>
+              </motion.div>
+            ) : (
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-8">
                 <Input
                   type="email"
                   placeholder="Enter your email"
@@ -78,21 +114,23 @@ export default function ComingSoonPage() {
                   required
                   className="flex-1"
                 />
-                <Button type="submit" className="bg-blue-600 hover:bg-blue-700">
-                  Notify Me
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                <Button type="submit" disabled={isSubmitting} className="bg-blue-600 hover:bg-blue-700">
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Joining...
+                    </>
+                  ) : (
+                    <>
+                      Notify Me
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </>
+                  )}
                 </Button>
               </form>
-            ) : (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="bg-green-100 text-green-700 px-6 py-3 rounded-lg inline-flex items-center gap-2 mb-8"
-              >
-                <Mail className="w-4 h-4" />
-                Thanks! We'll notify you when we launch.
-              </motion.div>
             )}
+
+            {error && <p className="mt-3 text-sm text-red-600 mb-6">{error}</p>}
 
             <div className="flex items-center justify-center gap-8 text-sm text-slate-500">
               <div className="flex items-center gap-2">

@@ -50,8 +50,7 @@ export default function NotFound() {
             <div className="text-8xl font-bold text-blue-600 mb-4">404</div>
             <h1 className="text-3xl font-bold text-slate-900 mb-4">Page Not Found</h1>
             <p className="text-lg text-slate-600 mb-8">
-              Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or you entered the
-              wrong URL.
+              Sorry, we couldn't find the page you're looking for.
             </p>
           </motion.div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   Shield,
   Zap,
@@ -66,6 +67,7 @@ const features = [
 ];
 
 export default function Features() {
+  const router = useRouter();
   const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
 
   return (
@@ -222,7 +224,10 @@ export default function Features() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-8 py-4 text-lg rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <Button 
+                  onClick={() => router.push('/coming-soon')}
+                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-8 py-4 text-lg rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                >
                   View Documentation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>

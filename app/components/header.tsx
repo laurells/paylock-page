@@ -55,17 +55,17 @@ const dropdownMenus = {
   Developers: [
     {
       name: "Documentation",
-      href: "/developers/documentation",
+      href: "/coming-soon",
       description: "API reference & guides",
     },
     {
       name: "SDKs",
-      href: "/developers/sdks",
+      href: "/coming-soon",
       description: "Official libraries",
     },
     {
       name: "Quick Start",
-      href: "/developers/quickstart",
+      href: "/coming-soon",
       description: "Get started in minutes",
     },
     {

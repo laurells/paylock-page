@@ -1,5 +1,5 @@
 "use client";
-
+import React from "react";
 import { motion } from "framer-motion";
 import { Shield, CheckCircle, ArrowRight, Copy, Play } from "lucide-react";
 import { Button } from "../../components/ui/button";
@@ -8,28 +8,30 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import Link from "next/link";
 
+import { Users, Zap, ShieldCheck } from "lucide-react";
+
 const features = [
   {
     title: "Condition-Based Releases",
     description:
       "Funds are only released when predefined conditions are met by all parties",
-    icon: "✅",
+    icon: CheckCircle,
   },
   {
     title: "Multi-Party Support",
     description:
       "Handle complex transactions with buyers, sellers, and intermediaries",
-    icon: "👥",
+    icon: Users,
   },
   {
     title: "Real-Time Verification",
     description: "Instant condition verification with automated workflows",
-    icon: "⚡",
+    icon: Zap,
   },
   {
     title: "Automated Compliance",
     description: "Built-in KYC/AML compliance and regulatory reporting",
-    icon: "🛡️",
+    icon: ShieldCheck,
   },
 ];
 
@@ -141,7 +143,11 @@ export default function EscrowAPIPage() {
                 viewport={{ once: true }}
               >
                 <Card className="h-full p-8 hover:shadow-xl transition-all duration-300">
-                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <div className="text-4xl mb-4">
+                    {React.createElement(feature.icon, {
+                      className: "w-10 h-10",
+                    })}
+                  </div>
                   <CardTitle className="text-xl mb-4">
                     {feature.title}
                   </CardTitle>

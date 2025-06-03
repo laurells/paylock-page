@@ -177,7 +177,7 @@ export default function Hero() {
             </motion.p>
 
             {/* Social Proof */}
-            <motion.div
+            {/* <motion.div
               variants={itemVariants}
               className="flex items-center gap-6 mb-8 p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-slate-200/50 shadow-lg hover:shadow-xl transition-all duration-300"
             >
@@ -196,10 +196,10 @@ export default function Hero() {
               <div className="text-slate-700">
                 <span className="font-semibold">$1.2B+</span> secured
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Interactive Stats */}
-            <motion.div
+            {/* <motion.div
               variants={itemVariants}
               className="bg-gradient-to-r from-white/80 to-blue-50/80 backdrop-blur-sm rounded-3xl p-8 mb-8 border border-slate-200/50 shadow-xl hover:shadow-2xl transition-all duration-500 group"
             >
@@ -236,7 +236,7 @@ export default function Hero() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* CTA Section */}
             <motion.div variants={itemVariants} className="space-y-6">

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Star, Quote, ArrowLeft, ArrowRight } from "lucide-react";
+import { Star, Quote, ArrowLeft, ArrowRight, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
 
@@ -14,7 +14,7 @@ const testimonials = [
       "Paylock's condition-based escrow transformed our marketplace. Disputes dropped 90% and seller confidence increased dramatically. The API integration was seamless and their support team is world-class.",
     rating: 5,
     avatar: "SC",
-    companyLogo: "🏪",
+    // companyLogo: "🏪",
     metrics: "90% fewer disputes",
   },
   {
@@ -25,7 +25,7 @@ const testimonials = [
       "The flexibility of custom conditions is incredible. We can handle everything from milestone payments to delivery confirmations. Best escrow API we've used, and we've tried them all.",
     rating: 5,
     avatar: "MR",
-    companyLogo: "💼",
+    // companyLogo: "💼",
     metrics: "$2M+ processed",
   },
   {
@@ -36,7 +36,7 @@ const testimonials = [
       "Real-time condition verification changed our business model. Drivers and customers both trust the system, and our transaction success rate is now 99.2%. Absolutely game-changing.",
     rating: 5,
     avatar: "EW",
-    companyLogo: "🚚",
+    // companyLogo: "🚚",
     metrics: "99.2% success rate",
   },
   {
@@ -47,7 +47,7 @@ const testimonials = [
       "Implementation took less than a week. The documentation is excellent, the API is intuitive, and the webhook system is rock solid. Our developers love working with Paylock.",
     rating: 5,
     avatar: "DK",
-    companyLogo: "⚡",
+    // companyLogo: "⚡",
     metrics: "< 1 week integration",
   },
 ];
@@ -155,9 +155,9 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <div className="text-center lg:text-right">
-                  <div className="text-6xl mb-4">
+                  {/* <div className="text-6xl mb-4">
                     {testimonials[currentTestimonial].companyLogo}
-                  </div>
+                  </div> */}
                   <div className="text-3xl font-bold text-blue-600 mb-2">
                     {testimonials[currentTestimonial].metrics}
                   </div>

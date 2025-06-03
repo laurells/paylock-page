@@ -13,9 +13,9 @@ export default function LandingPage() {
     <div className="min-h-screen bg-white">
       <Header />
       <Hero />
-      <TrustedBy />
+      {/* <TrustedBy /> */}
       <Features />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Pricing />
       <Footer />
     </div>

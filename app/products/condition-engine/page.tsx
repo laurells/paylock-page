@@ -1,5 +1,5 @@
 "use client";
-
+import React from 'react'
 import { motion } from "framer-motion";
 import {
   Zap,
@@ -8,6 +8,12 @@ import {
   CheckCircle,
   ArrowRight,
   Copy,
+  Package,
+  CheckSquare,
+  SearchCheck,
+  Clock,
+  Users,
+  Link2
 } from "lucide-react";
 import { Button } from "../../components/ui/button";
 import { Card, CardDescription, CardTitle } from "../../components/ui/card";
@@ -20,37 +26,37 @@ const conditionTypes = [
     name: "Delivery Confirmation",
     description: "Verify package delivery with tracking and photo confirmation",
     example: "Package delivered to correct address with photo proof",
-    icon: "📦",
+    icon: Package,
   },
   {
     name: "Service Completion",
     description: "Confirm service delivery with milestone-based verification",
     example: "Website development completed and approved by client",
-    icon: "✅",
+    icon: CheckSquare,
   },
   {
     name: "Quality Assurance",
     description: "Product quality verification with inspection periods",
     example: "Product meets specifications within 7-day inspection period",
-    icon: "🔍",
+    icon: SearchCheck,
   },
   {
     name: "Time-Based Release",
     description: "Automatic release after specified time period",
     example: "Funds released automatically after 30 days if no disputes",
-    icon: "⏰",
+    icon: Clock,
   },
   {
     name: "Multi-Party Approval",
     description: "Require approval from multiple parties before release",
     example: "Both buyer and platform operator must approve release",
-    icon: "👥",
+    icon: Users,
   },
   {
     name: "External API Verification",
     description: "Integrate with external services for condition verification",
     example: "Verify payment through external payment processor",
-    icon: "🔗",
+    icon: Link2,
   },
 ];
 
@@ -169,7 +175,9 @@ export default function ConditionEnginePage() {
                 viewport={{ once: true }}
               >
                 <Card className="h-full p-6 hover:shadow-xl transition-all duration-300">
-                  <div className="text-4xl mb-4">{condition.icon}</div>
+                  <div className="text-4xl mb-4">
+                    {React.createElement(condition.icon, { className: "w-10 h-10 text-green-600" })}
+                  </div>
                   <CardTitle className="text-xl mb-3">
                     {condition.name}
                   </CardTitle>

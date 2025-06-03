@@ -3,17 +3,9 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { generateSEOMetadata, generateStructuredData } from "./components/seo";
-import { GoogleAnalytics } from "./components/analytics";
-import { CookieConsent } from "./components/cookie-consent";
-import { PWAInstall } from "./components/pwa-install";
-import { AccessibilityMenu } from "./components/accessibility-menu";
 import { Suspense } from "react";
-import {
-  GoogleTranslateWidget,
-  BrowserTranslate,
-} from "./components/auto-translate";
-import { TranslationStatus } from "./components/ai-translate";
-import { LanguageProvider } from "./components/language-provider";
+import { Providers } from './providers'
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -97,16 +89,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#3B82F6" />
       </head>
       <body className={`${inter.className} antialiased`}>
-        <LanguageProvider>
-          <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
-          <GoogleAnalytics />
-          <CookieConsent />
-          <PWAInstall />
-          <AccessibilityMenu />
-          {/* <GoogleTranslateWidget />
-          <BrowserTranslate />
-          <TranslationStatus /> */}
-        </LanguageProvider>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Providers>{children}</Providers>
+        </Suspense>
       </body>
     </html>
   );

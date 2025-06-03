@@ -5,7 +5,7 @@ import { useLanguage } from "./language-provider"
 
 // Google Translate Widget Integration
 export function GoogleTranslateWidget() {
-  const { language } = useLanguage()
+  const { language, setLanguage } = useLanguage()
 
   useEffect(() => {
     // Load Google Translate script

@@ -250,7 +250,7 @@ export default function Header() {
                 Sign in
               </Button>
             </Link>
-            <Link href="/auth/signup">
+            <Link href="/coming-soon">
               <Button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium px-6 transition-all duration-200 hover:scale-105">
                 Get Started
               </Button>

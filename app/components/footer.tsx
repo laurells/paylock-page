@@ -81,7 +81,7 @@ export default function Footer() {
             <ul className="space-y-3 text-slate-400">
               <li>
                 <a
-                  href="/developers/documentation"
+                  href="/coming-soon"
                   className="hover:text-white transition-colors"
                 >
                   Documentation
@@ -89,7 +89,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/developers/api-reference"
+                  href="/coming-soon"
                   className="hover:text-white transition-colors"
                 >
                   API Reference
@@ -97,7 +97,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/developers/sdks"
+                  href="/coming-soon"
                   className="hover:text-white transition-colors"
                 >
                   SDKs
@@ -105,7 +105,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/developers/status"
+                  href="/coming-soon"
                   className="hover:text-white transition-colors"
                 >
                   Status

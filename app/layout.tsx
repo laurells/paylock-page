@@ -1,5 +1,6 @@
 import type React from "react";
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { generateSEOMetadata, generateStructuredData } from "./components/seo";
@@ -90,7 +91,10 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased`}>
         <Suspense fallback={<div>Loading...</div>}>
-          <Providers>{children}</Providers>
+          <Providers>
+          {children}
+          <Script src="https://paylock-support.vercel.app/embed.js" />
+          </Providers>
         </Suspense>
       </body>
     </html>

@@ -4,6 +4,11 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['images.unsplash.com'], // Add any other domains you need
+    remotePatterns: [
+      {
+        hostname: 'avatar.vercel.sh',
+      },
+    ],
   },
 };
 

@@ -8,6 +8,7 @@ import { Suspense } from "react";
 import { Providers } from './providers'
 
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = generateSEOMetadata({
@@ -93,7 +94,7 @@ export default function RootLayout({
         <Suspense fallback={<div>Loading...</div>}>
           <Providers>
           {children}
-          <Script src="https://paylock-support.vercel.app/embed.js" />
+          <Script src="/embed.js" />
           </Providers>
         </Suspense>
       </body>

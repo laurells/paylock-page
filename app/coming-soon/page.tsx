@@ -53,9 +53,9 @@ export default function ComingSoonPage() {
   ]
 
   const timeline = [
-    { phase: "Beta Launch", date: "Q2 2024", status: "current" },
-    { phase: "Public Launch", date: "Q3 2024", status: "upcoming" },
-    { phase: "Mobile App", date: "Q4 2024", status: "planned" },
+    { phase: "Beta Launch", date: "Q3 2025", status: "current" },
+    { phase: "Public Launch", date: "Q4 2025", status: "upcoming" },
+    { phase: "Mobile App", date: "Q1 2026", status: "planned" },
   ]
 
   return (
@@ -135,7 +135,7 @@ export default function ComingSoonPage() {
             <div className="flex items-center justify-center gap-8 text-sm text-slate-500">
               <div className="flex items-center gap-2">
                 <Users className="w-4 h-4" />
-                12,000+ waiting
+                2,000+ waiting
               </div>
               <div className="flex items-center gap-2">
                 <Shield className="w-4 h-4" />

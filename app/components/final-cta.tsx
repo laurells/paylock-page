@@ -23,7 +23,7 @@ export default function FinalCTA() {
             className="inline-flex items-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 text-sm font-medium text-blue-200 mb-8"
           >
             <Shield className="mr-2 h-4 w-4" />
-            Join 500+ platforms already using Paylock
+            Join 500+ platforms already using Renvue
           </motion.div>
 
           <motion.h2
@@ -46,7 +46,7 @@ export default function FinalCTA() {
             viewport={{ once: true }}
             className="text-xl md:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Join thousands of businesses building trust with Paylock. Start with
+            Join thousands of businesses building trust with Renvue. Start with
             our free tier and scale as you grow.
           </motion.p>
 

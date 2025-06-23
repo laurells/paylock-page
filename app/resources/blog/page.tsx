@@ -71,7 +71,7 @@ const blogPosts = [
   {
     title: "Case Study: How MarketHub Reduced Disputes by 90%",
     excerpt:
-      "A detailed look at how MarketHub implemented Paylock to transform their marketplace experience.",
+      "A detailed look at how MarketHub implemented Renvue to transform their marketplace experience.",
     author: "Alex Thompson",
     date: "Dec 5, 2024",
     readTime: "7 min read",
@@ -91,10 +91,10 @@ const blogPosts = [
     featured: false,
   },
   {
-    title: "Announcing Paylock API v2.0",
+    title: "Announcing Renvue API v2.0",
     excerpt:
       "Introducing new features, improved performance, and enhanced security in our latest API version.",
-    author: "Paylock Team",
+    author: "Renvue Team",
     date: "Dec 1, 2024",
     readTime: "5 min read",
     category: "Product Updates",
@@ -140,7 +140,7 @@ export default function BlogPage() {
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
               Stay updated with the latest tutorials, best practices, case
-              studies, and product updates from the Paylock team.
+              studies, and product updates from the Renvue team.
             </p>
 
             {/* Search and Filter */}

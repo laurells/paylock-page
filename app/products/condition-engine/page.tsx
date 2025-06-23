@@ -88,7 +88,7 @@ const conditions = [
 ];
 
 // Create transaction with conditions
-const transaction = await paylock.transactions.create({
+const transaction = await Renvue.transactions.create({
   amount: 100000,
   currency: 'usd',
   buyer: { id: 'buyer_123' },

@@ -71,7 +71,7 @@ const caseStudy = {
   challenge:
     "High dispute rates (20%) for damaged packages and delivery verification",
   solution:
-    "Implemented Paylock's condition-based escrow with photo verification",
+    "Implemented Renvue's condition-based escrow with photo verification",
   results: [
     "99.2% successful deliveries (up from 80%)",
     "80% fewer disputes about package condition",
@@ -79,7 +79,7 @@ const caseStudy = {
     "40% increase in courier satisfaction",
   ],
   quote:
-    "Paylock has transformed our delivery operations. Couriers are paid instantly upon verification, customers trust our service more, and our support team spends 80% less time handling disputes.",
+    "Renvue has transformed our delivery operations. Couriers are paid instantly upon verification, customers trust our service more, and our support team spends 80% less time handling disputes.",
   author: "Emily Watson, Head of Product at CourierConnect",
 };
 
@@ -294,7 +294,7 @@ export default function LogisticsPage() {
               Ready to transform your logistics operations?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join hundreds of delivery companies using Paylock
+              Join hundreds of delivery companies using Renvue
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">

@@ -22,9 +22,9 @@ import Footer from "../../components/footer"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "SDKs & Libraries | Paylock Developers",
+  title: "SDKs & Libraries | Renvue Developers",
   description:
-    "Official SDKs and libraries for integrating Paylock escrow services into your applications. Available for Node.js, Python, PHP, Ruby, Go, and more.",
+    "Official SDKs and libraries for integrating Renvue escrow services into your applications. Available for Node.js, Python, PHP, Ruby, Go, and more.",
 }
 
 const sdks = [
@@ -36,10 +36,10 @@ const sdks = [
     downloads: "125K",
     stars: 1247,
     features: ["TypeScript Support", "Promise-based API", "Webhook Validation", "Auto-retry Logic"],
-    installCommand: "npm install @paylock/node-sdk",
+    installCommand: "npm install @Renvue/node-sdk",
     docsUrl: "/developers/sdks/nodejs",
-    githubUrl: "https://github.com/paylock/node-sdk",
-    npmUrl: "https://www.npmjs.com/package/@paylock/node-sdk",
+    githubUrl: "https://github.com/Renvue/node-sdk",
+    npmUrl: "https://www.npmjs.com/package/@Renvue/node-sdk",
     status: "stable",
     icon: "🟢",
   },
@@ -51,10 +51,10 @@ const sdks = [
     downloads: "89K",
     stars: 892,
     features: ["Async/Await Support", "Django Integration", "Type Hints", "Request Validation"],
-    installCommand: "pip install paylock-python",
+    installCommand: "pip install Renvue-python",
     docsUrl: "/developers/sdks/python",
-    githubUrl: "https://github.com/paylock/python-sdk",
-    pypyUrl: "https://pypi.org/project/paylock-python/",
+    githubUrl: "https://github.com/Renvue/python-sdk",
+    pypyUrl: "https://pypi.org/project/Renvue-python/",
     status: "stable",
     icon: "🐍",
   },
@@ -66,10 +66,10 @@ const sdks = [
     downloads: "67K",
     stars: 634,
     features: ["PSR-4 Autoloading", "Laravel Service Provider", "Exception Handling", "Guzzle HTTP"],
-    installCommand: "composer require paylock/php-sdk",
+    installCommand: "composer require Renvue/php-sdk",
     docsUrl: "/developers/sdks/php",
-    githubUrl: "https://github.com/paylock/php-sdk",
-    packagistUrl: "https://packagist.org/packages/paylock/php-sdk",
+    githubUrl: "https://github.com/Renvue/php-sdk",
+    packagistUrl: "https://packagist.org/packages/Renvue/php-sdk",
     status: "stable",
     icon: "🐘",
   },
@@ -81,10 +81,10 @@ const sdks = [
     downloads: "45K",
     stars: 423,
     features: ["Rails Integration", "ActiveRecord Models", "RSpec Helpers", "Faraday HTTP"],
-    installCommand: "gem install paylock-ruby",
+    installCommand: "gem install Renvue-ruby",
     docsUrl: "/developers/sdks/ruby",
-    githubUrl: "https://github.com/paylock/ruby-sdk",
-    rubygemsUrl: "https://rubygems.org/gems/paylock-ruby",
+    githubUrl: "https://github.com/Renvue/ruby-sdk",
+    rubygemsUrl: "https://rubygems.org/gems/Renvue-ruby",
     status: "stable",
     icon: "💎",
   },
@@ -96,9 +96,9 @@ const sdks = [
     downloads: "23K",
     stars: 312,
     features: ["Context Support", "Structured Logging", "HTTP/2 Support", "Zero Dependencies"],
-    installCommand: "go get github.com/paylock/go-sdk",
+    installCommand: "go get github.com/Renvue/go-sdk",
     docsUrl: "/developers/sdks/go",
-    githubUrl: "https://github.com/paylock/go-sdk",
+    githubUrl: "https://github.com/Renvue/go-sdk",
     status: "beta",
     icon: "🐹",
   },
@@ -110,25 +110,25 @@ const sdks = [
     downloads: "18K",
     stars: 267,
     features: ["Spring Boot Starter", "Maven/Gradle Support", "Jackson Serialization", "OkHttp Client"],
-    installCommand: 'implementation "com.paylock:java-sdk:0.7.2"',
+    installCommand: 'implementation "com.Renvue:java-sdk:0.7.2"',
     docsUrl: "/developers/sdks/java",
-    githubUrl: "https://github.com/paylock/java-sdk",
-    mavenUrl: "https://mvnrepository.com/artifact/com.paylock/java-sdk",
+    githubUrl: "https://github.com/Renvue/java-sdk",
+    mavenUrl: "https://mvnrepository.com/artifact/com.Renvue/java-sdk",
     status: "beta",
     icon: "☕",
   },
 ]
 
 const codeExamples = {
-  nodejs: `import { Paylock } from '@paylock/node-sdk';
+  nodejs: `import { Renvue } from '@Renvue/node-sdk';
 
-const paylock = new Paylock({
-  apiKey: process.env.PAYLOCK_API_KEY,
+const Renvue = new Renvue({
+  apiKey: process.env.Renvue_API_KEY,
   environment: 'sandbox' // or 'production'
 });
 
 // Create an escrow transaction
-const escrow = await paylock.escrows.create({
+const escrow = await Renvue.escrows.create({
   amount: 1000,
   currency: 'USD',
   buyer: { email: 'buyer@example.com' },
@@ -138,15 +138,15 @@ const escrow = await paylock.escrows.create({
 
 console.log('Escrow created:', escrow.id);`,
 
-  python: `from paylock import Paylock
+  python: `from Renvue import Renvue
 
-paylock = Paylock(
-    api_key=os.environ['PAYLOCK_API_KEY'],
+Renvue = Renvue(
+    api_key=os.environ['Renvue_API_KEY'],
     environment='sandbox'  # or 'production'
 )
 
 # Create an escrow transaction
-escrow = paylock.escrows.create(
+escrow = Renvue.escrows.create(
     amount=1000,
     currency='USD',
     buyer={'email': 'buyer@example.com'},
@@ -157,15 +157,15 @@ escrow = paylock.escrows.create(
 print(f'Escrow created: {escrow.id}')`,
 
   php: `<?php
-use Paylock\\PaylockClient;
+use Renvue\\RenvueClient;
 
-$paylock = new PaylockClient([
-    'api_key' => $_ENV['PAYLOCK_API_KEY'],
+$Renvue = new RenvueClient([
+    'api_key' => $_ENV['Renvue_API_KEY'],
     'environment' => 'sandbox' // or 'production'
 ]);
 
 // Create an escrow transaction
-$escrow = $paylock->escrows->create([
+$escrow = $Renvue->escrows->create([
     'amount' => 1000,
     'currency' => 'USD',
     'buyer' => ['email' => 'buyer@example.com'],
@@ -193,11 +193,11 @@ export default function SDKsPage() {
               Build with
               <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                 {" "}
-                Paylock SDKs
+                Renvue SDKs
               </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Official software development kits and libraries for seamless integration with Paylock's escrow services.
+              Official software development kits and libraries for seamless integration with Renvue's escrow services.
               Available in your favorite programming language.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -404,7 +404,7 @@ export default function SDKsPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Paylock SDKs?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Renvue SDKs?</h2>
             <p className="text-lg text-gray-600">
               Built with developer experience in mind, our SDKs provide everything you need.
             </p>
@@ -473,7 +473,7 @@ export default function SDKsPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Start Building?</h2>
           <p className="text-xl text-blue-100 mb-8">
-            Choose your preferred SDK and start integrating Paylock's escrow services today.
+            Choose your preferred SDK and start integrating Renvue's escrow services today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">

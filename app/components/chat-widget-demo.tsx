@@ -49,7 +49,7 @@ export default function ChatWidgetDemo() {
             Try Our <span className="text-blue-600">AI Assistant</span>
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto mb-8">
-            Experience our intelligent chat widget that provides instant support and answers to all your PayLock questions.
+            Experience our intelligent chat widget that provides instant support and answers to all your Renvue questions.
           </p>
           
           {!isEmbedded ? (

@@ -54,7 +54,7 @@ async function sendUpdateEmail(entry: any, update: UpdateEmail) {
 
   const emailContent = {
     to: entry.email,
-    subject: `Paylock Update: ${update.subject}`,
+    subject: `Renvue Update: ${update.subject}`,
     html: generateUpdateEmailHTML(entry, update),
   }
 
@@ -76,7 +76,7 @@ function generateUpdateEmailHTML(entry: any, update: UpdateEmail): string {
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Paylock Update</title>
+      <title>Renvue Update</title>
     </head>
     <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
       <div style="text-align: center; margin-bottom: 30px;">
@@ -90,13 +90,13 @@ function generateUpdateEmailHTML(entry: any, update: UpdateEmail): string {
       </div>
       
       <div style="text-align: center; margin-bottom: 25px;">
-        <a href="https://paylock.com" style="display: inline-block; background: #1e40af; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600;">
-          Visit Paylock
+        <a href="https://Renvue.com" style="display: inline-block; background: #1e40af; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600;">
+          Visit Renvue
         </a>
       </div>
       
       <div style="text-align: center; padding-top: 20px; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 14px;">
-        <p>You're receiving this because you're on the Paylock waitlist.</p>
+        <p>You're receiving this because you're on the Renvue waitlist.</p>
         <p><a href="#" style="color: #64748b;">Unsubscribe</a> | <a href="#" style="color: #64748b;">Update Preferences</a></p>
       </div>
     </body>

@@ -58,7 +58,7 @@ export default function PrivacyPage() {
     {
       title: "International Transfers",
       content: [
-        "Paylock operates globally and may transfer your personal information to countries outside your residence.",
+        "Renvue operates globally and may transfer your personal information to countries outside your residence.",
         "We ensure appropriate safeguards are in place for international transfers, including Standard Contractual Clauses.",
         "Data transferred to the United States is protected under our comprehensive privacy and security framework.",
       ],
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
               <strong>Last updated:</strong> January 1, 2025
             </p>
             <p>
-              At Paylock, we take your privacy seriously. This Privacy Policy
+              At Renvue, we take your privacy seriously. This Privacy Policy
               explains how we collect, use, disclose, and safeguard your
               information when you use our escrow API platform and related
               services.
@@ -155,10 +155,10 @@ export default function PrivacyPage() {
               </p>
               <div className="space-y-2">
                 <p>
-                  <strong>Email:</strong> privacy@paylock.com
+                  <strong>Email:</strong> privacy@Renvue.com
                 </p>
                 <p>
-                  <strong>Address:</strong> Paylock Inc., 123 Market Street,
+                  <strong>Address:</strong> Renvue Inc., 123 Market Street,
                   Suite 400, San Francisco, CA 94105
                 </p>
                 <p>
@@ -167,7 +167,7 @@ export default function PrivacyPage() {
               </div>
               <p>
                 For EU residents, you may also contact our Data Protection
-                Officer at dpo@paylock.com.
+                Officer at dpo@Renvue.com.
               </p>
             </div>
           </motion.div>

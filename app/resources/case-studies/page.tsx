@@ -21,7 +21,7 @@ const caseStudies = [
     challenge:
       "High dispute rates (15%) and seller churn due to payment issues and lack of trust",
     solution:
-      "Implemented Paylock's condition-based escrow with delivery verification and automated dispute resolution",
+      "Implemented Renvue's condition-based escrow with delivery verification and automated dispute resolution",
     results: [
       { metric: "90%", description: "Reduction in payment disputes" },
       { metric: "40%", description: "Increase in seller retention" },
@@ -29,7 +29,7 @@ const caseStudies = [
       { metric: "60%", description: "Faster dispute resolution" },
     ],
     quote:
-      "Paylock transformed our marketplace. Sellers trust us more, buyers feel secure, and our support team can focus on growth instead of disputes.",
+      "Renvue transformed our marketplace. Sellers trust us more, buyers feel secure, and our support team can focus on growth instead of disputes.",
     author: "Sarah Chen, CTO at MarketHub",
     featured: true,
   },
@@ -48,7 +48,7 @@ const caseStudies = [
       { metric: "45%", description: "Increase in repeat clients" },
     ],
     quote:
-      "Paylock's milestone-based escrow gave our freelancers confidence and our clients peace of mind. It's been a game-changer for our platform.",
+      "Renvue's milestone-based escrow gave our freelancers confidence and our clients peace of mind. It's been a game-changer for our platform.",
     author: "Marcus Rodriguez, Founder",
     featured: false,
   },
@@ -86,7 +86,7 @@ const caseStudies = [
       { metric: "90%", description: "Client satisfaction score" },
     ],
     quote:
-      "Paylock handles the complexity of real estate transactions beautifully. Our clients love the transparency and security.",
+      "Renvue handles the complexity of real estate transactions beautifully. Our clients love the transparency and security.",
     author: "David Kim, CEO",
     featured: false,
   },
@@ -104,7 +104,7 @@ const caseStudies = [
       { metric: "3x", description: "Increase in trading volume" },
     ],
     quote:
-      "Paylock's fraud detection is incredible. We can now offer instant trades while staying completely secure.",
+      "Renvue's fraud detection is incredible. We can now offer instant trades while staying completely secure.",
     author: "Lisa Park, Head of Product",
     featured: false,
   },
@@ -123,7 +123,7 @@ const caseStudies = [
       { metric: "40%", description: "Reduction in billing errors" },
     ],
     quote:
-      "Paylock's healthcare-specific features made our telemedicine platform possible. The compliance and security are unmatched.",
+      "Renvue's healthcare-specific features made our telemedicine platform possible. The compliance and security are unmatched.",
     author: "Jennifer Adams, Chief Medical Officer",
     featured: false,
   },
@@ -157,7 +157,7 @@ export default function CaseStudiesPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              See how companies across different industries use Paylock to
+              See how companies across different industries use Renvue to
               transform their businesses and build trust with their customers.
             </p>
           </motion.div>
@@ -391,7 +391,7 @@ export default function CaseStudiesPage() {
             </h2>
             <p className="text-xl mb-8 opacity-90">
               Join hundreds of companies transforming their business with
-              Paylock
+              Renvue
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button

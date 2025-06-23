@@ -73,7 +73,7 @@ const caseStudy = {
   challenge:
     "Payment delays and scope creep causing freelancer dissatisfaction",
   solution:
-    "Implemented Paylock's milestone-based escrow with automated releases",
+    "Implemented Renvue's milestone-based escrow with automated releases",
   results: [
     "95% on-time payments (up from 60%)",
     "60% faster project completion",
@@ -81,7 +81,7 @@ const caseStudy = {
     "40% increase in freelancer retention",
   ],
   quote:
-    "Paylock transformed our platform economics. Freelancers get paid faster, clients feel protected, and our support team spends 70% less time on payment disputes.",
+    "Renvue transformed our platform economics. Freelancers get paid faster, clients feel protected, and our support team spends 70% less time on payment disputes.",
   author: "Marcus Rodriguez, Founder at FreelanceForge",
 };
 
@@ -295,7 +295,7 @@ export default function FreelancePage() {
               Ready to transform your freelance platform?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join thousands of freelance platforms using Paylock
+              Join thousands of freelance platforms using Renvue
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">

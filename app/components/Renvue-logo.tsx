@@ -2,17 +2,17 @@
 
 import { motion } from "framer-motion";
 
-interface PaylockLogoProps {
+interface RenvueLogoProps {
   size?: "sm" | "md" | "lg";
   variant?: "light" | "dark" | "gradient";
   animated?: boolean;
 }
 
-export default function PaylockLogo({
+export default function RenvueLogo({
   size = "md",
   variant = "light",
   animated = false,
-}: PaylockLogoProps) {
+}: RenvueLogoProps) {
   const sizeClasses = {
     sm: "w-8 h-8",
     md: "w-10 h-10",
@@ -61,8 +61,8 @@ export default function PaylockLogo({
         };
       case "gradient":
         return {
-          primary: "url(#paylock-gradient)",
-          secondary: "url(#paylock-gradient-2)",
+          primary: "url(#Renvue-gradient)",
+          secondary: "url(#Renvue-gradient-2)",
           accent: "#3B82F6",
         };
       default:
@@ -88,7 +88,7 @@ export default function PaylockLogo({
         <svg viewBox="0 0 100 100" className="w-full h-full">
           <defs>
             <linearGradient
-              id="paylock-gradient"
+              id="Renvue-gradient"
               x1="0%"
               y1="0%"
               x2="100%"
@@ -99,7 +99,7 @@ export default function PaylockLogo({
               <stop offset="100%" stopColor="#EC4899" />
             </linearGradient>
             <linearGradient
-              id="paylock-gradient-2"
+              id="Renvue-gradient-2"
               x1="0%"
               y1="0%"
               x2="100%"
@@ -179,7 +179,7 @@ export default function PaylockLogo({
             : "text-slate-900"
         }`}
       >
-        paylock
+        Renvue
       </motion.div>
     </div>
   );

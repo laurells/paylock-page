@@ -4,7 +4,7 @@ import { useEffect } from "react"
 import { motion } from "framer-motion"
 import { Button } from "./components/ui/button"
 import { Card, CardContent } from "./components/ui/card"
-import PaylockLogo from "./components/paylock-logo"
+import RenvueLogo from "./components/Renvue-logo"
 import { AlertTriangle, RefreshCw, Home, Headphones } from "lucide-react"
 import Link from "next/link"
 
@@ -26,7 +26,7 @@ export default function Error({
       <header className="border-b bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
           <Link href="/">
-            <PaylockLogo size="md" />
+            <RenvueLogo size="md" />
           </Link>
         </div>
       </header>

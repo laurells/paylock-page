@@ -65,13 +65,13 @@ const features = [
 ]
 
 const webhookExample = `// Webhook endpoint example (Express.js)
-app.post('/webhooks/paylock', (req, res) => {
-  const signature = req.headers['paylock-signature'];
+app.post('/webhooks/Renvue', (req, res) => {
+  const signature = req.headers['Renvue-signature'];
   const payload = JSON.stringify(req.body);
   
   // Verify webhook signature
   const expectedSignature = crypto
-    .createHmac('sha256', process.env.PAYLOCK_WEBHOOK_SECRET)
+    .createHmac('sha256', process.env.Renvue_WEBHOOK_SECRET)
     .update(payload)
     .digest('hex');
     

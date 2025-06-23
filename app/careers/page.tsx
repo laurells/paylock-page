@@ -57,7 +57,7 @@ export default function CareersPage() {
       location: "Remote",
       type: "Full-time",
       description:
-        "Help developers integrate Paylock and build amazing developer experiences.",
+        "Help developers integrate Renvue and build amazing developer experiences.",
     },
     {
       title: "Security Engineer",
@@ -145,7 +145,7 @@ export default function CareersPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Why Work at Paylock?
+              Why Work at Renvue?
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We believe in taking care of our team so they can do their best

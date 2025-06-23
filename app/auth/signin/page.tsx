@@ -16,7 +16,7 @@ import {
 import { Separator } from "../../components/ui/separator";
 import { Eye, EyeOff, Github, Mail } from "lucide-react";
 import { motion } from "framer-motion";
-import PaylockLogo from "../../components/paylock-logo";
+import RenvueLogo from "../../components/Renvue-logo";
 import Link from "next/link";
 
 export default function SignInPage() {
@@ -67,7 +67,7 @@ export default function SignInPage() {
         {/* Logo */}
         <motion.div className="text-center mb-8" variants={itemVariants}>
           <Link href="/">
-            <PaylockLogo size="lg" variant="gradient" animated />
+            <RenvueLogo size="lg" variant="gradient" animated />
           </Link>
         </motion.div>
 
@@ -78,7 +78,7 @@ export default function SignInPage() {
                 Welcome back
               </CardTitle>
               <CardDescription className="text-slate-600">
-                Sign in to your Paylock account to continue
+                Sign in to your Renvue account to continue
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">

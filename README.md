@@ -1,12 +1,12 @@
-# Paylock – Secure Payment Solutions
+# Renvue – Secure Payment Solutions
 
 ## Overview
 
-Paylock is a modern web application designed to provide secure and seamless payment experiences. Built with Next.js 13+, React 19, and TypeScript, it serves as the official landing page for Paylock. The application emphasizes performance, accessibility, and maintainability with a modern UI and modular architecture.
+Renvue is a modern web application designed to provide secure and seamless payment experiences. Built with Next.js 13+, React 19, and TypeScript, it serves as the official landing page for Renvue. The application emphasizes performance, accessibility, and maintainability with a modern UI and modular architecture.
 
 ## Description of the Software
 
-This application acts as a branded frontend experience for Paylock and includes:
+This application acts as a branded frontend experience for Renvue and includes:
 
 - A responsive landing page optimized for desktop and mobile
 - Interactive waitlist signup forms with validation
@@ -21,7 +21,7 @@ The software integrates modern frontend best practices with a focus on type safe
 
 The software was developed to:
 
-- Showcase Paylock's secure payment services through a professional web presence
+- Showcase Renvue's secure payment services through a professional web presence
 - Demonstrate advanced frontend development with React, Next.js, and TypeScript
 - Provide a foundation for future product marketing and user acquisition tools
 - Deliver a fast and accessible experience across devices
@@ -79,5 +79,5 @@ The software was developed to:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/laurells/paylock-page.git
-cd paylock-page
+git clone https://github.com/laurells/Renvue-page.git
+cd Renvue-page

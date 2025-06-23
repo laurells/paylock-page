@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
-            <div className="text-2xl font-bold mb-4">paylock</div>
+            <div className="text-2xl font-bold mb-4">Renvue</div>
             <p className="text-slate-400 mb-6 max-w-md">
               The most trusted escrow API for platforms and marketplaces. Secure
               transactions with condition-based releases.
@@ -150,7 +150,7 @@ export default function Footer() {
 
         <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-slate-400 text-sm mb-4 md:mb-0">
-            © 2025 Paylock. All rights reserved.
+            © 2025 Renvue. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
             <LanguageSelector variant="footer" />

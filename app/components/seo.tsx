@@ -15,8 +15,8 @@ interface SEOProps {
 }
 
 export function generateSEOMetadata({
-  title = "Paylock - Secure Escrow Services for Digital Transactions",
-  description = "Protect your digital transactions with Paylock's secure escrow services. Trusted by thousands of businesses worldwide for safe, reliable payment processing.",
+  title = "Renvue - Secure Escrow Services for Digital Transactions",
+  description = "Protect your digital transactions with Renvue's secure escrow services. Trusted by thousands of businesses worldwide for safe, reliable payment processing.",
   keywords = [
     "escrow",
     "secure payments",
@@ -26,7 +26,7 @@ export function generateSEOMetadata({
     "secure transactions",
   ],
   image = "/og-image.png",
-  url = "https://paylock.com",
+  url = "https://Renvue.com",
   type = "website",
   publishedTime,
   modifiedTime,
@@ -34,16 +34,16 @@ export function generateSEOMetadata({
   section,
   tags,
 }: SEOProps = {}): Metadata {
-  const siteName = "Paylock";
+  const siteName = "Renvue";
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
 
   return {
     title: fullTitle,
     description,
     keywords: keywords.join(", "),
-    authors: author ? [{ name: author }] : [{ name: "Paylock Team" }],
-    creator: "Paylock",
-    publisher: "Paylock",
+    authors: author ? [{ name: author }] : [{ name: "Renvue Team" }],
+    creator: "Renvue",
+    publisher: "Renvue",
     robots: {
       index: true,
       follow: true,
@@ -81,8 +81,8 @@ export function generateSEOMetadata({
       title: fullTitle,
       description,
       images: [image],
-      creator: "@paylock",
-      site: "@paylock",
+      creator: "@Renvue",
+      site: "@Renvue",
     },
     alternates: {
       canonical: url,
@@ -93,15 +93,15 @@ export function generateSEOMetadata({
 
 export function generateStructuredData({
   type = "Organization",
-  name = "Paylock",
+  name = "Renvue",
   description = "Secure escrow services for digital transactions",
-  url = "https://paylock.com",
-  logo = "https://paylock.com/logo.png",
+  url = "https://Renvue.com",
+  logo = "https://Renvue.com/logo.png",
   contactPoint,
   sameAs = [
-    "https://twitter.com/paylock",
-    "https://linkedin.com/company/paylock",
-    "https://github.com/paylock",
+    "https://twitter.com/Renvue",
+    "https://linkedin.com/company/Renvue",
+    "https://github.com/Renvue",
   ],
   address,
   foundingDate = "2020",

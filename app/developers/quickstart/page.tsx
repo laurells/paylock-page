@@ -21,31 +21,31 @@ const steps = [
     description: "Sign up and get your API key from the dashboard",
     time: "1 min",
     code: `// Add to your environment variables
-PAYLOCK_API_KEY=pk_test_your_api_key_here`,
+Renvue_API_KEY=pk_test_your_api_key_here`,
   },
   {
     step: "2",
     title: "Install SDK",
-    description: "Install the Paylock SDK for your language",
+    description: "Install the Renvue SDK for your language",
     time: "30 sec",
     code: `# Node.js
-npm install @paylock/node
+npm install @Renvue/node
 
 # Python
-pip install paylock
+pip install Renvue
 
 # PHP
-composer require paylock/paylock-php`,
+composer require Renvue/Renvue-php`,
   },
   {
     step: "3",
     title: "Initialize Client",
-    description: "Create a Paylock client instance",
+    description: "Create a Renvue client instance",
     time: "30 sec",
-    code: `const Paylock = require('@paylock/node');
+    code: `const Renvue = require('@Renvue/node');
 
-const paylock = new Paylock({
-  apiKey: process.env.PAYLOCK_API_KEY,
+const Renvue = new Renvue({
+  apiKey: process.env.Renvue_API_KEY,
   environment: 'sandbox' // Use 'production' for live
 });`,
   },
@@ -54,7 +54,7 @@ const paylock = new Paylock({
     title: "Create Transaction",
     description: "Create your first escrow transaction",
     time: "2 min",
-    code: `const transaction = await paylock.transactions.create({
+    code: `const transaction = await Renvue.transactions.create({
   amount: 50000, // $500.00 in cents
   currency: 'usd',
   buyer: {
@@ -82,14 +82,14 @@ console.log('Transaction created:', transaction.id);`,
     description: "Accept conditions to release funds",
     time: "1 min",
     code: `// Buyer accepts delivery
-await paylock.transactions.acceptCondition({
+await Renvue.transactions.acceptCondition({
   transactionId: transaction.id,
   partyType: 'buyer',
   conditionMet: true
 });
 
 // Seller confirms delivery
-await paylock.transactions.acceptCondition({
+await Renvue.transactions.acceptCondition({
   transactionId: transaction.id,
   partyType: 'seller',
   conditionMet: true
@@ -151,7 +151,7 @@ export default function QuickStartPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Create your first escrow transaction with Paylock. Follow this
+              Create your first escrow transaction with Renvue. Follow this
               step-by-step guide to integrate secure transactions into your
               application.
             </p>
@@ -244,7 +244,7 @@ export default function QuickStartPage() {
             <h2 className="text-4xl font-bold mb-6">Congratulations!</h2>
             <p className="text-xl mb-8 opacity-90">
               You've successfully created your first escrow transaction with
-              Paylock. Your integration is ready to secure real transactions.
+              Renvue. Your integration is ready to secure real transactions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">

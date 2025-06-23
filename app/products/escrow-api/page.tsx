@@ -36,7 +36,7 @@ const features = [
 ];
 
 const codeExample = `// Create an escrow transaction
-const transaction = await paylock.transactions.create({
+const transaction = await Renvue.transactions.create({
   amount: 50000, // $500.00 in cents
   currency: 'usd',
   buyer: {
@@ -61,7 +61,7 @@ const transaction = await paylock.transactions.create({
 });
 
 // Both parties accept conditions
-await paylock.transactions.acceptCondition({
+await Renvue.transactions.acceptCondition({
   transactionId: transaction.id,
   partyType: 'buyer',
   conditionMet: true

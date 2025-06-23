@@ -12,9 +12,9 @@ import { Providers } from './providers'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = generateSEOMetadata({
-  title: "Paylock - Secure Escrow Services for Digital Transactions",
+  title: "Renvue - Secure Escrow Services for Digital Transactions",
   description:
-    "Protect your digital transactions with Paylock's secure escrow services. Trusted by thousands of businesses worldwide for safe, reliable payment processing with advanced fraud protection.",
+    "Protect your digital transactions with Renvue's secure escrow services. Trusted by thousands of businesses worldwide for safe, reliable payment processing with advanced fraud protection.",
   keywords: [
     "escrow services",
     "secure payments",
@@ -29,7 +29,7 @@ export const metadata: Metadata = generateSEOMetadata({
     "safe payments",
     "payment processing",
   ],
-  url: "https://paylock.com",
+  url: "https://Renvue.com",
 });
 
 export const viewport: Viewport = {
@@ -53,14 +53,14 @@ export default function RootLayout({
       <head>
         {generateStructuredData({
           type: "Organization",
-          name: "Paylock",
+          name: "Renvue",
           description:
             "Leading provider of secure escrow services for digital transactions, protecting businesses and individuals worldwide.",
-          url: "https://paylock.com",
-          logo: "https://paylock.com/logo.png",
+          url: "https://Renvue.com",
+          logo: "https://Renvue.com/logo.png",
           contactPoint: {
             "@type": "ContactPoint",
-            telephone: "+1-800-PAYLOCK",
+            telephone: "+1-800-Renvue",
             contactType: "Customer Service",
             availableLanguage: ["English"],
             areaServed: "Worldwide",
@@ -85,8 +85,8 @@ export default function RootLayout({
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Paylock" />
-        <meta name="application-name" content="Paylock" />
+        <meta name="apple-mobile-web-app-title" content="Renvue" />
+        <meta name="application-name" content="Renvue" />
         <meta name="msapplication-TileColor" content="#3B82F6" />
         <meta name="theme-color" content="#3B82F6" />
       </head>

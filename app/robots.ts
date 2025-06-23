@@ -21,7 +21,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/",
       },
     ],
-    sitemap: "https://paylock.com/sitemap.xml",
-    host: "https://paylock.com",
+    sitemap: "https://Renvue.com/sitemap.xml",
+    host: "https://Renvue.com",
   }
 }

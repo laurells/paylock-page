@@ -11,7 +11,7 @@ const testimonials = [
     role: "CTO",
     company: "MarketHub",
     content:
-      "Paylock's condition-based escrow transformed our marketplace. Disputes dropped 90% and seller confidence increased dramatically. The API integration was seamless and their support team is world-class.",
+      "Renvue's condition-based escrow transformed our marketplace. Disputes dropped 90% and seller confidence increased dramatically. The API integration was seamless and their support team is world-class.",
     rating: 5,
     avatar: "SC",
     // companyLogo: "🏪",
@@ -44,7 +44,7 @@ const testimonials = [
     role: "VP Engineering",
     company: "TechFlow",
     content:
-      "Implementation took less than a week. The documentation is excellent, the API is intuitive, and the webhook system is rock solid. Our developers love working with Paylock.",
+      "Implementation took less than a week. The documentation is excellent, the API is intuitive, and the webhook system is rock solid. Our developers love working with Renvue.",
     rating: 5,
     avatar: "DK",
     // companyLogo: "⚡",
@@ -98,7 +98,7 @@ export default function Testimonials() {
             viewport={{ once: true }}
             className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto"
           >
-            See how companies use Paylock to build trust and grow their
+            See how companies use Renvue to build trust and grow their
             platforms
           </motion.p>
         </div>

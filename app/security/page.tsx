@@ -78,7 +78,7 @@ export default function SecurityPage() {
       step: "1",
       title: "Report the Issue",
       description:
-        "Email security@paylock.com with details of the vulnerability",
+        "Email security@Renvue.com with details of the vulnerability",
     },
     {
       step: "2",
@@ -112,7 +112,7 @@ export default function SecurityPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Security at Paylock
+            Security at Renvue
           </motion.h1>
           <motion.p
             className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto"
@@ -316,7 +316,7 @@ export default function SecurityPage() {
                 </p>
                 <div className="space-y-2 text-slate-700">
                   <p>
-                    <strong>Email:</strong> security@paylock.com
+                    <strong>Email:</strong> security@Renvue.com
                   </p>
                   <p>
                     <strong>PGP Key:</strong> Available upon request
@@ -349,7 +349,7 @@ export default function SecurityPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://status.paylock.com"
+                href="https://status.Renvue.com"
                 className="inline-flex items-center justify-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-slate-50 transition-colors"
               >
                 View Security Status

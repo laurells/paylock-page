@@ -92,7 +92,7 @@ export function PWAInstall() {
                 <Smartphone className="w-5 h-5 text-blue-600" />
               </div>
               <div className="flex-1 min-w-0">
-                <h3 className="font-semibold text-slate-900 mb-1">Install Paylock App</h3>
+                <h3 className="font-semibold text-slate-900 mb-1">Install Renvue App</h3>
                 <p className="text-sm text-slate-600 mb-3">
                   Get quick access to your escrow dashboard with our mobile app experience.
                 </p>

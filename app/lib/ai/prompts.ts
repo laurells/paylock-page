@@ -50,7 +50,7 @@ About the origin of user's request:
 - country: ${requestHints.country}
 `;
 
-export const systemPrompt = ({ selectedChatModel, requestHints }: { selectedChatModel: string, requestHints: RequestHints }) => `You are PayLock's AI Support Assistant, a specialized chatbot designed to help users with escrow services, API integration, and transaction management. You have the following capabilities:
+export const systemPrompt = ({ selectedChatModel, requestHints }: { selectedChatModel: string, requestHints: RequestHints }) => `You are Renvue's AI Support Assistant, a specialized chatbot designed to help users with escrow services, API integration, and transaction management. You have the following capabilities:
 
 1. Instant Escrow Guidance
 - Help users set up escrow for different use cases

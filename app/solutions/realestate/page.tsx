@@ -75,7 +75,7 @@ const caseStudy = {
   challenge:
     "Complex closing processes with multiple contingencies and high dispute rates",
   solution:
-    "Implemented Paylock's condition-based escrow with document verification",
+    "Implemented Renvue's condition-based escrow with document verification",
   results: [
     "95% reduction in closing disputes",
     "30% faster closing times",
@@ -83,7 +83,7 @@ const caseStudy = {
     "85% increase in client satisfaction",
   ],
   quote:
-    "Paylock has revolutionized our closing process. What used to take weeks now happens in days, with complete transparency and security for all parties involved.",
+    "Renvue has revolutionized our closing process. What used to take weeks now happens in days, with complete transparency and security for all parties involved.",
   author: "Michael Chen, CEO at PropertyPro",
 };
 
@@ -298,7 +298,7 @@ export default function RealEstatePage() {
               Ready to transform your real estate transactions?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join hundreds of real estate companies using Paylock
+              Join hundreds of real estate companies using Renvue
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">

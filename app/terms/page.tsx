@@ -9,7 +9,7 @@ export default function TermsPage() {
     {
       title: "Acceptance of Terms",
       content: [
-        "By accessing and using Paylock's services, you accept and agree to be bound by the terms and provision of this agreement.",
+        "By accessing and using Renvue's services, you accept and agree to be bound by the terms and provision of this agreement.",
         "If you do not agree to abide by the above, please do not use this service.",
         "These terms apply to all users of the service, including without limitation users who are merchants, customers, browsers, vendors, and contributors of content.",
       ],
@@ -17,7 +17,7 @@ export default function TermsPage() {
     {
       title: "Description of Service",
       content: [
-        "Paylock provides an escrow API platform that enables secure transactions between parties through programmable escrow accounts.",
+        "Renvue provides an escrow API platform that enables secure transactions between parties through programmable escrow accounts.",
         "Our services include transaction processing, dispute resolution, condition-based releases, and webhook notifications.",
         "We reserve the right to modify, suspend, or discontinue any aspect of our services at any time with reasonable notice.",
       ],
@@ -52,7 +52,7 @@ export default function TermsPage() {
     {
       title: "Escrow Services",
       content: [
-        "Paylock acts as an escrow agent to hold and disburse funds according to the terms of each transaction.",
+        "Renvue acts as an escrow agent to hold and disburse funds according to the terms of each transaction.",
         "We will hold funds in segregated accounts and release them only when specified conditions are met.",
         "In case of disputes, we may hold funds pending resolution through our dispute resolution process.",
         "We are not responsible for the underlying transaction or the performance of the parties involved.",
@@ -61,7 +61,7 @@ export default function TermsPage() {
     {
       title: "Limitation of Liability",
       content: [
-        "Paylock's liability is limited to the maximum extent permitted by law.",
+        "Renvue's liability is limited to the maximum extent permitted by law.",
         "We are not liable for any indirect, incidental, special, consequential, or punitive damages.",
         "Our total liability for any claim shall not exceed the fees paid by you in the 12 months preceding the claim.",
         "We provide our services 'as is' without warranties of any kind, express or implied.",
@@ -70,7 +70,7 @@ export default function TermsPage() {
     {
       title: "Indemnification",
       content: [
-        "You agree to indemnify and hold harmless Paylock from any claims, damages, or expenses arising from your use of our services.",
+        "You agree to indemnify and hold harmless Renvue from any claims, damages, or expenses arising from your use of our services.",
         "This includes claims related to your violation of these terms, infringement of third-party rights, or illegal activities.",
         "We reserve the right to assume the exclusive defense of any matter subject to indemnification by you.",
       ],
@@ -119,7 +119,7 @@ export default function TermsPage() {
               <strong>Last updated:</strong> January 1, 2025
             </p>
             <p>
-              These Terms of Service ("Terms") govern your use of Paylock's
+              These Terms of Service ("Terms") govern your use of Renvue's
               escrow API platform and related services. Please read these terms
               carefully before using our services.
             </p>
@@ -174,10 +174,10 @@ export default function TermsPage() {
               </p>
               <div className="space-y-2">
                 <p>
-                  <strong>Email:</strong> legal@paylock.com
+                  <strong>Email:</strong> legal@Renvue.com
                 </p>
                 <p>
-                  <strong>Address:</strong> Paylock Inc., 123 Market Street,
+                  <strong>Address:</strong> Renvue Inc., 123 Market Street,
                   Suite 400, San Francisco, CA 94105
                 </p>
                 <p>

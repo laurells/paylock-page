@@ -22,21 +22,21 @@ export default function ContactPage() {
       title: "Sales Inquiries",
       description:
         "Get in touch with our sales team to discuss your platform's needs",
-      contact: "sales@paylock.com",
+      contact: "sales@Renvue.com",
       action: "Email Sales",
     },
     {
       icon: Headphones,
       title: "Technical Support",
       description: "Need help with integration or have technical questions?",
-      contact: "support@paylock.com",
+      contact: "support@Renvue.com",
       action: "Get Support",
     },
     {
       icon: Users,
       title: "Partnerships",
-      description: "Interested in partnering with Paylock?",
-      contact: "partnerships@paylock.com",
+      description: "Interested in partnering with Renvue?",
+      contact: "partnerships@Renvue.com",
       action: "Partner With Us",
     },
   ];
@@ -83,7 +83,7 @@ export default function ContactPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Have questions about Paylock? Want to discuss how we can help secure
+            Have questions about Renvue? Want to discuss how we can help secure
             your platform's transactions? We'd love to hear from you.
           </motion.p>
         </div>

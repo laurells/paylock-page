@@ -1,5 +1,5 @@
 {
-  "name": "paylock-page",
+  "name": "renvue",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laurells/paylock-page.git"
+    "url": "git+https://github.com/laurells/Renvue-page.git"
   },
   "keywords": [
     "nextjs",
@@ -52,7 +52,7 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/laurells/paylock-page/issues"
+    "url": "https://github.com/laurells/Renvue-page/issues"
   },
-  "homepage": "https://github.com/laurells/paylock-page#readme"
+  "homepage": "https://github.com/laurells/Renvue-page#readme"
 }

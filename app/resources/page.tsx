@@ -129,7 +129,7 @@ const webinars = [
 const guides = [
   {
     title: "Quick Start Guide",
-    description: "Get up and running with Paylock in under 10 minutes",
+    description: "Get up and running with Renvue in under 10 minutes",
     difficulty: "Beginner",
     time: "10 min",
   },
@@ -175,7 +175,7 @@ export default function ResourcesPage() {
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
               Discover guides, tutorials, case studies, and best practices to
-              help you build better with Paylock.
+              help you build better with Renvue.
             </p>
           </motion.div>
         </div>
@@ -312,7 +312,7 @@ export default function ResourcesPage() {
               Popular <span className="text-blue-600">guides</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Step-by-step tutorials to help you master Paylock
+              Step-by-step tutorials to help you master Renvue
             </p>
           </motion.div>
 

@@ -29,7 +29,7 @@ const communityChannels = [
     members: "2,000+",
     icon: MessageCircle,
     color: "from-indigo-500 to-purple-500",
-    link: "https://discord.gg/paylock",
+    link: "https://discord.gg/Renvue",
     features: [
       "Real-time chat",
       "Code help",
@@ -44,7 +44,7 @@ const communityChannels = [
     members: "500+",
     icon: Github,
     color: "from-gray-700 to-gray-900",
-    link: "https://github.com/paylock",
+    link: "https://github.com/Renvue",
     features: [
       "Open source SDKs",
       "Issue tracking",
@@ -55,11 +55,11 @@ const communityChannels = [
   {
     name: "Stack Overflow",
     description:
-      "Get help from the community and our team with the 'paylock' tag",
+      "Get help from the community and our team with the 'Renvue' tag",
     members: "1,000+",
     icon: BookOpen,
     color: "from-orange-500 to-red-500",
-    link: "https://stackoverflow.com/questions/tagged/paylock",
+    link: "https://stackoverflow.com/questions/tagged/Renvue",
     features: [
       "Q&A format",
       "Expert answers",
@@ -89,7 +89,7 @@ const events = [
   {
     title: "Hackathon",
     description:
-      "Quarterly hackathon with prizes for the best Paylock integrations",
+      "Quarterly hackathon with prizes for the best Renvue integrations",
     frequency: "Quarterly",
     nextDate: "Mar 2025",
     attendees: "500+",
@@ -177,7 +177,7 @@ export default function CommunityPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Connect with thousands of developers building with Paylock. Get
+              Connect with thousands of developers building with Renvue. Get
               help, share knowledge, and shape the future of secure
               transactions.
             </p>

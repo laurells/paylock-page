@@ -180,7 +180,7 @@ export default function GuidesPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Master Paylock with our comprehensive step-by-step guides. From
+              Master Renvue with our comprehensive step-by-step guides. From
               basic setup to advanced implementations, we've got you covered.
             </p>
 

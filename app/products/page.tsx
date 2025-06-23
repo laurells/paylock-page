@@ -230,7 +230,7 @@ export default function ProductsPage() {
           >
             <h2 className="text-4xl font-bold mb-6">Ready to get started?</h2>
             <p className="text-xl mb-8 opacity-90">
-              Join thousands of businesses securing transactions with Paylock
+              Join thousands of businesses securing transactions with Renvue
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">

@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Card, CardContent } from "./ui/card"
-import PaylockLogo from "./paylock-logo"
+import RenvueLogo from "./Renvue-logo"
 import {
   Home,
   Search,
@@ -40,7 +40,7 @@ export default function NotFoundClient() {
       <header className="border-b bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
           <Link href="/">
-            <PaylockLogo size="md" />
+            <RenvueLogo size="md" />
           </Link>
         </div>
       </header>

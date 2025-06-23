@@ -75,7 +75,7 @@ const caseStudy = {
   industry: "Multi-vendor Marketplace",
   challenge: "High dispute rates (15%) and seller churn due to payment issues",
   solution:
-    "Implemented Paylock's condition-based escrow with delivery verification",
+    "Implemented Renvue's condition-based escrow with delivery verification",
   results: [
     "90% reduction in payment disputes",
     "40% increase in seller retention",
@@ -83,7 +83,7 @@ const caseStudy = {
     "60% faster dispute resolution",
   ],
   quote:
-    "Paylock transformed our marketplace. Sellers trust us more, buyers feel secure, and our support team can focus on growth instead of disputes.",
+    "Renvue transformed our marketplace. Sellers trust us more, buyers feel secure, and our support team can focus on growth instead of disputes.",
   author: "Sarah Chen, CTO at MarketHub",
 };
 
@@ -297,7 +297,7 @@ export default function EcommercePage() {
               Ready to secure your marketplace?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join thousands of e-commerce platforms using Paylock
+              Join thousands of e-commerce platforms using Renvue
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/auth/signup">

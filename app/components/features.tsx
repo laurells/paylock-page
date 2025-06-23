@@ -256,7 +256,7 @@ export default function Features() {
                 viewport={{ once: true }}
               >
                 <code>{`// Both parties must accept conditions
-await paylock.transactions.acceptCondition({
+await Renvue.transactions.acceptCondition({
   transactionId: 'txn_1234567890',
   partyType: 'buyer', // or 'seller'
   conditionMet: true,
@@ -267,7 +267,7 @@ await paylock.transactions.acceptCondition({
 });
 
 // Funds released automatically when both accept
-const transaction = await paylock.transactions.get(
+const transaction = await Renvue.transactions.get(
   'txn_1234567890'
 );
 console.log(transaction.status); // 'completed'`}</code>

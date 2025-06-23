@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "./ui/button"
 import { X, ChevronRight, Home, Package, Wrench, BookOpen, DollarSign } from "lucide-react"
 import Link from "next/link"
-import PaylockLogo from "./paylock-logo"
+import RenvueLogo from "./Renvue-logo"
 
 interface MobileMenuProps {
   isOpen: boolean
@@ -145,7 +145,7 @@ export function MobileMenu({ isOpen, onToggle }: MobileMenuProps) {
             <div className="flex flex-col h-full">
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-slate-200">
-                <PaylockLogo size="sm" variant="gradient" />
+                <RenvueLogo size="sm" variant="gradient" />
                 <Button onClick={onToggle} variant="ghost" size="sm">
                   <X className="w-6 h-6" />
                 </Button>

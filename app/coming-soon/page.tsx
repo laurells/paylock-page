@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 import { Button } from "../components/ui/button"
 import { Input } from "../components/ui/input"
 import { Card, CardContent } from "../components/ui/card"
-import PaylockLogo from "../components/paylock-logo"
+import RenvueLogo from "../components/Renvue-logo"
 import { Clock, Users, Shield, CheckCircle, Loader2, ArrowRight, Twitter, Linkedin, Github } from "lucide-react"
 
 export default function ComingSoonPage() {
@@ -63,7 +63,7 @@ export default function ComingSoonPage() {
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
-          <PaylockLogo size="md" />
+          <RenvueLogo size="md" />
         </div>
       </header>
 

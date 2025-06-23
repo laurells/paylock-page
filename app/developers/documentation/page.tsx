@@ -81,7 +81,7 @@ export default function DocumentationPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Everything you need to integrate Paylock into your application.
+              Everything you need to integrate Renvue into your application.
               From quick start guides to comprehensive API references.
             </p>
 

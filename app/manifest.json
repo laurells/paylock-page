@@ -1,6 +1,6 @@
 {
-    "name": "Paylock - Secure Escrow Services",
-    "short_name": "Paylock",
+    "name": "Renvue - Secure Escrow Services",
+    "short_name": "Renvue",
     "description": "Secure escrow services for digital transactions with advanced fraud protection",
     "start_url": "/",
     "display": "standalone",
@@ -92,7 +92,7 @@
         "sizes": "1280x720",
         "type": "image/png",
         "form_factor": "wide",
-        "label": "Paylock Homepage"
+        "label": "Renvue Homepage"
       },
       {
         "src": "/screenshots/mobile-dashboard.png",
@@ -105,12 +105,12 @@
     "related_applications": [
       {
         "platform": "play",
-        "url": "https://play.google.com/store/apps/details?id=com.paylock.app",
-        "id": "com.paylock.app"
+        "url": "https://play.google.com/store/apps/details?id=com.Renvue.app",
+        "id": "com.Renvue.app"
       },
       {
         "platform": "itunes",
-        "url": "https://apps.apple.com/app/paylock/id123456789",
+        "url": "https://apps.apple.com/app/Renvue/id123456789",
         "id": "123456789"
       }
     ],

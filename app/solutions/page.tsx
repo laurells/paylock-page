@@ -152,7 +152,7 @@ export default function SolutionsPage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              Discover how businesses across different industries use Paylock to
+              Discover how businesses across different industries use Renvue to
               build trust and secure transactions.
             </p>
           </motion.div>
@@ -227,7 +227,7 @@ export default function SolutionsPage() {
               Success <span className="text-blue-600">stories</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              See how companies transformed their businesses with Paylock
+              See how companies transformed their businesses with Renvue
             </p>
           </motion.div>
 
@@ -297,7 +297,7 @@ export default function SolutionsPage() {
               Ready to transform your business?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Let's discuss how Paylock can solve your specific challenges
+              Let's discuss how Renvue can solve your specific challenges
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button

@@ -34,7 +34,7 @@ export default function GlobalError({
               </Button>
 
               <p className="text-sm text-slate-500">
-                If this problem persists, please contact support at support@paylock.com
+                If this problem persists, please contact support at support@Renvue.com
               </p>
             </CardContent>
           </Card>

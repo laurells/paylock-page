@@ -93,7 +93,7 @@ async function sendWelcomeEmail(entry: WaitlistEntry) {
   // Simulate email sending
   const emailContent = {
     to: entry.email,
-    subject: "Welcome to the Paylock Waitlist! 🚀",
+    subject: "Welcome to the Renvue Waitlist! 🚀",
     html: generateWelcomeEmailHTML(entry),
   }
 
@@ -110,11 +110,11 @@ function generateWelcomeEmailHTML(entry: WaitlistEntry): string {
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Welcome to Paylock Waitlist</title>
+      <title>Welcome to Renvue Waitlist</title>
     </head>
     <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
       <div style="text-align: center; margin-bottom: 30px;">
-        <h1 style="color: #1e40af; font-size: 28px; margin-bottom: 10px;">Welcome to Paylock!</h1>
+        <h1 style="color: #1e40af; font-size: 28px; margin-bottom: 10px;">Welcome to Renvue!</h1>
         <p style="color: #64748b; font-size: 16px;">You're now on the waitlist for the future of secure escrow services</p>
       </div>
       
@@ -147,8 +147,8 @@ function generateWelcomeEmailHTML(entry: WaitlistEntry): string {
       </div>
       
       <div style="text-align: center; padding-top: 20px; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 14px;">
-        <p>Thanks for your interest in Paylock!</p>
-        <p>The Paylock Team</p>
+        <p>Thanks for your interest in Renvue!</p>
+        <p>The Renvue Team</p>
       </div>
     </body>
     </html>

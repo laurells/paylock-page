@@ -15,7 +15,7 @@ import {
 } from "../../components/ui/card";
 import { ArrowLeft, Mail } from "lucide-react";
 import { motion } from "framer-motion";
-import PaylockLogo from "../../components/paylock-logo";
+import RenvueLogo from "../../components/Renvue-logo";
 import Link from "next/link";
 
 export default function ForgotPasswordPage() {
@@ -64,7 +64,7 @@ export default function ForgotPasswordPage() {
         {/* Logo */}
         <motion.div className="text-center mb-8" variants={itemVariants}>
           <Link href="/">
-            <PaylockLogo size="lg" variant="gradient" animated />
+            <RenvueLogo size="lg" variant="gradient" animated />
           </Link>
         </motion.div>
 

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Button } from "../components/ui/button";
 import { ChevronDown, X, Menu } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import PaylockLogo from "./paylock-logo";
+import RenvueLogo from "./Renvue-logo";
 import Link from "next/link";
 import { LanguageSelector } from "./language-selector";
 import { MobileMenu } from "./mobile-menu";
@@ -172,7 +172,7 @@ export default function Header() {
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
             <Link href="/">
-              <PaylockLogo size="md" variant="gradient" animated />
+              <RenvueLogo size="md" variant="gradient" animated />
             </Link>
           </motion.div>
 

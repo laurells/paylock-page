@@ -42,7 +42,7 @@ export default function WaitlistSection() {
       /*
       await emailjs.send(serviceId, templateId, {
         to_email: "your-email@example.com",
-        from_name: "Paylock Waitlist",
+        from_name: "Renvue Waitlist",
         message: `New waitlist signup: ${email}`,
         reply_to: email
       }, userId);

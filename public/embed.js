@@ -1,7 +1,7 @@
 (function () {
   // Prevent multiple instances
-  if (window.paylockWidgetLoaded) return;
-  window.paylockWidgetLoaded = true;
+  if (window.RenvueWidgetLoaded) return;
+  window.RenvueWidgetLoaded = true;
 
   // Widget state
   let isOpen = false;
@@ -9,7 +9,7 @@
   let messageHistory = [];
   // Create widget container
   const widget = document.createElement("div");
-  widget.id = "paylock-chat-widget";
+  widget.id = "Renvue-chat-widget";
   widget.style.cssText = `
       position: fixed;
       bottom: 20px;
@@ -154,7 +154,7 @@
   //     align-items: center;
   //   `;
   // header.innerHTML = `
-  //     <span>PayLock Support</span>
+  //     <span>Renvue Support</span>
   //     <button id="close-chat" style="background: none; border: none; color: white; cursor: pointer; padding: 4px;">
   //       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
   //         <path d="M18 6L6 18M6 6l12 12"/>
@@ -174,7 +174,7 @@
       `;
       header.innerHTML = `
         <div>
-          <div style="font-weight: 600; font-size: 16px; margin-bottom: 4px;">PayLock Support</div>
+          <div style="font-weight: 600; font-size: 16px; margin-bottom: 4px;">Renvue Support</div>
           <div style="font-size: 12px; opacity: 0.9; display: flex; align-items: center;">
             <div style="width: 8px; height: 8px; background: #4ade80; border-radius: 50%; margin-right: 6px;"></div>
             Typically replies in a few minutes
@@ -376,7 +376,7 @@ inputWrapper.style.cssText = `
      // Add welcome message
      function showWelcomeMessage() {
       setTimeout(() => {
-        addMessage("👋 Hi! I'm here to help you with PayLock. How can I assist you today?", false);
+        addMessage("👋 Hi! I'm here to help you with Renvue. How can I assist you today?", false);
       }, 500);
     }
 
@@ -645,5 +645,5 @@ inputWrapper.style.cssText = `
   }, 10000); // Show after 10 seconds
 
 
-  console.log('PayLock chat widget loaded successfully');
+  console.log('Renvue chat widget loaded successfully');
 })();

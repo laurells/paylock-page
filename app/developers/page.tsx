@@ -62,14 +62,14 @@ const sdks = [
   { name: "Go", version: "v1.6.1", downloads: "12K+", logo: "🐹" },
 ];
 
-const codeExample = `// Initialize Paylock client
-const paylock = new Paylock({
-  apiKey: process.env.PAYLOCK_API_KEY,
+const codeExample = `// Initialize Renvue client
+const Renvue = new Renvue({
+  apiKey: process.env.Renvue_API_KEY,
   environment: 'sandbox' // or 'production'
 });
 
 // Create an escrow transaction
-const transaction = await paylock.transactions.create({
+const transaction = await Renvue.transactions.create({
   amount: 50000, // $500.00 in cents
   currency: 'usd',
   buyer: {

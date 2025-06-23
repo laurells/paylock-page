@@ -17,7 +17,7 @@ import { Separator } from "../../components/ui/separator";
 import { Checkbox } from "../../components/ui/checkbox";
 import { Eye, EyeOff, Github, Mail, Check } from "lucide-react";
 import { motion } from "framer-motion";
-import PaylockLogo from "../../components/paylock-logo";
+import RenvueLogo from "../../components/Renvue-logo";
 import Link from "next/link";
 
 export default function SignUpPage() {
@@ -90,7 +90,7 @@ export default function SignUpPage() {
         {/* Logo */}
         <motion.div className="text-center mb-8" variants={itemVariants}>
           <Link href="/">
-            <PaylockLogo size="lg" variant="gradient" animated />
+            <RenvueLogo size="lg" variant="gradient" animated />
           </Link>
         </motion.div>
 
@@ -101,7 +101,7 @@ export default function SignUpPage() {
                 Create your account
               </CardTitle>
               <CardDescription className="text-slate-600">
-                Start securing transactions with Paylock today
+                Start securing transactions with Renvue today
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">

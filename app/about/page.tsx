@@ -89,7 +89,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            Paylock was founded with a simple mission: make online transactions
+            Renvue was founded with a simple mission: make online transactions
             as secure and trustworthy as face-to-face exchanges. We're the
             escrow infrastructure that powers the world's most trusted
             platforms.
@@ -145,7 +145,7 @@ export default function AboutPage() {
                 They realized that what the industry needed wasn't just another
                 escrow service, but a complete infrastructure platform that
                 could be seamlessly integrated into any marketplace or platform.
-                That's how Paylock was born.
+                That's how Renvue was born.
               </p>
               <p>
                 Today, we're proud to be the escrow infrastructure of choice for

@@ -44,7 +44,7 @@ const upcomingWebinars = [
     duration: "75 min",
     speaker: {
       name: "Marcus Rodriguez",
-      title: "Lead Engineer at Paylock",
+      title: "Lead Engineer at Renvue",
       avatar: "MR",
     },
     attendees: "180+ registered",
@@ -88,7 +88,7 @@ const recordedWebinars = [
     duration: "50 min",
     speaker: {
       name: "Emily Watson",
-      title: "Security Lead at Paylock",
+      title: "Security Lead at Renvue",
       avatar: "EW",
     },
     views: "1,200+ views",
@@ -100,14 +100,14 @@ const recordedWebinars = [
     ],
   },
   {
-    title: "Getting Started with Paylock: Complete Walkthrough",
+    title: "Getting Started with Renvue: Complete Walkthrough",
     description:
-      "Step-by-step guide to implementing your first escrow transaction with Paylock APIs.",
+      "Step-by-step guide to implementing your first escrow transaction with Renvue APIs.",
     date: "Dec 10, 2024",
     duration: "40 min",
     speaker: {
       name: "Alex Thompson",
-      title: "Developer Advocate at Paylock",
+      title: "Developer Advocate at Renvue",
       avatar: "AT",
     },
     views: "2,500+ views",
@@ -126,7 +126,7 @@ const recordedWebinars = [
     duration: "65 min",
     speaker: {
       name: "Lisa Park",
-      title: "Senior Engineer at Paylock",
+      title: "Senior Engineer at Renvue",
       avatar: "LP",
     },
     views: "950+ views",
@@ -145,7 +145,7 @@ const recordedWebinars = [
     duration: "55 min",
     speaker: {
       name: "Jennifer Adams",
-      title: "Solutions Architect at Paylock",
+      title: "Solutions Architect at Renvue",
       avatar: "JA",
     },
     views: "1,800+ views",

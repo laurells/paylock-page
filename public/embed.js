@@ -7,6 +7,9 @@
   let isOpen = false;
   let isTyping = false;
   let messageHistory = [];
+  let requestCount = 0;
+  const MAX_REQUESTS = 10;
+  const SUPPORT_MESSAGE = 'You have reached the maximum number of free requests. For further assistance, please message +1234567890 for human support.';
   // Create widget container
   const widget = document.createElement("div");
   widget.id = "Renvue-chat-widget";
@@ -496,6 +499,10 @@ inputWrapper.style.cssText = `
   // Handle send message
    // Handle send message
    async function sendMessage() {
+    if (requestCount >= MAX_REQUESTS) {
+      addMessage(SUPPORT_MESSAGE, false);
+      return;
+    }
     const message = input.value.trim();
     if (!message) return;
 
@@ -549,7 +556,9 @@ inputWrapper.style.cssText = `
                 if (!streamingMessage) {
                   streamingMessage = addMessage('', false, true);
                 }
-                fullResponse += data.textDelta;
+                // Remove all '**' from the response
+                const cleanDelta = data.textDelta.replace(/\*\*/g, '');
+                fullResponse += cleanDelta;
                 streamingMessage.textContent = fullResponse;
                 messagesContainer.scrollTop = messagesContainer.scrollHeight;
               }
@@ -563,7 +572,7 @@ inputWrapper.style.cssText = `
       if (streamingMessage) {
         streamingMessage.id = '';
       }
-
+      requestCount++;
     } catch (error) {
       console.error('Error sending message:', error);
       hideTypingIndicator();

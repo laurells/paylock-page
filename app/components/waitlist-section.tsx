@@ -7,12 +7,14 @@ import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Card } from "./ui/card"
 import { CheckCircle, Loader2, ArrowRight } from "lucide-react"
+import { useSnackbar } from "./ui/snackbar-provider"
 
 export default function WaitlistSection() {
   const [email, setEmail] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
-  const [error, setError] = useState("")
+  const { showSnackbar } = useSnackbar()
+   const [error, setError] = useState("")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -23,35 +25,31 @@ export default function WaitlistSection() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
       setError("Please enter a valid email address")
+      showSnackbar("Please enter a valid email address", "error")
       setIsSubmitting(false)
       return
     }
 
     try {
-      // Using EmailJS (free tier) for email collection
-      // In a real implementation, you would use your EmailJS credentials
-      const serviceId = "service_id" // Replace with your EmailJS service ID
-      const templateId = "template_id" // Replace with your EmailJS template ID
-      const userId = "user_id" // Replace with your EmailJS user ID
-
-      // Simulate API call (in production, use actual EmailJS API)
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-
-      // For demo purposes, we'll simulate success
-      // In production, you would use the EmailJS send method:
-      /*
-      await emailjs.send(serviceId, templateId, {
-        to_email: "your-email@example.com",
-        from_name: "Renvue Waitlist",
-        message: `New waitlist signup: ${email}`,
-        reply_to: email
-      }, userId);
-      */
-
+      // POST to waitlist API
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        setError(data.error || "Failed to join waitlist. Please try again.")
+        showSnackbar(data.error || "Failed to join waitlist. Please try again.", "error")
+        setIsSubmitting(false)
+        return
+      }
       setIsSuccess(true)
       setEmail("")
+      showSnackbar("Successfully joined the waitlist!", "success")
     } catch (err) {
       setError("Failed to join waitlist. Please try again.")
+      showSnackbar("Failed to join waitlist. Please try again.", "error")
       console.error("Waitlist error:", err)
     } finally {
       setIsSubmitting(false)

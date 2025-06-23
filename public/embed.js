@@ -130,8 +130,10 @@
       position: fixed;
       bottom: 90px;
       right: 20px;
-      width: 380px;
-      height: 500px;
+      width: 90vw;
+      max-width: 380px;
+      height: 70vh;
+      max-height: 500px;
       background: white;
       border-radius: 16px;
       box-shadow: 0 10px 50px rgba(0,0,0,0.15);
@@ -140,6 +142,7 @@
       overflow: hidden;
       border: 1px solid #e1e5e9;
       animation: slideUp 0.3s ease-out;
+      z-index: 9999;
     `;
 
   // Create chat header

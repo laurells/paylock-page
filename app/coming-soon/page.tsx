@@ -9,36 +9,48 @@ import { Input } from "../components/ui/input"
 import { Card, CardContent } from "../components/ui/card"
 import RenvueLogo from "../components/Renvue-logo"
 import { Clock, Users, Shield, CheckCircle, Loader2, ArrowRight, Twitter, Linkedin, Github } from "lucide-react"
+import { useSnackbar } from "../components/ui/snackbar-provider"
 
 export default function ComingSoonPage() {
   const [email, setEmail] = useState("")
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
   const [error, setError] = useState("")
+  const { showSnackbar } = useSnackbar()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setError("")
 
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
       setError("Please enter a valid email address")
+      showSnackbar("Please enter a valid email address", "error")
       setIsSubmitting(false)
       return
     }
 
     try {
-      // Using EmailJS (free tier) for email collection
-      // In a real implementation, you would use your EmailJS credentials
-      // Simulate API call (in production, use actual EmailJS API)
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-
+      // POST to waitlist API
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        setError(data.error || "Failed to join waitlist. Please try again.")
+        showSnackbar(data.error || "Failed to join waitlist. Please try again.", "error")
+        setIsSubmitting(false)
+        return
+      }
       setIsSuccess(true)
       setEmail("")
+      showSnackbar("Successfully joined the waitlist!", "success")
     } catch (err) {
       setError("Failed to join waitlist. Please try again.")
+      showSnackbar("Failed to join waitlist. Please try again.", "error")
       console.error("Waitlist error:", err)
     } finally {
       setIsSubmitting(false)
@@ -129,8 +141,6 @@ export default function ComingSoonPage() {
                 </Button>
               </form>
             )}
-
-            {error && <p className="mt-3 text-sm text-red-600 mb-6">{error}</p>}
 
             <div className="flex items-center justify-center gap-8 text-sm text-slate-500">
               <div className="flex items-center gap-2">

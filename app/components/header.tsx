@@ -13,44 +13,52 @@ const dropdownMenus = {
   Products: [
     {
       name: "Escrow API",
-      href: "/products/escrow-api",
+      // href: "/products/escrow-api",
+      href: "/coming-soon",
       description: "Core escrow infrastructure",
     },
     {
       name: "Dispute Resolution",
-      href: "/products/dispute-resolution",
+      // href: "/products/dispute-resolution",
+      href: "/coming-soon",
       description: "Automated dispute handling",
     },
     {
       name: "Condition Engine",
-      href: "/products/condition-engine",
+      // href: "/products/condition-engine",
+      href: "/coming-soon",
       description: "Custom verification logic",
     },
     {
       name: "Webhook",
-      href: "/products/webhook",
+      // href: "/products/webhook",
+      href: "/coming-soon",
       description: "Real-time notifications",
     },
   ],
   Solutions: [
     {
       name: "E-commerce",
-      href: "/solutions/ecommerce",
+      // href: "/solutions/ecommerce",
+      href: "/coming-soon",
       description: "Marketplace transactions",
     },
     {
       name: "Freelancing",
-      href: "/solutions/freelance",
+      // href: "/solutions/freelance",
+      href: "/coming-soon",
       description: "Project-based payments",
     },
     {
       name: "Logistics",
-      href: "/solutions/logistics",
+      // href: "/solutions/logistics",
+      href: "/coming-soon",
       description: "Delivery verification",
     },
     {
       name: "Real Estate",
-      href: "/solutions/realestate",
+      // href: "/solutions/realestate",
+      href: "/coming-soon",
       description: "Property transactions",
     },
   ],
@@ -79,22 +87,26 @@ const dropdownMenus = {
   Resources: [
     {
       name: "Blog",
-      href: "/resources/blog",
+      // href: "/resources/blog",
+      href: "/coming-soon",
       description: "Latest insights & tutorials",
     },
     {
       name: "Case Studies",
-      href: "/resources/case-studies",
+      // href: "/resources/case-studies",
+      href: "/coming-soon",
       description: "Customer success stories",
     },
     {
       name: "Webinars",
       href: "/resources/webinars",
+      // href: "/coming-soon",
       description: "Live sessions & recordings",
     },
     {
       name: "Guides",
-      href: "/resources/guides",
+      // href: "/resources/guides",
+      href: "/coming-soon",
       description: "Step-by-step tutorials",
     },
   ],
@@ -188,13 +200,16 @@ export default function Header() {
                 onMouseEnter={() => setActiveDropdown(menuName)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <Link
-                  href={`/${menuName.toLowerCase()}`}
+                {/* <Link */}
+                <p
+                  // href={`/${menuName.toLowerCase()}`}
                   className="flex items-center text-slate-600 hover:text-slate-900 font-medium transition-colors duration-200 group-hover:text-blue-600"
                 >
                   {menuName}
                   <ChevronDown className="ml-1 h-4 w-4 transition-transform group-hover:rotate-180" />
-                </Link>
+                </p>
+                {/* </Link> */}
+                
 
                 {/* Dropdown Menu */}
                 <AnimatePresence>
@@ -242,7 +257,8 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <Link href="/auth/signin">
+             {/* /auth/signin */}
+            <Link href="/coming-soon">
               <Button
                 variant="ghost"
                 className="text-slate-600 hover:text-slate-900 font-medium transition-colors duration-200"

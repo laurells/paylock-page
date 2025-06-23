@@ -3,14 +3,18 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import { ArrowRight, Shield, CheckCircle, Play, Star } from "lucide-react";
+import { ArrowRight, Shield, CheckCircle, Play, Star, Loader2 } from "lucide-react";
 import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
+import { useSnackbar } from "./ui/snackbar-provider";
 
 export default function Hero() {
   const [animatedValue, setAnimatedValue] = useState(0);
   const [currentStat, setCurrentStat] = useState(0);
   const controls = useAnimation();
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { showSnackbar } = useSnackbar();
 
   const stats = [
     {
@@ -85,6 +89,34 @@ export default function Hero() {
         ease: [0.25, 0.46, 0.45, 0.94],
       },
     },
+  };
+
+  const handleWaitlist = async () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      showSnackbar("Please enter a valid email address", "error");
+      return;
+    }
+    setIsSubmitting(true);
+    try {
+      const res = await fetch("/api/waitlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        showSnackbar(data.error || "Failed to join waitlist. Please try again.", "error");
+        setIsSubmitting(false);
+        return;
+      }
+      showSnackbar("Successfully joined the waitlist!", "success");
+      setEmail("");
+    } catch (err) {
+      showSnackbar("Failed to join waitlist. Please try again.", "error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -245,13 +277,26 @@ export default function Hero() {
                   type="email"
                   placeholder="Enter your business email"
                   className="bg-white/80 backdrop-blur-sm border-slate-300 text-slate-900 placeholder:text-slate-500 focus:border-blue-500 focus:ring-blue-500 h-14 text-lg shadow-lg"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}
                 />
-                <Link href="/auth/signup">
-                  <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-8 h-14 text-lg whitespace-nowrap transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl">
-                    Get Started
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Button>
-                </Link>
+                <Button
+                  className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold px-8 h-14 text-lg whitespace-nowrap transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+                  onClick={handleWaitlist}
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Joining...
+                    </>
+                  ) : (
+                    <>
+                      Get Started
+                      <ArrowRight className="ml-2 w-5 h-5" />
+                    </>
+                  )}
+                </Button>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">

@@ -9,6 +9,7 @@ import {
   primaryKey,
   foreignKey,
   boolean,
+  serial,
 } from 'drizzle-orm/pg-core';
 
 export const user = pgTable('User', {
@@ -168,3 +169,11 @@ export const stream = pgTable(
 );
 
 export type Stream = InferSelectModel<typeof stream>;
+
+export const waitlist = pgTable('waitlist', {
+  id: serial('id').primaryKey(),
+  email: text('email').notNull().unique(),
+  created_at: timestamp('created_at').notNull().defaultNow(),
+});
+
+export type Waitlist = InferSelectModel<typeof waitlist>;

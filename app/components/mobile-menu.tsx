@@ -17,36 +17,70 @@ const menuItems = [
     title: "Home",
     href: "/",
     icon: Home,
+
   },
   {
     title: "Products",
-    href: "/products",
+    // href: "/products",
+    href: "/coming-soon",
     icon: Package,
     submenu: [
-      { name: "Escrow API", href: "/products/escrow-api" },
-      { name: "Dispute Resolution", href: "/products/dispute-resolution" },
-      { name: "Condition Engine", href: "/products/condition-engine" },
-      { name: "Webhooks", href: "/products/webhooks" },
+      { name: "Escrow API",
+        //  href: "/products/escrow-api" 
+        href: "/coming-soon",
+        },
+      { name: "Dispute Resolution", 
+        // href: "/products/dispute-resolution" 
+        href: "/coming-soon",
+      },
+      { name: "Condition Engine", 
+        // href: "/products/condition-engine" 
+        href: "/coming-soon",
+      },
+      { name: "Webhooks", 
+        // href: "/products/webhooks" 
+        href: "/coming-soon",
+      },
     ],
   },
   {
     title: "Solutions",
-    href: "/solutions",
+    // href: "/solutions",
+    href: "/coming-soon",
     icon: Wrench,
     submenu: [
-      { name: "E-commerce", href: "/solutions/ecommerce" },
-      { name: "Freelancing", href: "/solutions/freelancing" },
+      { name: "E-commerce", 
+        // href: "/solutions/ecommerce" 
+        href: "/coming-soon",
+      },
+      { name: "Freelancing",
+        //  href: "/solutions/freelancing" 
+        href: "/coming-soon",
+        },
     ],
   },
   {
     title: "Developers",
-    href: "/developers",
+    // href: "/developers",
+    href: "/coming-soon",
     icon: BookOpen,
     submenu: [
-      { name: "Documentation", href: "/developers/documentation" },
-      { name: "SDKs", href: "/developers/sdks" },
-      { name: "Quick Start", href: "/developers/quickstart" },
-      { name: "Community", href: "/developers/community" },
+      { name: "Documentation", 
+        // href: "/developers/documentation" 
+        href: "/coming-soon",
+      },
+      { name: "SDKs", 
+        // href: "/developers/sdks" 
+        href: "/coming-soon",
+      },
+      { name: "Quick Start", 
+        // href: "/developers/quickstart" 
+        href: "/coming-soon",
+      },
+      { name: "Community", 
+        // href: "/developers/community"
+        href: "/coming-soon", 
+      },
     ],
   },
   {

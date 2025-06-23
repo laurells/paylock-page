@@ -8,6 +8,7 @@ import { PWAInstall } from "./components/pwa-install"
 import { AccessibilityMenu } from "./components/accessibility-menu"
 import { GoogleTranslateWidget, BrowserTranslate } from "./components/auto-translate"
 import { TranslationStatus } from "./components/ai-translate"
+import { SnackbarProvider } from "./components/ui/snackbar-provider"
 
 export function Providers({ children }: { children: ReactNode }) {
   const [mounted, setMounted] = useState(false)
@@ -19,7 +20,7 @@ export function Providers({ children }: { children: ReactNode }) {
   return (
     <LanguageProvider>
       {mounted && (
-        <>
+        <SnackbarProvider>
           {children}
           <GoogleAnalytics />
           <CookieConsent />
@@ -28,7 +29,7 @@ export function Providers({ children }: { children: ReactNode }) {
           <GoogleTranslateWidget />
           <BrowserTranslate />
           <TranslationStatus />
-        </>
+        </SnackbarProvider>
       )}
     </LanguageProvider>
   )

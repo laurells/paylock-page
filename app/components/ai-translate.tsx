@@ -6,7 +6,7 @@ import { useState, useEffect } from "react"
 import { useLanguage } from "./language-provider"
 
 
-// Translation Status Indicator
+// Translation Status
 export function TranslationStatus() {
   const { language } = useLanguage()
 

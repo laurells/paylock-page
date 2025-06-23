@@ -13,13 +13,25 @@ export function Snackbar({
 }) {
   if (!open) return null;
   return (
-    <div
-      className={`fixed bottom-6 left-6 px-6 py-3 rounded shadow-lg z-50 transition-all
-        ${type === "success" ? "bg-green-600 text-white" : "bg-red-600 text-white"}`}
-      onClick={onClose}
-      role="alert"
-    >
-      {message}
-    </div>
+    <>
+      <style>{`
+        @media (max-width: 600px) {
+          .snackbar-mobile-top-right {
+            bottom: auto !important;
+            left: auto !important;
+            top: 1.5rem !important;
+            right: 1.5rem !important;
+          }
+        }
+      `}</style>
+      <div
+        className={`fixed bottom-6 left-6 px-6 py-3 rounded shadow-lg z-50 transition-all snackbar-mobile-top-right
+          ${type === "success" ? "bg-green-600 text-white" : "bg-red-600 text-white"}`}
+        onClick={onClose}
+        role="alert"
+      >
+        {message}
+      </div>
+    </>
   );
 } 

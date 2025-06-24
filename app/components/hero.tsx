@@ -194,7 +194,7 @@ export default function Hero() {
               <span className="text-slate-900">transactions</span>
               <br />
               <span className="text-slate-500 text-5xl sm:text-6xl md:text-6xl lg:text-7xl">
-                at scale
+                at Scale
               </span>
             </motion.h1>
 

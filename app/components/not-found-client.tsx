@@ -23,10 +23,14 @@ export default function NotFoundClient() {
   const [searchQuery, setSearchQuery] = useState("")
 
   const popularPages = [
-    { name: "Products", href: "/products", icon: Shield },
-    { name: "Solutions", href: "/solutions", icon: Users },
-    { name: "Documentation", href: "/developers/documentation", icon: FileText },
-    { name: "Contact Support", href: "/contact", icon: Headphones },
+    // "/products"
+    { name: "Products", href: "/coming-soon", icon: Shield }, 
+    // "/solutions"
+    { name: "Solutions", href: "/coming-soon", icon: Users },
+    //"/developers/documentation"
+    { name: "Documentation", href: "/coming-soon", icon: FileText },
+    //"/contact"
+    { name: "Contact Support", href: "/coming-soon", icon: Headphones },
   ]
 
   const handleSearch = (e: React.FormEvent) => {

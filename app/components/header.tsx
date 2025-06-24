@@ -80,7 +80,8 @@ const dropdownMenus = {
     },
     {
       name: "Community",
-      href: "/developers/community",
+      // href: "/developers/community",
+      href: "/coming-soon",
       description: "Discord & GitHub",
     },
   ],
@@ -99,8 +100,8 @@ const dropdownMenus = {
     },
     {
       name: "Webinars",
-      href: "/resources/webinars",
-      // href: "/coming-soon",
+      // href: "/resources/webinars",
+      href: "/coming-soon",
       description: "Live sessions & recordings",
     },
     {
@@ -184,7 +185,7 @@ export default function Header() {
           {/* Logo */}
           <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
             <Link href="/">
-              <RenvueLogo size="md" variant="gradient" animated />
+              <RenvueLogo size="md" animated />
             </Link>
           </motion.div>
 

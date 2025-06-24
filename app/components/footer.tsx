@@ -42,7 +42,8 @@ export default function Footer() {
             <ul className="space-y-3 text-slate-400">
               <li>
                 <a
-                  href="/products/escrow-api"
+                  // href="/products/escrow-api"
+                   href="/coming-soon"
                   className="hover:text-white transition-colors"
                 >
                   Escrow API
@@ -50,7 +51,8 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/products/dispute-resolution"
+                  // href="/products/dispute-resolution"
+                  href="/coming-soon"
                   className="hover:text-white transition-colors"
                 >
                   Dispute Resolution
@@ -58,7 +60,8 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/products/condition-engine"
+                  // href="/products/condition-engine"
+                  href="/coming-soon"
                   className="hover:text-white transition-colors"
                 >
                   Condition Engine
@@ -66,7 +69,8 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/products/webhooks"
+                  // href="/products/webhooks"
+                  href="/coming-soon"
                   className="hover:text-white transition-colors"
                 >
                   Webhooks
@@ -124,13 +128,17 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/blog" className="hover:text-white transition-colors">
+                <a 
+                // href="/blog" 
+                href="/coming-soon"
+                className="hover:text-white transition-colors">
                   Blog
                 </a>
               </li>
               <li>
                 <a
-                  href="/careers"
+                  // href="/careers"
+                  href="/coming-soon"
                   className="hover:text-white transition-colors"
                 >
                   Careers

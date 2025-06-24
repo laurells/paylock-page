@@ -77,9 +77,9 @@ export default function RootLayout({
           employees: "51-200",
           industry: "Financial Technology",
         })}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* <link rel="icon" href="/icons/favicon.ico" sizes="any" /> */}
+        <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />

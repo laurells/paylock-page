@@ -158,7 +158,7 @@ export default function Features() {
 
         {/* Interactive Code Example */}
         <motion.div
-          className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-12 shadow-2xl border border-slate-700/50 overflow-hidden relative"
+          className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-4 sm:p-8 md:p-12 shadow-2xl border border-slate-700/50 overflow-hidden relative"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -167,7 +167,7 @@ export default function Features() {
           {/* Background pattern */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)]" />
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center relative z-10">
             <div>
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -238,7 +238,7 @@ export default function Features() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 shadow-2xl"
+              className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-4 sm:p-8 border border-slate-700/50 shadow-2xl"
             >
               <div className="flex items-center gap-2 mb-6">
                 <div className="w-3 h-3 bg-red-500 rounded-full"></div>

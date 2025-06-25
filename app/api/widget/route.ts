@@ -27,7 +27,7 @@ You are Renvue's AI Support Assistant. Your purpose is to provide accurate infor
 
 # RULES:
 1. For ANY off-topic questions (weather, jokes, other companies, etc.), respond EXACTLY with:
-   "I'm sorry, I can only assist with questions about Renvue's platform and services. <a href='https://renvue.vercel.app/contact' target='_blank' class='text-blue-500 underline'>Contact support</a> for other inquiries."
+   "I'm sorry, I can only assist with questions about Renvue's platform and services. <a href='https://payrenvue.vercel.app/contact' target='_blank' class='text-blue-500 underline'>Contact support</a> for other inquiries."
 2. For integration questions, respond EXACTLY with:
    "Yes, you can integrate Renvue with your website using our API. Documentation is available at api.renvue.com/docs. Authentication uses OAuth 2.0 with API keys."
 3. For all other platform questions, use ONLY the following information:
@@ -84,7 +84,7 @@ You are Renvue's AI Support Assistant. Your purpose is to provide accurate infor
     }
     // Validate other responses
     else if (!isValidResponse(responseText)) {
-      responseText = "I'm sorry, I can only assist with questions about Renvue's platform and services. <a href='https://renvue.vercel.app/contact' target='_blank' class='text-blue-500 underline'>Contact support</a> for other inquiries.";
+      responseText = "I'm sorry, I can only assist with questions about Renvue's platform and services. <a href='https://payrenvue.vercel.app/contact' target='_blank' class='text-blue-500 underline'>Contact support</a> for other inquiries.";
     }
 
     const encoder = new TextEncoder();
@@ -125,7 +125,7 @@ You are Renvue's AI Support Assistant. Your purpose is to provide accurate infor
 // Helper function to validate responses
 function isValidResponse(text: string): boolean {
   const requiredIntegrationResponse = "Yes, you can integrate Renvue with your website using our API. Documentation is available at api.renvue.com/docs. Authentication uses OAuth 2.0 with API keys.";
-  const standardErrorMessage = "I'm sorry, I can only assist with questions about Renvue's platform and services. <a href='https://renvue.vercel.app/contact' target='_blank' class='text-blue-500 underline'>Contact support</a> for other inquiries.";
+  const standardErrorMessage = "I'm sorry, I can only assist with questions about Renvue's platform and services. <a href='https://payrenvue.vercel.app/contact' target='_blank' class='text-blue-500 underline'>Contact support</a> for other inquiries.";
   // Check for exact match on integration response
   if (text.includes(requiredIntegrationResponse) ||
     text.includes(standardErrorMessage)) {

@@ -92,6 +92,15 @@ export default function TermsPage() {
         "You waive any right to a jury trial or to participate in a class action lawsuit.",
       ],
     },
+    {
+      title: "Prohibited Activities: Scraping, Reverse Engineering, and Automated Access",
+      content: [
+        "You are strictly prohibited from using any automated means, including but not limited to bots, scrapers, spiders, crawlers, or data mining tools, to access, extract, download, or index any portion of Renvue's website, services, or content without our express written permission.",
+        "You may not attempt to reverse engineer, decompile, disassemble, or otherwise attempt to discover the source code, underlying structure, or algorithms of any part of our website, services, or software.",
+        "Any attempt to circumvent security measures, obfuscate your identity, or gain unauthorized access to our systems is strictly forbidden.",
+        "We reserve the right to take legal action, suspend or terminate access, and seek damages against any individual or entity found to be violating these prohibitions.",
+      ],
+    },
   ];
 
   return (

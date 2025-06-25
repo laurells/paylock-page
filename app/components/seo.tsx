@@ -25,7 +25,7 @@ export function generateSEOMetadata({
     "online escrow",
     "secure transactions",
   ],
-  image = "https://payrenvue.vercel.app/og.png",
+  image = "/og.png",
   url = "https://payrenvue.vercel.app",
   type = "website",
   publishedTime,

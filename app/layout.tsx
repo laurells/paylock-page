@@ -78,6 +78,11 @@ export default function RootLayout({
           industry: "Financial Technology",
         })}
         {/* <link rel="icon" href="/icons/favicon.ico" sizes="any" /> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@Renvue" />
+        <meta name="twitter:creator" content="@Renvue" />
+        <meta name="twitter:title" content={metadata.title?.toString()} />
+        <meta name="twitter:image" content="/og.png" />
         <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
@@ -93,8 +98,8 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <Suspense fallback={<div>Loading...</div>}>
           <Providers>
-          {children}
-          <Script src="/embed.js" />
+            {children}
+            <Script src="/embed.js" />
           </Providers>
         </Suspense>
       </body>

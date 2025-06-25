@@ -1,4 +1,11 @@
 (function () {
+  // Dynamically load DOMPurify if not already loaded
+  if (typeof window.DOMPurify === 'undefined') {
+    var purifyScript = document.createElement('script');
+    purifyScript.src = '/purify.min.js';
+    purifyScript.async = false;
+    document.head.appendChild(purifyScript);
+  }
   // Prevent multiple instances
   if (window.RenvueWidgetLoaded) return;
   window.RenvueWidgetLoaded = true;
@@ -429,7 +436,16 @@ inputWrapper.style.cssText = `
       message.id = 'streaming-message';
     }
 
-    message.textContent = content;
+    if (isUser) {
+      message.textContent = content;
+    } else {
+      // Sanitize AI/assistant messages
+      if (window.DOMPurify) {
+        message.innerHTML = window.DOMPurify.sanitize(content);
+      } else {
+        message.textContent = content; // fallback if DOMPurify not loaded yet
+      }
+    }
     messageWrapper.appendChild(message);
     messagesContainer.appendChild(messageWrapper);
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
@@ -495,8 +511,6 @@ inputWrapper.style.cssText = `
     }, 1000);
   }
 
-
-  // Handle send message
    // Handle send message
    async function sendMessage() {
     if (requestCount >= MAX_REQUESTS) {
@@ -559,7 +573,11 @@ inputWrapper.style.cssText = `
                 // Remove all '**' from the response
                 const cleanDelta = data.textDelta.replace(/\*\*/g, '');
                 fullResponse += cleanDelta;
-                streamingMessage.textContent = fullResponse;
+                if (window.DOMPurify) {
+                  streamingMessage.innerHTML = window.DOMPurify.sanitize(fullResponse);
+                } else {
+                  streamingMessage.textContent = fullResponse;
+                }
                 messagesContainer.scrollTop = messagesContainer.scrollHeight;
               }
             } catch (e) {

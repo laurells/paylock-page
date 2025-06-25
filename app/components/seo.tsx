@@ -26,7 +26,7 @@ export function generateSEOMetadata({
     "secure transactions",
   ],
   image = "/og.png",
-  url = "https://Renvue.com",
+  url = "https://payrenvue.vercel.app",
   type = "website",
   publishedTime,
   modifiedTime,
@@ -95,7 +95,7 @@ export function generateStructuredData({
   type = "Organization",
   name = "Renvue",
   description = "Secure escrow services for digital transactions",
-  url = "https://Renvue.com",
+  url = "https://payrenvue.vercel.app",
   logo = "https://Renvue.com/logo.png",
   contactPoint,
   sameAs = [

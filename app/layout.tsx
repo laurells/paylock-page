@@ -29,7 +29,7 @@ export const metadata: Metadata = generateSEOMetadata({
     "safe payments",
     "payment processing",
   ],
-  url: "https://Renvue.com",
+  url: "https://payrenvue.vercel.app",
 });
 
 export const viewport: Viewport = {
@@ -56,7 +56,7 @@ export default function RootLayout({
           name: "Renvue",
           description:
             "Leading provider of secure escrow services for digital transactions, protecting businesses and individuals worldwide.",
-          url: "https://Renvue.com",
+          url: "https://payrenvue.vercel.app",
           logo: "https://Renvue.com/logo.png",
           contactPoint: {
             "@type": "ContactPoint",

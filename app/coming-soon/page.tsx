@@ -10,6 +10,7 @@ import { Card, CardContent } from "../components/ui/card"
 import RenvueLogo from "../components/Renvue-logo"
 import { Clock, Users, Shield, CheckCircle, Loader2, ArrowRight, Twitter, Linkedin, Github } from "lucide-react"
 import { useSnackbar } from "../components/ui/snackbar-provider"
+import Link from "next/link";
 
 export default function ComingSoonPage() {
   const [email, setEmail] = useState("")
@@ -75,7 +76,9 @@ export default function ComingSoonPage() {
       {/* Header */}
       <header className="border-b bg-white/80 backdrop-blur-sm">
         <div className="container mx-auto px-4 py-4">
-          <RenvueLogo size="md" />
+          <Link href="/">
+              <RenvueLogo size="md" animated />
+          </Link>
         </div>
       </header>
 

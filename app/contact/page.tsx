@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Clock, MessageSquare, Users, Headphones } from "lucide-react";
+import { MapPin, Clock, MessageSquare, Users, Headphones, Loader2 } from "lucide-react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { Button } from "../components/ui/button";
@@ -14,8 +14,21 @@ import {
   CardHeader,
   CardTitle,
 } from "../components/ui/card";
+import { useSnackbar } from "../components/ui/snackbar-provider";
+import { useState } from "react";
 
 export default function ContactPage() {
+  const { showSnackbar } = useSnackbar();
+  const [loading, setLoading] = useState(false);
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    company: "",
+    subject: "",
+    message: "",
+  });
+
   const contactMethods = [
     {
       icon: MessageSquare,
@@ -61,6 +74,53 @@ export default function ContactPage() {
       phone: "+44 20 7123 4567",
     },
   ];
+
+  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    setForm({ ...form, [e.target.id]: e.target.value });
+  }
+
+  function validateForm() {
+    return (
+      form.firstName.trim() !== "" &&
+      form.lastName.trim() !== "" &&
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email) &&
+      form.message.trim() !== ""
+    );
+  }
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const formData = new FormData();
+      formData.append('firstName', form.firstName);
+      formData.append('lastName', form.lastName);
+      formData.append('email', form.email);
+      formData.append('company', form.company);
+      formData.append('subject', form.subject);
+      formData.append('message', form.message);
+
+      const res = await fetch("https://formspree.io/f/mwpbwoyg", {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: formData,
+      });
+
+      if (res.ok) {
+        showSnackbar("Message sent successfully!", "success");
+        setForm({ firstName: "", lastName: "", email: "", company: "", subject: "", message: "" });
+      } else {
+        const errorData = await res.json();
+        console.error("Submission error:", errorData);
+        showSnackbar("Failed to send message. Please try again.", "error");
+      }
+    } catch (error: any) {
+      console.error("Full error:", error);
+      showSnackbar(`Error: ${error.message || error}`, "error");
+    } finally {
+      setLoading(false);
+    }
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -145,51 +205,57 @@ export default function ContactPage() {
             viewport={{ once: true }}
           >
             <Card>
-              <CardContent className="p-8">
-                <form className="space-y-6">
+              <CardContent className="p-8" >
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <Label htmlFor="firstName">First Name</Label>
-                      <Input id="firstName" placeholder="John" />
+                      <Input id="firstName" name="firstName" placeholder="John" value={form.firstName} onChange={handleChange} />
                     </div>
                     <div>
                       <Label htmlFor="lastName">Last Name</Label>
-                      <Input id="lastName" placeholder="Doe" />
+                      <Input id="lastName" name="lastName" placeholder="Doe" value={form.lastName} onChange={handleChange} />
                     </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <Label htmlFor="email">Email</Label>
-                      <Input
-                        id="email"
-                        type="email"
-                        placeholder="john@company.com"
-                      />
+                      <Input id="email" name="email" type="email" placeholder="john@company.com" value={form.email} onChange={handleChange} />
                     </div>
                     <div>
                       <Label htmlFor="company">Company</Label>
-                      <Input id="company" placeholder="Your Company" />
+                      <Input id="company" name="company" placeholder="Your Company" value={form.company} onChange={handleChange} />
                     </div>
                   </div>
 
                   <div>
                     <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" placeholder="How can we help you?" />
+                    <Input id="subject" name="subject" placeholder="How can we help you?" value={form.subject} onChange={handleChange} />
                   </div>
 
                   <div>
                     <Label htmlFor="message">Message</Label>
                     <textarea
                       id="message"
+                      name="message"
                       rows={6}
                       className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="Tell us more about your project and how we can help..."
+                      value={form.message}
+                      onChange={handleChange}
                     />
                   </div>
 
-                  <Button type="submit" size="lg" className="w-full">
-                    Send Message
+                  <Button type="submit" size="lg" className="w-full" disabled={loading || !validateForm()}>
+                    {loading ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      "Send Message"
+                    )}
                   </Button>
                 </form>
               </CardContent>

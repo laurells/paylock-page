@@ -82,7 +82,8 @@ export default function RootLayout({
         <meta name="twitter:site" content="@Renvue" />
         <meta name="twitter:creator" content="@Renvue" />
         <meta name="twitter:title" content={metadata.title?.toString()} />
-        <meta name="twitter:image" content="/og.png" />
+        <meta name="twitter:description" content={metadata.description ?? ""} />
+        <meta name="twitter:image" content="https://payrenvue.vercel.app/og.png" />
         <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />

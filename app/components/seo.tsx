@@ -25,7 +25,7 @@ export function generateSEOMetadata({
     "online escrow",
     "secure transactions",
   ],
-  image = "/og-image.png",
+  image = "/og.png",
   url = "https://Renvue.com",
   type = "website",
   publishedTime,
